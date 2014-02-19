@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.5.2" method="upgrade">
+	<name>Mosets Tree Package</name>
+	<packagename>mtree</packagename>
+	<version>3.5.2</version>
+	<author>Mosets Consulting</author>
+	<creationDate>October 2013</creationDate>
+	<url>http://www.mosets.com</url>
+	<packager>Mosets Consulting</packager>
+	<packageurl>http://www.mosets.com</packageurl>
+	<description>Mosets Tree Package</description>
+	<update>http://update.mosets.com/update/packages/mtree</update>
+	<files folder=".">
+		<file type="component" id="com_mtree">com_mtree-3.5.2.zip</file>
+		<file type="module" id="mod_mt_alphaindex" client="site">mod_mt_alphaindex-3.5.0.zip</file>
+		<file type="module" id="mod_mt_browse" client="site">mod_mt_browse-3.5.0.zip</file>
+		<file type="module" id="mod_mt_categories" client="site">mod_mt_categories-3.5.0.zip</file>
+		<file type="module" id="mod_mt_categories_expanding" client="site">mod_mt_categories_expanding-3.5.0.zip</file>
+		<file type="module" id="mod_mt_dtree" client="site">mod_mt_dtree-3.5.0.zip</file>
+		<file type="module" id="mod_mt_filter" client="site">mod_mt_filter-3.5.0.zip</file>
+		<file type="module" id="mod_mt_lastupdate" client="site">mod_mt_lastupdate-3.5.0.zip</file>
+		<file type="module" id="mod_mt_listings" client="site">mod_mt_listings-3.5.0.zip</file>
+		<file type="module" id="mod_mt_menu" client="site">mod_mt_menu-3.5.0.zip</file>
+		<file type="module" id="mod_mt_search" client="site">mod_mt_search-3.5.0.zip</file>
+		<file type="module" id="mod_mt_staticcats" client="site">mod_mt_staticcats-3.5.0.zip</file>
+		<file type="module" id="mod_mt_stats" client="site">mod_mt_stats-3.5.0.zip</file>
+		<file type="module" id="mod_mt_tagcloud" client="site">mod_mt_tagcloud-3.5.0.zip</file>
+		<file type="module" id="mod_mt_votedbest" client="site">mod_mt_votedbest-3.5.0.zip</file>
+		<file type="plugin" id="mosets" group="extension">plg_extension_mosets-1.0.0.zip</file>
+		<file type="plugin" id="mtree_listings" group="finder">plg_finder_mtree_listings-3.5.zip</file>
+		<file type="plugin" id="mtree" group="search">plg_search_mtree-3.0.0.zip</file>
+		<file type="plugin" id="profilepicture" group="user">plg_user_profilepicture-1.1.0.zip</file>
+		<file type="library" id="profilepicture">lib_mosets_profilepicture-1.0.zip</file>
+	</files>
+</extension>

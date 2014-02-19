@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_votedbest.xml 2010 2013-08-02 09:32:44Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_votedbest</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2005-2013 Mosets Consulting. All rights reserved.</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_VOTEDBEST_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_votedbest">mod_mt_votedbest.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_votedbest.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_votedbest.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+				<field name="parent_cat" type="text" default="0" label="MOD_MT_VOTEDBEST_FIELD_PARENTCATID_LABEL" description="MOD_MT_VOTEDBEST_FIELD_PARENTCATID_DESC" />
+				<field name="only_subcats" type="radio" default="1" label="MOD_MT_VOTEDBEST_FIELD_ONLYSUBCATSLISTING_LABEL" description="MOD_MT_VOTEDBEST_FIELD_ONLYSUBCATSLISTING_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="count" type="text" default="5" label="MOD_MT_VOTEDBEST_FIELD_COUNT_LABEL" />
+				<field name="show_more" type="radio" default="1" label="MOD_MT_VOTEDBEST_FIELD_DISPLAYSHOWMORE_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="caption_showmore" type="text" default="Show more..." label="MOD_MT_VOTEDBEST_FIELD_SHOWMORETEXT_LABEL" />
+				<field name="caption_rank" type="text" default="Rank" label="MOD_MT_VOTEDBEST_FIELD_RANKTEXT_LABEL" />
+				<field name="show_header" type="radio" default="1" label="MOD_MT_VOTEDBEST_FIELD_SHOWTABLEHEADER_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="use_alternating_bg" type="radio" default="0" label="MOD_MT_VOTEDBEST_FIELD_USEALTBG_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="order_rank" type="list" default="1" label="MOD_MT_VOTEDBEST_FIELD_RANKSORDER_LABEL" description="MOD_MT_VOTEDBEST_FIELD_RANKSORDER_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">MOD_MT_VOTEDBEST_VALUE_RANKORDER1</option>
+					<option value="2">MOD_MT_VOTEDBEST_VALUE_RANKORDER2</option>
+					<option value="3">MOD_MT_VOTEDBEST_VALUE_RANKORDER3</option>
+					<option value="4">MOD_MT_VOTEDBEST_VALUE_RANKORDER4</option>
+					<option value="5">MOD_MT_VOTEDBEST_VALUE_RANKORDER5</option>
+				</field>
+				<field name="order_name" type="list" default="2" label="MOD_MT_VOTEDBEST_FIELD_NAMESORDER_LABEL">
+					<option value="0">JHIDE</option>
+					<option value="1">MOD_MT_VOTEDBEST_VALUE_RANKORDER1</option>
+					<option value="2">MOD_MT_VOTEDBEST_VALUE_RANKORDER2</option>
+					<option value="3">MOD_MT_VOTEDBEST_VALUE_RANKORDER3</option>
+					<option value="4">MOD_MT_VOTEDBEST_VALUE_RANKORDER4</option>
+					<option value="5">MOD_MT_VOTEDBEST_VALUE_RANKORDER5</option>
+				</field>
+				<field name="order_category" type="list" default="0" label="MOD_MT_VOTEDBEST_FIELD_CATEGORYSORDER_LABEL">
+					<option value="0">JHIDE</option>
+					<option value="1">MOD_MT_VOTEDBEST_VALUE_RANKORDER1</option>
+					<option value="2">MOD_MT_VOTEDBEST_VALUE_RANKORDER2</option>
+					<option value="3">MOD_MT_VOTEDBEST_VALUE_RANKORDER3</option>
+					<option value="4">MOD_MT_VOTEDBEST_VALUE_RANKORDER4</option>
+					<option value="5">MOD_MT_VOTEDBEST_VALUE_RANKORDER5</option>
+				</field>
+				<field name="order_rating" type="list" default="0" label="MOD_MT_VOTEDBEST_FIELD_RATINGSORDER_LABEL">
+					<option value="0">JHIDE</option>
+					<option value="1">MOD_MT_VOTEDBEST_VALUE_RANKORDER1</option>
+					<option value="2">MOD_MT_VOTEDBEST_VALUE_RANKORDER2</option>
+					<option value="3">MOD_MT_VOTEDBEST_VALUE_RANKORDER3</option>
+					<option value="4">MOD_MT_VOTEDBEST_VALUE_RANKORDER4</option>
+					<option value="5">MOD_MT_VOTEDBEST_VALUE_RANKORDER5</option>
+				</field>
+				<field name="order_votes" type="list" default="0" label="MOD_MT_VOTEDBEST_FIELD_VOTESORDER_LABEL">
+					<option value="0">JHIDE</option>
+					<option value="1">MOD_MT_VOTEDBEST_VALUE_RANKORDER1</option>
+					<option value="2">MOD_MT_VOTEDBEST_VALUE_RANKORDER2</option>
+					<option value="3">MOD_MT_VOTEDBEST_VALUE_RANKORDER3</option>
+					<option value="4">MOD_MT_VOTEDBEST_VALUE_RANKORDER4</option>
+					<option value="5">MOD_MT_VOTEDBEST_VALUE_RANKORDER5</option>
+				</field>
+
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="max_name_char" type="text" default="24" label="MOD_MT_VOTEDBEST_FIELD_MAXCHARS_LABEL" description="MOD_MT_VOTEDBEST_FIELD_MAXCHARS_DESC" />
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_VOTEDBEST_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_VOTEDBEST_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_VOTEDBEST_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_VOTEDBEST_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

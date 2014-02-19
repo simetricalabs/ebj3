@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>associatedlisting</name>
+	<caption>Associated Listing</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>July 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Associated Listing</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/associatedlisting">
+			<filename>associatedlisting.php</filename>
+			<filename>associatedlisting.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/associatedlisting.xml</server>
+	</updateservers>
+</extension>

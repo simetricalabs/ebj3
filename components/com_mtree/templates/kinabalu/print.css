@@ -1,0 +1,23 @@
+@media print {
+	a[href]:after {
+	    content: none !important;
+	}
+	.print-links {
+		display: none;
+	}
+}
+
+@page {  
+	margin-top: 2cm;  
+	margin-bottom: 3cm;  
+	margin-left: 1.5cm;
+	margin-right: 1cm;  
+}
+
+.print-links {
+	text-align:right;margin-bottom:10px;
+}
+.mainimage {
+	text-align:center;
+	padding: 0 1em 2em 1em;
+}

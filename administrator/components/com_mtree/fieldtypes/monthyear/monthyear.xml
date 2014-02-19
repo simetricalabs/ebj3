@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>monthyear</name>
+	<caption>Month &amp; Year</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Similar to Date field but for selecting month and year only.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="" target="administrator/components/com_mtree/fieldtypes/monthyear">
+			<filename>monthyear.php</filename>
+			<filename>monthyear.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="startYear" type="text" default="" label="Start year" description="Enter the starting year or earliest year available for selection. If left empty, it will default to 70 years ago from the current year."/>
+				<field name="endYear" type="text" default="" label="End year" description="Enter the latest year or available for selection. If left empty, the current year will be used."/>
+				<field name="dateFormat" type="text" default="%M %Y" label="Date Format" description="Date format based on http://php.net/strftime"/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/monthyear.xml</server>
+	</updateservers>
+</extension>
+

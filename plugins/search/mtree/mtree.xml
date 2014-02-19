@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mtree.xml 1591 2012-10-18 07:38:02Z cy $ -->
+<extension version="1.6" type="plugin" group="search" method="upgrade">
+	<name>plg_search_mtree</name>
+	<creationDate>October 2012</creationDate>
+	<version>3.0.0</version>
+	<copyright>Copyright (C) 2008 - 2012 Mosets Consulting. All rights reserved.</copyright>
+    	<license>GNU General Public License</license>
+	<author>Mosets Consulting</author>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<description>PLG_SEARCH_MTREE_XML_DESC</description>
+	<files>
+		<filename plugin="mtree">mtree.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_search_mtree.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_search_mtree.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="search_limit" type="text" size="5" default="50" label="PLG_SEARCH_MTREE_FIELD_SEARCH_LIMIT_LABEL" description="PLG_SEARCH_MTREE_FIELD_SEARCH_LIMIT_DESC"/>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="search_listing" type="radio" default="1" label="PLG_SEARCH_MTREE_FIELD_SEARCH_LISTINGS_LABEL">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="search_category" type="radio" default="0" label="PLG_SEARCH_MTREE_FIELD_SEARCH_CATEGORIES_LABEL">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

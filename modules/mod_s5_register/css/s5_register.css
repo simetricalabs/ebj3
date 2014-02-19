@@ -1,0 +1,12 @@
+.s5_regfloatleft{float:left;line-height:31px;width:80% !important;margin-bottom:8px !important;}
+.rlable{float:left;line-height:31px;}
+#cboxLoadedContent #jform_profile_dob1, #cboxLoadedContent #jform_profile_tos0{width:auto !important;}
+#jform_profile_aboutme, .s5_regfloatleft input {width:94%;}
+.s5_regagreement{border:1px solid #C0C0C0;height:100px;margin-top:10px;overflow:auto;padding-bottom: 20px;width:94%;}
+.s5_regagreewrap{padding-top:8px;}
+#jform_profile_tos0{margin:0px;}
+.s5_regagreewrap label{display:inline !important;margin-top:3px;}
+.s5_regfloatleft label{margin:0px !important;}
+#s5_regresponse {color:#F00;margin-top:-10px;padding-bottom:22px;display:none;}
+#s5_regresponse br {display:block;margin-bottom:10px;}
+#s5_regsecurity_img {float:left;margin-bottom:12px;}.s5_regrequiredfields {padding-top:16px; padding-bottom:16px;}#s5box_register_inner .calendar .button {float:none;}

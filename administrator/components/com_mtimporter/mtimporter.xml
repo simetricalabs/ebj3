@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" version="3.56" method="upgrade">
+    <name>com_mtimporter</name>
+    <creationDate>October 2013</creationDate>
+    <author>Mosets Consulting</author>
+    <copyright>This Joomla Component is copyrighted to Mosets Consulting</copyright>
+    <authorEmail>mtree@mosets.com</authorEmail>
+    <authorUrl>http://www.mosets.com/</authorUrl>
+    <version>3.5.1</version>
+    <license>GNU General Public License</license>
+    <description>MT Importer is an import tool that imports data from CSV file to Mosets Tree 3.5.</description>
+    <installfile>install.mtimporter.php</installfile>
+	<administration>
+		<menu link="option=com_mtimporter&amp;task=check_csv">COM_MTIMPORTER_MENU_NAME</menu>
+		<submenu>
+			<menu link="option=com_mtimporter&amp;task=check_csv">COM_MTIMPORTER_MENU_NAME_CSV</menu>
+			<menu link="option=com_mtimporter&amp;task=check_hotproperty">COM_MTIMPORTER_MENU_NAME_HOTPROPERTY</menu>
+		</submenu>
+		<files>
+			<filename>admin.mtimporter.html.php</filename>
+			<filename>mtimporter.php</filename>
+			<filename>mtimporter.xml</filename>
+			<filename>sample.csv</filename>
+		</files>
+		<languages folder="administrator/language">
+			<language tag="en-GB">en-GB/en-GB.com_mtimporter.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_mtimporter.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

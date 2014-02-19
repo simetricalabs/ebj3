@@ -1,0 +1,137 @@
+.pane-sliders fieldset.panelform {
+	padding:0;
+	margin:0;
+}
+.pane-sliders fieldset.panelform table.paramlist{
+	width:100%;
+}
+ul.linkcats a {text-decoration:underline;margin-right:3px;}
+table.paramlist tr {
+}
+table.paramlist td {
+	background-color:#F6F6F6;
+	border-bottom:1px solid #E9E9E9;
+	padding:5px 3px;
+}
+.paramlist_value label {
+    clear: none;
+    float: left;
+    min-width: 0 !important;
+}
+/*
+ul#mtfields li span.input {
+	float: left;
+	min-width: 455px;
+}
+#mtForm ul.adminformlist {
+	padding-left:0;
+	list-style-type:none;
+}
+*/
+ul.adminformlist ul#linkcats {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+#mc_active_pathway {
+	background-color: #F9F9F9; color: #c0c0c0;
+}
+#mc_con {
+/*	margin-left:135px;*/
+}
+/*
+#mtForm ul.adminformlist > li {
+	overflow:hidden;
+	padding:0 0 5px 0;
+}
+*/
+ul.adminformlist li > span {
+	display:block;
+}
+ul.adminformlist li span.mtinput label {
+	margin:0 5px;
+}
+ul.adminformlist li span.mtinput label img {
+}
+ul.adminformlist li span.mtcaption > label {
+	clear: left;
+	display: block;
+	float: left;
+	min-width: 135px;
+	margin: 5px 0;
+	padding:0;
+}
+ul.adminformlist li label span {
+	margin-left:0;
+	padding:0;
+	display:inline;
+}
+/*#mtForm ul.adminformlist li span p {
+	margin:0 0 0 135px;
+}
+*/
+ul.adminformlist li span.mtinput label img {
+	float:none;
+}
+ul.adminformlist li span input {
+	float:none;
+}
+ul.adminformlist li span input[type=file] {
+	display:block;
+}
+ul.adminformlist li span input[type="checkbox"], ul.adminformlist li span input[type="radio"] {
+	margin:0;
+	float:left;
+}
+/*#mtfields li span.mtcaption label {
+    display: inline;
+}
+#mtfields li span ul {
+    overflow:hidden;
+	margin: 5px 0;
+	list-style-type:none;
+	padding:0;
+}
+#mtfields li span ul li {
+	padding:3px 0;
+	overflow:hidden;
+	width:auto;
+	float:left;
+	margin-right:1em;
+}
+#mtfields li span ul li > label {
+	min-width:0;
+}
+#mtfields li span ul li > label > img {
+	margin-top:0;
+}
+
+#mtfields li span ul li label {
+	margin: 0 5px;
+	clear:none;
+}
+#mtfields li span.mtinput ul {
+	padding-top:2px;
+}
+#mtfields li span.mtcaption {
+	float:left;
+}*/
+.validation-advice {
+	background-color:#FFEBE8;
+	border-bottom:1px solid #EB8266;
+	margin:5px 0 0 0px;
+	padding:3px 4px;
+}
+label.invalid {
+	color:red;
+	font-weight:bold;
+}
+input.invalid {
+	border:1px solid #EB8266;
+}
+
+.task-editlink form .controls ul, .task-editlisting form .controls ul {
+	margin:0;
+	padding:0;
+	list-style-type:none
+}

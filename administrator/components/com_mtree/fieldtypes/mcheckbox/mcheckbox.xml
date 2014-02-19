@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>checkboxwithimage</name>
+	<caption>Checkbox with Image</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Allows you to use image as the check box label.</description>
+	<useElements>1</useElements>
+	<useSize>0</useSize>
+	<taggable>1</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/checkboxwithimage">
+			<filename>checkboxwithimage.php</filename>
+			<filename>checkboxwithimage.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">	
+				<field name="images" type="textarea" cols="40" rows="6" default="" label="Images" description="Enter the URLs of images corresponding to the elements defined for this custom field. URLs must be separated by |. You can use {live_site} as the replacement for your site's base URL. ie: {live_site}/media/media/images/mime-icon-32/zip.png|{live_site}/media/media/images/mime-icon-32/mp3.png"/>
+				<field name="showImages" type="list" default="1" label="Show Images" description="Where to display the images.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+					<option value="2">Only in front-end</option>
+				</field>
+				<field name="captions" type="textarea" cols="40" rows="6" default="" label="Captions" description="Captions are display beside the image to provide a short description of each checkbox. Enter the captions corresponding to the elements defined for this custom field. Captions must be separated by |."/>
+				<field name="useCaptions" type="list" default="0" label="Show Captions" description="Toggle the display of captions.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+					<option value="2">Only in Edit screen</option>
+				</field>
+				<field name="alts" type="textarea" cols="40" rows="6" default="" label="Image ALTs attribute" description="ALTs attribute are included in your image for accessibility and allow user agents that cannot display images to use this as alternatee text. Keep it short and precise. If you leave this empty, field elements will be used for this. Enter the ALT texts corresponding to the elements defined for this custom field. ALT texts must be separated by |."/>
+				<field name="titles" type="textarea" cols="40" rows="6" default="" label="Image TITLEs attribute" description="This will be added to your images as Title attribute. Use this to provide additional information to each of your images. Most browsers display title text as a tooltip when it is hovered over. Enter the TITLE texts corresponding to the elements defined for this custom field. TITLE texts must be separated by |."/>
+				<field name="dvOutput" type="list" default="h" label="Details view's output">
+					<option value="ul">Unordered List</option>
+					<option value="ol">Numbered List</option>
+					<option value="h">Horizontally</option>
+					<option value="v">Vertically</option>
+				</field>
+				<field name="columns" type="list" default="0" label="Columns" description="Enter the number of columns used to display each of the checkboxes in Edit Listing form. By default, it is set to automatically arrange itself based on available width and the size of each checkbox.">
+					<option value="0">Auto</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/checkboxwithimage.xml</server>
+	</updateservers>
+</extension>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 	type="module" version="3.0" client="site" 	method="upgrade">
+	<name>S5 Register</name>
+	<author>Shape5.com</author>
+	<creationDate>June 2013</creationDate>
+	<authorEmail>contact@shape5.com</authorEmail>
+	<creationDate>January 2013</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>www.shape5.com</authorUrl>
+	<version>3.0.0</version>
+	<description>This is the default Joomla registration page convereted into a module. It also works directly with the User Profile plugin.</description>
+	<files>
+		<filename module="mod_s5_register">mod_s5_register.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<filename>index.html</filename>
+		<filename>captcha/validate.php</filename>
+		<filename>captcha/CaptchaSecurityImages.php</filename>
+		<filename>captcha/monofont.ttf</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_s5_register.ini</language>
+    </languages>
+<config>
+		<fields name="params">
+		<fieldset name="basic">
+   		<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="MOD_REGISTER_SUFFIX_INSTRUCTION" />
+		<field 	name="captcha"
+			type="list"
+			default="0"
+			label="Captcha"
+			description="MOD_REGISTER_CAPTCHA_INSTRUCTION">
+			<option value="0">MOD_REGISTER_NO</option>
+			<option value="1">MOD_REGISTER_yes</option>
+		</field>
+		</fieldset>
+	</fields>
+</config>
+</extension>

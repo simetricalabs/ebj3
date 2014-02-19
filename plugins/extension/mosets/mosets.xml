@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="extension" method="upgrade">
+	<name>plg_extension_mosets</name>
+	<author>Mosets Consulting</author>
+	<creationDate>October 2012</creationDate>
+	<copyright>Copyright (C) 2012 Mosets Consulting. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_EXTENSION_MOSETS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="mosets">mosets.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_extension_mosets.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_extension_mosets.sys.ini</language>
+	</languages>
+</extension>

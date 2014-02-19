@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>coredesc</name>
+	<caption>Description</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/coredesc">
+			<filename>coredesc.php</filename>
+			<filename>coredesc.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="summaryChars" type="text" default="255" label="Number of Summary characters" />
+				<field name="maxChars" type="text" default="3000" label="Max. characters" description="The maximum number of characters allowed in this field. Description that foes over this limit will be trimmed."/>
+				<field name="stripSummaryTags" type="radio" default="1" class="btn-group" label="Strip all HTML tags in Summary view" description="Setting this to yes will remove all tags that could potentially affect when viewing a list of listings.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="convertSpecialCharsInSummary" type="radio" default="1" class="btn-group" label="Use HTML Entities in Summary view" description="Setting this to yes will convert special characters such as ampersand, quotes, less than (&lt;) and greater than (&gt;) charaters to HTML entities in summary view.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="stripDetailsTags" type="radio" default="1" class="btn-group" label="Strip all HTML tags in Details view" description="Setting this to yes will remove all tags except those that are specified in 'Allowed tags'.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="parseUrl" type="radio" default="1" class="btn-group" label="Parse URL as link in Details view">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="stripAllTagsBeforeSave" type="radio" default="1" class="btn-group" label="Strip all HTML tags before storing to database" description="If WYSYWIG editor is enabled in the front-end, this feature allow you to strip any potentially harmful codes. You can still allow some tags within description field, which can be specified below.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="allowedTags" type="text" default="u,b,i,a,ul,li,pre,blockquote,strong,em" label="Allowed tags" description="Enter the tag names seperated by comma. This parameter allow you to accept some HTML tags even if you have enable striping of all HTML tags above." />
+				<field name="parseMambots" type="radio" default="0" class="btn-group" label="Parse Mambots" description="Enabling this will parse mambots codess within the description field">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showReadMore" type="radio" default="0" class="btn-group" label="Show &quot;Read More...&quot;" description="Show &quot;Read More..&quot; if a description text clipped in Summary View.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="whenReadMore" type="list" default="0" label="When to show &quot;Read More..&quot;" description="This allow you to set when to show the &quot;Read More..&quot; link.">
+					<option value="0">When description is clipped</option>
+					<option value="1">All the time</option>
+				</field>
+				<field name="txtReadMore" type="text" default="Read More..." label="Read More text" description="Enter the &quot;Read More..&quot; text." />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/coredesc.xml</server>
+	</updateservers>
+</extension>

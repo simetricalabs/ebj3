@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_listings.xml 2010 2013-08-02 09:32:44Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_listings</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2013 Mosets Consulting. All rights reserved.</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_LISTINGS_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_listings">mod_mt_listings.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_listings.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_listings.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+				<field name="type" type="list" default="1" label="MOD_MT_LISTINGS_FIELD_TYPE_LABEL" description="MOD_MT_LISTINGS_FIELD_TYPE_DESC">
+					<option value="1">MOD_MT_LISTINGS_VALUE_NEW_LISTING</option>
+					<option value="7">MOD_MT_LISTINGS_VALUE_RECENTLY_UPDATED_LISTING</option>
+					<option value="2">MOD_MT_LISTINGS_VALUE_FEATURED_LISTING</option>
+					<option value="3">MOD_MT_LISTINGS_VALUE_POPULAR_LISTING</option>
+					<option value="4">MOD_MT_LISTINGS_VALUE_MOST_RATED_LISTING</option>
+					<option value="5">MOD_MT_LISTINGS_VALUE_TOP_RATED_LISTING</option>
+					<option value="6">MOD_MT_LISTINGS_VALUE_MOST_REVIEWED_LISTING</option>
+					<option value="9">MOD_MT_LISTINGS_VALUE_ALPHABETICALLY_ORDERED_LISTING</option>
+					<option value="8">MOD_MT_LISTINGS_VALUE_RANDOM_LISTING</option>
+				</field>
+				<field name="count" type="text" default="5" label="MOD_MT_LISTINGS_FIELD_COUNT_LABEL" description="MOD_MT_LISTINGS_FIELD_COUNT_DESC" />
+				<field name="show_from_cat_id" type="text" default="0" label="MOD_MT_LISTINGS_FIELD_SHOWLISTINGFROMTHISCAT_LABEL" description="MOD_MT_LISTINGS_FIELD_SHOWLISTINGFROMTHISCAT_DESC" />
+				<field name="only_subcats" type="radio" default="0" label="MOD_MT_LISTINGS_FIELD_ONLYSUBCATSLISTINGS_LABEL" description="MOD_MT_LISTINGS_FIELD_ONLYSUBCATSLISTINGS_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="shuffle_listing" type="radio" default="1" label="MOD_MT_LISTINGS_FIELD_SHUFFLELISTING_LABEL" description="MOD_MT_LISTINGS_FIELD_SHUFFLELISTING_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_website" type="radio" default="0" label="MOD_MT_LISTINGS_FIELD_SHOWWEBSITE_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_category" type="radio" default="1" label="MOD_MT_LISTINGS_FIELD_SHOWCATNAME_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_rel_data" type="radio" default="1" label="MOD_MT_LISTINGS_FIELD_SHOWRELATEDDATA_LABEL" description="MOD_MT_LISTINGS_FIELD_SHOWRELATEDDATA_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_more" type="radio" default="1" label="MOD_MT_LISTINGS_FIELD_DISPLAYSHOWMORE_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="caption_showmore" type="text" default="Show more..." label="MOD_MT_LISTINGS_FIELD_SHOWMORETEXT_LABEL" />
+
+				<field name="show_images" type="radio" default="1" label="MOD_MT_LISTINGS_FIELD_SHOWIMAGES_LABEL" description="MOD_MT_LISTINGS_FIELD_SHOWIMAGES_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="trim_long_names" type="radio" default="1" label="MOD_MT_LISTINGS_FIELD_TRIMLONGNAMES_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="trim_long_urls" type="radio" default="1" label="MOD_MT_LISTINGS_FIELD_TRIMLONGURLS_LABEL" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="max_name_char" type="text" default="24" label="MOD_MT_LISTINGS_FIELD_MAXCHARS_LABEL" description="MOD_MT_LISTINGS_FIELD_MAXCHARS_DESC" />
+
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="fields" type="mtfields" default="" label="MOD_MT_LISTINGS_FIELD_DISPLAYFIELDS_LABEL" />
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_LISTINGS_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_LISTINGS_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_LISTINGS_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_LISTINGS_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="listingclass" type="text" default="" label="MOD_MT_LISTINGS_FIELD_LISTINGCLASS_LABEL" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="filterfield" type="filterfield" default="" label="MOD_MT_LISTINGS_FIELD_FILTERFIELD_LABEL" size="6" description="MOD_MT_LISTINGS_FIELD_FILTERFIELD_DESC" />
+			</fieldset>
+			<fieldset name="layout_option_tiles">
+				<field name="tiles_flow" type="radio" default="vertical" label="MOD_MT_LISTINGS_FIELD_TILESFLOW_LABEL" description="MOD_MT_LISTINGS_FIELD_TILESFLOW_DESC" class="radio btn-group">
+					<option value="vertical">MOD_MT_LISTINGS_VALUE_VERTICAL</option>
+					<option value="horizontal">MOD_MT_LISTINGS_VALUE_HORIZONTAL</option>
+				</field>
+				<field name="hide_name" type="radio" default="0" label="MOD_MT_LISTINGS_FIELD_HIDENAME_LABEL" description="MOD_MT_LISTINGS_FIELD_HIDENAME_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="name_alignment" type="radio" default="left" label="MOD_MT_LISTINGS_FIELD_NAMEALIGNMENT_LABEL" description="MOD_MT_LISTINGS_FIELD_NAMEALIGNMENT_DESC" class="radio btn-group">
+					<option value="left">MOD_MT_LISTINGS_VALUE_LEFT_ALIGN</option>
+					<option value="center">MOD_MT_LISTINGS_VALUE_CENTER_ALIGN</option>
+					<option value="right">MOD_MT_LISTINGS_VALUE_RIGHT_ALIGN</option>
+				</field>
+				<field name="image_size" type="list" default="50px" label="MOD_MT_LISTINGS_FIELD_IMAGESIZE_LABEL" description="MOD_MT_LISTINGS_FIELD_IMAGESIZE_DESC">
+					<option value="auto">auto</option>
+					<option value="50px">50px</option>
+					<option value="60px">60px</option>
+					<option value="70px">70px</option>
+					<option value="80px">80px</option>
+					<option value="90px">90px</option>
+					<option value="100px">100px</option>
+					<option value="110px">110px</option>
+					<option value="120px">120px</option>
+					<option value="130px">130px</option>
+					<option value="140px">140px</option>
+					<option value="150px">150px</option>
+				</field>
+				<field name="tile_width" type="text" default="" label="MOD_MT_LISTINGS_FIELD_TILEWIDTH_LABEL" description="MOD_MT_LISTINGS_FIELD_TILEWIDTH_DESC" />
+				<field name="tile_height" type="text" default="" label="MOD_MT_LISTINGS_FIELD_TILEHEIGHT_LABEL" description="MOD_MT_LISTINGS_FIELD_TILEHEIGHT_DESC" />
+
+			</fieldset>
+			<fieldset name="layout_option_dropdown">
+				<field name="dropdown_width" type="text" default="200" label="MOD_MT_LISTINGS_FIELD_DROPDOWN_WIDTH_LABEL" description="MOD_MT_LISTINGS_FIELD_DROPDOWN_WIDTH_LABEL" />
+				<field name="dropdown_select_text" type="text" default="" label="MOD_MT_LISTINGS_FIELD_DROPDOWN_SELECT_TEXT_LABEL" description="MOD_MT_LISTINGS_FIELD_DROPDOWN_SELECT_TEXT_DESC" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

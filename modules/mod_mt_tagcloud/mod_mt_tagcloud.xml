@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_tagcloud.xml 2069 2013-09-19 09:27:10Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_tagcloud</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2009-2013 Mosets Consulting. All rights reserved.</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_TAGCLOUD_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_tagcloud">mod_mt_tagcloud.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_tagcloud.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_tagcloud.sys.ini</language>
+	</languages>
+	<media destination="mod_mt_tagcloud">
+		<folder>css</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+				<field name="cf_id" type="tagfields" default="28" label="MOD_MT_TAGCLOUD_FIELD_TAGFIELDS_LABEL" description="MOD_MT_TAGCLOUD_FIELD_TAGFIELDS_DESC" />
+				<field name="maxTags" type="list" default="30" label="MOD_MT_TAGCLOUD_FIELD_MAXTAGS_LABEL" description="MOD_MT_TAGCLOUD_FIELD_MAXTAGS_DESC" >
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="40">40</option>
+					<option value="50">50</option>
+					<option value="75">75</option>
+					<option value="100">100</option>
+				</field>
+				<field name="hide_list" type="text" default="" size="30" label="MOD_MT_TAGCLOUD_FIELD_HIDE_LIST_LABEL" description="MOD_MT_TAGCLOUD_FIELD_HIDE_LIST_DESC" />
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_TAGCLOUD_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_TAGCLOUD_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_TAGCLOUD_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_TAGCLOUD_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

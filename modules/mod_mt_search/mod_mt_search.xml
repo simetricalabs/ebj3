@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_search.xml 2010 2013-08-02 09:32:44Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_search</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2005-2013 Mosets Consulting. All rights reserved.</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_SEARCH_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_search">mod_mt_search.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_search.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_search.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+				<field name="width" type="text" default="22" label="MOD_MT_SEARCH_FIELD_INPUTFIELDWIDTH_LABEL" description="MOD_MT_SEARCH_FIELD_INPUTFIELDWIDTH_DESC" />
+				<field name="placeholder_text" type="text" default="" label="MOD_MT_SEARCH_FIELD_TEXT_LABEL" description="MOD_MT_SEARCH_FIELD_TEXT_DESC" />
+				<field name="advsearch" type="radio" default="1" label="MOD_MT_SEARCH_FIELD_ADVANCEDSEARCH_LABEL" description="MOD_MT_SEARCH_FIELD_ADVANCEDSEARCH_DESC" class="radio btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="search_button" type="radio" default="1" label="MOD_MT_SEARCH_FIELD_SEARCHBUTTON_LABEL" description="MOD_MT_SEARCH_FIELD_SEARCHBUTTON_DESC" class="radio btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="showCatDropdown" type="radio" default="0" label="MOD_MT_SEARCH_FIELD_SHOWCATEGORIES_LABEL" description="MOD_MT_SEARCH_FIELD_SHOWCATEGORIES_DESC" class="radio btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="searchCategory" type="radio" default="0" label="MOD_MT_SEARCH_FIELD_SEARCHCATEGORY_LABEL" description="MOD_MT_SEARCH_FIELD_SEARCHCATEGORY_DESC" class="radio btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="parent_cat" type="text" default="0" label="MOD_MT_SEARCH_FIELD_PARENTCATID_LABEL" description="MOD_MT_SEARCH_FIELD_PARENTCATID_DESC" />
+				<field name="dropdownWidth" type="text" default="0" label="MOD_MT_SEARCH_FIELD_DROPDOWNWIDTH_LABEL" description="MOD_MT_SEARCH_FIELD_DROPDOWNWIDTH_DESC" />
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_SEARCH_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_SEARCH_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_SEARCH_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_SEARCH_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

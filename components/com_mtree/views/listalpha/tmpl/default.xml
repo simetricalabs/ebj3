@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_MTREE_MENU_TASK_NAME_LISTAPHA" option="com_mtree_LISTAPHA_view_default_option">
+		<message><![CDATA[COM_MTREE_MENU_TASK_MSG_LISTAPHA]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_mtree/jformfields">
+			<field name="alpha" type="list"
+				label="COM_MTREE_MENU_TASK_LISTALPHA_ALPHA_LABEL"
+				description="COM_MTREE_MENU_TASK_LISTALPHA_ALPHA_DESC"
+				required="true"
+			>
+				<option value="a">A</option>
+				<option value="b">B</option>
+				<option value="c">C</option>
+				<option value="d">D</option>
+				<option value="e">E</option>
+				<option value="f">F</option>
+				<option value="g">G</option>
+				<option value="h">H</option>
+				<option value="i">I</option>
+				<option value="j">J</option>
+				<option value="k">K</option>
+				<option value="l">L</option>
+				<option value="m">M</option>
+				<option value="n">N</option>
+				<option value="o">O</option>
+				<option value="p">P</option>
+				<option value="q">Q</option>
+				<option value="r">R</option>
+				<option value="s">S</option>
+				<option value="t">T</option>
+				<option value="u">U</option>
+				<option value="v">V</option>
+				<option value="w">W</option>
+				<option value="x">X</option>
+				<option value="y">Y</option>
+				<option value="z">Z</option>
+				<option value="0">0-9</option>
+			</field>
+			<field name="cat_id" type="mtreecategory" 
+				default="0" 
+				extension="com_mtree" 
+				required="true"
+				label="COM_MTREE_MENU_TASK_NAME_CATEGORY_LABEL" 
+			/>
+		</fieldset>
+	</fields>
+</metadata>

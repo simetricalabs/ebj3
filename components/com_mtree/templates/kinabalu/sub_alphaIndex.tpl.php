@@ -1,0 +1,1 @@
+<div class="alpha-index" style="text-align:center"><?php echo $this->plugin('listalphaindex', '') ?></div>

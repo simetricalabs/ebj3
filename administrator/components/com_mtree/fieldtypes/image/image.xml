@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>image</name>
+	<caption>Image</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2012</creationDate>
+	<copyright>(C) 2011-2012  Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Image field type accepts gif, png &amp; jpg file and resize it according to the value set in the parameter before it is saved to Mosets Tree.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<isFile>1</isFile>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/image">
+			<filename>image.php</filename>
+			<filename>image.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.fld_image.ini</language>
+	</languages>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="size" type="text" default="0" label="Max. width &amp; height" description="Enter the maximum size of the width and height of the final resized image. Enter 0 to use the value configured for listing thumbnail's size." />
+				<field name="maxFileSize" type="text" default="3145728" label="Max. File Size (in bytes)" description="The maximum file size for the uploaded file in bytes. Default is 3MB (3145728 bytes). Enter 0 for no limit. Note that your server may have a maximum upload limit." />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/image.xml</server>
+	</updateservers>
+</extension>

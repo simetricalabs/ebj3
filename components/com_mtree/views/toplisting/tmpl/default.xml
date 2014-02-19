@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_MTREE_MENU_TASK_NAME_TOPLISTING" option="com_mtree_TOPLISTING_view_default_option">
+		<message><![CDATA[COM_MTREE_MENU_TASK_MSG_TOPLISTING]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_mtree/jformfields">
+			<field name="type" type="list"
+				label="COM_MTREE_MENU_TASK_TOPLISTING_TYPE_LABEL"
+				description="COM_MTREE_MENU_TASK_TOPLISTING_TYPE_DESC"
+				required="true"
+			>
+				<option value="alpha">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_ALPHA</option>
+				<option value="all">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_ALL</option>
+				<option value="new">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_NEW</option>
+				<option value="updated">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_RECENTLYUPDATED</option>
+				<option value="popular">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_POPULAR</option>
+				<option value="featured">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_FEATURED</option>
+				<option value="mostrated">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_MOSTRATED</option>
+				<option value="toprated">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_TOPRATED</option>
+				<option value="mostreview">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_MOSTREVIEW</option>
+				<option value="favourite">COM_MTREE_MENU_TASK_TOPLISTING_TYPE_OPTION_FAVOURITE</option>
+			</field>
+			<field name="cat_id" type="mtreecategory" 
+				default="0" 
+				extension="com_mtree" 
+				required="true"
+				label="COM_MTREE_MENU_TASK_NAME_CATEGORY_LABEL" 
+			/>
+		</fieldset>
+	</fields>
+</metadata>

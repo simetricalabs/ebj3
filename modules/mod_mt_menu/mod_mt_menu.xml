@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_menu.xml 2010 2013-08-02 09:32:44Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_menu</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2005-2013 Mosets Consulting. All rights reserved</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_MENU_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_menu">mod_mt_menu.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_menu.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_menu.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+				<field name="limit_toplist" type="radio" default="0" label="MOD_MT_MENU_FIELD_LIMITTOPLISTCURRENTCAT_LABEL" description="MOD_MT_MENU_FIELD_LIMITTOPLISTCURRENTCAT_DESC" class="radio btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_home" type="radio" default="0" label="MOD_MT_MENU_FIELD_HOME_LABEL" description="MOD_MT_MENU_FIELD_HOME_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_directory" type="radio" default="1" label="MOD_MT_MENU_FIELD_DIRECTORY_LABEL" description="MOD_MT_MENU_FIELD_DIRECTORY_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_allcats" type="radio" default="1" label="MOD_MT_MENU_FIELD_ALLCATEGORIES_LABEL" description="MOD_MT_MENU_FIELD_ALLCATEGORIES_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_all" type="radio" default="1" label="MOD_MT_MENU_FIELD_ALLLISTINGS_LABEL" description="MOD_MT_MENU_FIELD_ALLLISTINGS_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_addlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_ADDLISTING_LABEL" description="MOD_MT_MENU_FIELD_ADDLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_addcategory" type="radio" default="1" label="MOD_MT_MENU_FIELD_ADDCAT_LABEL" description="MOD_MT_MENU_FIELD_ADDCAT_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_mypage" type="radio" default="1" label="MOD_MT_MENU_FIELD_MYPAGE_LABEL" description="MOD_MT_MENU_FIELD_MYPAGE_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_myfavourites" type="radio" default="1" label="MOD_MT_MENU_FIELD_MYFAVOURITES_LABEL" description="MOD_MT_MENU_FIELD_MYFAVOURITES_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_myreviews" type="radio" default="1" label="MOD_MT_MENU_FIELD_MYREVIEWS_LABEL" description="MOD_MT_MENU_FIELD_MYREVIEWS_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_newlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_NEWLISTING_LABEL" description="MOD_MT_MENU_FIELD_NEWLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_recentlyupdatedlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_RECENTLYUPDATEDLISTING_LABEL" description="MOD_MT_MENU_FIELD_RECENTLYUPDATEDLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_featuredlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_FEATUREDLISTING_LABEL" description="MOD_MT_MENU_FIELD_FEATUREDLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_mostfavoured" type="radio" default="1" label="MOD_MT_MENU_FIELD_FAVOUREDLISTING_LABEL" description="MOD_MT_MENU_FIELD_FAVOUREDLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_popularlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_POPULARLISTING_LABEL" description="MOD_MT_MENU_FIELD_POPULARLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_mostratedlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_MOSTRATEDLISTING_LABEL" description="MOD_MT_MENU_FIELD_MOSTRATEDLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_topratedlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_TOPRATEDLISTING_LABEL" description="MOD_MT_MENU_FIELD_TOPRATEDLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="show_mostreviewedlisting" type="radio" default="1" label="MOD_MT_MENU_FIELD_MOSTREVIEWEDLISTING_LABEL" description="MOD_MT_MENU_FIELD_MOSTREVIEWEDLISTING_DESC" class="radio btn-group">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+
+				<field name="@spacer" type="spacer" default="" label="" />
+
+				<field name="show_addlisting_force" type="radio" default="0" label="MOD_MT_MENU_FIELD_SHOWADDLISTINGINNONDIRECTORYPAGES_LABEL" description="MOD_MT_MENU_FIELD_SHOWADDLISTINGINNONDIRECTORYPAGES_DESC" class="radio btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_MENU_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_MENU_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_MENU_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_MENU_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_MT_MENU_FIELD_CLASS_LABEL"
+					description="MOD_MT_MENU_FIELD_CLASS_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

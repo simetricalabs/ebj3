@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" version="3.5.2" method="upgrade">
+	<name>com_mtree</name>
+	<author>Mosets Consulting</author>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>http://www.mosets.com/tree</authorUrl>
+	<copyright>Mosets Consulting 2005 - 2013. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<version>3.5.2</version>
+	<description>(Shared in REdBitZ.COM) MTREE | Joomla Directory Component</description>
+	<creationDate>October 2013</creationDate>
+	<scriptfile>script.php</scriptfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.mtree.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.mtree.sql</file>
+		</sql>
+	</uninstall>
+	<administration>
+		<menu link="option=com_mtree" img="../media/com_mtree/images/icon-16-mosetstree.png">com_mtree</menu>
+		<files folder="administrator/components/com_mtree">
+			<folder>elements</folder>
+			<folder>fieldtypes</folder>
+			<folder>helpers</folder>
+			<folder>jformfields</folder>
+			<folder>models</folder>
+			<folder>params</folder>
+			<folder>toolbar</folder>
+			<folder>upgrade</folder>
+			<filename>admin.mtree.ajax.php</filename>
+			<filename>admin.mtree.class.php</filename>
+			<filename>admin.mtree.html.php</filename>
+			<filename>changelog.txt</filename>
+			<filename>config.mtree.class.php</filename>
+			<filename>customfields.mtree.html.php</filename>
+			<filename>customfields.mtree.php</filename>
+			<filename>diagnosis.php</filename>
+			<filename>dtree.css</filename>
+			<filename>geocode.mtree.php</filename>
+			<filename>index.php</filename>
+			<filename>install.mtree.sql</filename>
+			<filename>license.mtree.php</filename>
+			<filename>linkchecker.mtree.html.php</filename>
+			<filename>linkchecker.mtree.php</filename>
+			<filename>mAdvancedSearch.class.php</filename>
+			<filename>mfields.class.php</filename>
+			<filename>mtree.php</filename>
+			<filename>mtree.xml</filename>
+			<filename>recount.mtree.php</filename>
+			<filename>script.php</filename>
+			<filename>spy.mtree.html.php</filename>
+			<filename>spy.mtree.php</filename>
+			<filename>toolbar.mtree.html.php</filename>
+			<filename>toolbar.mtree.php</filename>
+			<filename>tools.mtree.php</filename>
+			<filename>uninstall.mtree.sql</filename>
+			<filename>upgrade.class.php</filename>
+			<filename>upgrade.php</filename>
+		</files>
+		<languages folder="administrator/language">
+			<language tag="en-GB">en-GB/en-GB.com_mtree.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_mtree.sys.ini</language>
+		</languages>
+	</administration>
+	<files folder="components/com_mtree">
+		<folder>includes</folder>
+		<folder>models</folder>
+		<folder>Savant2</folder>
+		<folder>templates</folder>
+		<folder>views</folder>
+		<filename>fields.json.php</filename>
+		<filename>index.html</filename>
+		<filename>init.module.php</filename>
+		<filename>init.php</filename>
+		<filename>listlisting.php</filename>
+		<filename>methods.php</filename>
+		<filename>modulehelper.php</filename>
+		<filename>mtree.class.php</filename>
+		<filename>mtree.php</filename>
+		<filename>mtree.tools.php</filename>
+		<filename>router.php</filename>
+		<filename>rss.php</filename>
+		<filename>Savant2.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.com_mtree.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_audioplayer.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_corefeatured.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_coreprice.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_corewebsite.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_date.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_email.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_file.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_image.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_number.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_vanityurl.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_videoplayer.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_weblink.ini</language>
+		<language tag="en-GB">en-GB/en-GB.fld_year.ini</language>
+	</languages>
+	<tables>
+		<table>#__mt_archived_log</table>
+		<table>#__mt_archived_reviews</table>
+		<table>#__mt_archived_users</table>
+		<table>#__mt_cats</table>
+		<table>#__mt_cfvalues</table>
+		<table>#__mt_cfvalues_att</table>
+		<table>#__mt_cl</table>
+		<table>#__mt_claims</table>
+		<table>#__mt_clone_owners</table>
+		<table>#__mt_config</table>
+		<table>#__mt_configgroup</table>
+		<table>#__mt_customfields</table>
+		<table>#__mt_favourites</table>
+		<table>#__mt_fields_map</table>
+		<table>#__mt_fieldtypes</table>
+		<table>#__mt_images</table>
+		<table>#__mt_linkcheck</table>
+		<table>#__mt_links</table>
+		<table>#__mt_links_associations</table>
+		<table>#__mt_log</table>
+		<table>#__mt_relcats</table>
+		<table>#__mt_reports</table>
+		<table>#__mt_reviews</table>
+		<table>#__mt_searchlog</table>
+		<table>#__mt_templates</table>
+	</tables>
+	<media folder="media/com_mtree" destination="com_mtree">
+		<filename>attachments/htaccess.txt</filename>
+		<filename>attachments/index.html</filename>
+		<filename>fieldtypes/audioplayer/audio-player.js</filename>
+		<filename>fieldtypes/audioplayer/index.html</filename>
+		<filename>fieldtypes/audioplayer/player.swf</filename>
+		<filename>fieldtypes/index.html</filename>
+		<filename>fieldtypes/mskype/index.html</filename>
+		<filename>fieldtypes/mskype/skypeCheck.js</filename>
+		<filename>fieldtypes/videoplayer/index.html</filename>
+		<filename>fieldtypes/videoplayer/video-js.min.css</filename>
+		<filename>fieldtypes/videoplayer/video-js.png</filename>
+		<filename>fieldtypes/videoplayer/video-js.swf</filename>
+		<filename>fieldtypes/videoplayer/video.min.js</filename>
+		<filename>images/accept.png</filename>
+		<filename>images/add.png</filename>
+		<filename>images/anchor.gif</filename>
+		<filename>images/arrow_folder.png</filename>
+		<filename>images/arrow_folder_open.png</filename>
+		<filename>images/arrow_left.png</filename>
+		<filename>images/cats/index.html</filename>
+		<filename>images/cats/o/index.html</filename>
+		<filename>images/cats/s/index.html</filename>
+		<filename>images/comment.png</filename>
+		<filename>images/comment_add.png</filename>
+		<filename>images/comment_delete.png</filename>
+		<filename>images/delete.png</filename>
+		<filename>images/dot.gif</filename>
+		<filename>images/dtree/addfolder.gif</filename>
+		<filename>images/dtree/addpage.gif</filename>
+		<filename>images/dtree/base.gif</filename>
+		<filename>images/dtree/empty.gif</filename>
+		<filename>images/dtree/folder.gif</filename>
+		<filename>images/dtree/folderopen.gif</filename>
+		<filename>images/dtree/imgfolder.gif</filename>
+		<filename>images/dtree/imgfolder2.gif</filename>
+		<filename>images/dtree/index.html</filename>
+		<filename>images/dtree/join.png</filename>
+		<filename>images/dtree/joinbottom.png</filename>
+		<filename>images/dtree/line.png</filename>
+		<filename>images/dtree/minus.gif</filename>
+		<filename>images/dtree/minusbottom.gif</filename>
+		<filename>images/dtree/nolines_minus.gif</filename>
+		<filename>images/dtree/nolines_plus.gif</filename>
+		<filename>images/dtree/page.gif</filename>
+		<filename>images/dtree/plus.png</filename>
+		<filename>images/dtree/plusbottom.png</filename>
+		<filename>images/error.png</filename>
+		<filename>images/error_go.png</filename>
+		<filename>images/exclamation.png</filename>
+		<filename>images/folder-closed.gif</filename>
+		<filename>images/folder-open.gif</filename>
+		<filename>images/folder.png</filename>
+		<filename>images/folder_add.png</filename>
+		<filename>images/folderopenbig.gif</filename>
+		<filename>images/group.png</filename>
+		<filename>images/group_error.png</filename>
+		<filename>images/heart_add.png</filename>
+		<filename>images/heart_delete.png</filename>
+		<filename>images/house.png</filename>
+		<filename>images/icon-16-mosetstree.png</filename>
+		<filename>images/index.html</filename>
+		<filename>images/listings/index.html</filename>
+		<filename>images/listings/m/index.html</filename>
+		<filename>images/listings/o/index.html</filename>
+		<filename>images/listings/s/index.html</filename>
+		<filename>images/logo.png</filename>
+		<filename>images/mosetstree-icon.png</filename>
+		<filename>images/noimage_thb.png</filename>
+		<filename>images/page_white.png</filename>
+		<filename>images/page_white_add.png</filename>
+		<filename>images/page_white_edit.png</filename>
+		<filename>images/rss.png</filename>
+		<filename>images/star_00.png</filename>
+		<filename>images/star_05.png</filename>
+		<filename>images/star_10.png</filename>
+		<filename>images/table_link.png</filename>
+		<filename>images/user_comment.png</filename>
+		<filename>images/user_green.png</filename>
+		<filename>images/vdot.gif</filename>
+		<filename>images/zoom.png</filename>
+		<filename>index.html</filename>
+		<filename>js/addlisting.js</filename>
+		<filename>js/blank.gif</filename>
+		<filename>js/category.js</filename>
+		<filename>js/dtree.css</filename>
+		<filename>js/dtree.js</filename>
+		<filename>js/fancy_close.png</filename>
+		<filename>js/fancy_loading.png</filename>
+		<filename>js/fancy_nav_left.png</filename>
+		<filename>js/fancy_nav_right.png</filename>
+		<filename>js/fancy_shadow_e.png</filename>
+		<filename>js/fancy_shadow_n.png</filename>
+		<filename>js/fancy_shadow_ne.png</filename>
+		<filename>js/fancy_shadow_nw.png</filename>
+		<filename>js/fancy_shadow_s.png</filename>
+		<filename>js/fancy_shadow_se.png</filename>
+		<filename>js/fancy_shadow_sw.png</filename>
+		<filename>js/fancy_shadow_w.png</filename>
+		<filename>js/fancy_title_left.png</filename>
+		<filename>js/fancy_title_main.png</filename>
+		<filename>js/fancy_title_over.png</filename>
+		<filename>js/fancy_title_right.png</filename>
+		<filename>js/fancybox-x.png</filename>
+		<filename>js/fancybox-y.png</filename>
+		<filename>js/fancybox.png</filename>
+		<filename>js/index.html</filename>
+		<filename>js/jquery-1.8.3.min.js</filename>
+		<filename>js/jquery-ui-1.8.24.custom.min.js</filename>
+		<filename>js/jquery.fancybox-1.3.4.css</filename>
+		<filename>js/jquery.fancybox-1.3.4.pack.js</filename>
+		<filename>js/map.js</filename>
+		<filename>js/vote.js</filename>
+	</media>
+</extension>

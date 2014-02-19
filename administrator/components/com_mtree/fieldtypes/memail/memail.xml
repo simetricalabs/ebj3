@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>memail</name>
+	<caption>E-mail</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>E-mail field type validates the e-mail entered by users before storing it to the database. The e-mail will be displayed with the 'mailto' protocol in the front-end. To protect against e-mail harvester, e-mail is cloaked through javascript.</description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/memail">
+			<filename>memail.php</filename>
+			<filename>memail.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/memail.xml</server>
+	</updateservers>
+</extension>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>corewebsite</name>
+	<caption>Website</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/corewebsite">
+			<filename>corewebsite.php</filename>
+			<filename>corewebsite.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.fld_corewebsite.ini</language>
+	</languages>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="openNewWindow" type="radio" default="1" class="btn-group" label="Open New Window" description="Open a new window when the link is clicked.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="useMTVisitRedirect" type="radio" default="1" class="btn-group" label="Use internal redirect" description="Using internet redirect will bring visitors through an internal URL before redirecting them to the actual website. This allows Mosets Tree to keep track of the hits and hides the actualy URL from visitor.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="text" type="text" default="" label="Link Text" description="Use this parameter to specify the link text. If left empty, the full URL will be displayed as the link's text." />
+				<field name="maxUrlLength" type="text" default="60" label="Max. URL Length" description="Enter the maximum URL's length before it is clipped" />
+				<field name="clippedSymbol" type="text" default="..." label="Clipped symbol" />
+
+				<field name="hideProtocolOutput" type="radio" default="1" class="btn-group" label="Hide 'http://' during output">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showGo" type="radio" default="1" class="btn-group" label="Show Go button" description="This Go button will be available in the back-end Edit Listing page to allow admin a fast way to open the listing's website.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showSpider" type="radio" default="0" class="btn-group" label="Show Spider button" description="When enabled, a Spider button will be available next to the website input field in back-end. When the button is clicked, it will check the website in the backgroun and populate the listing's META Keys and META Description field.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field type="spacer" name="@spacer" label="" description=""/>
+
+				<field name="useNofollow" type="radio" default="0" class="btn-group" label="Use nofollow attribute" description="nofollow is an HTML attribute value used to instruct some search engines that a hyperlink should not influence the link target's ranking in the search engine's index. Enabling this parameter will append the nofollow attribute to all links created using this field type.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/corewebsite.xml</server>
+	</updateservers>
+</extension>

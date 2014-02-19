@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_browse.xml 2010 2013-08-02 09:32:44Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_browse</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2005-2013 Mosets Consulting http://www.mosets.com/</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_BROWSE_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_browse">mod_mt_browse.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_browse.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_browse.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+	
+				<field name="layout" type="radio" default="default" label="MOD_MT_BROWSE_FIELD_LAYOUT_LABEL" description="MOD_MT_BROWSE_FIELD_LAYOUT_DESC" class="radio btn-group">
+					<option value="default">MOD_MT_BROWSE_FIELD_VALUE_MENU</option>
+					<option value="tree">MOD_MT_BROWSE_FIELD_VALUE_FOLDERTREE</option>
+				</field>
+				<field name="show_empty_cat" type="list" default="-1" label="MOD_MT_BROWSE_FIELD_SHOWEMPTYCAT_LABEL" description="MOD_MT_BROWSE_FIELD_SHOWEMPTYCAT_DESC">
+					<option value="-1">JDEFAULT</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_totalcats" type="radio" default="0" label="MOD_MT_BROWSE_FIELD_SHOWCATCOUNT_LABEL" description="MOD_MT_BROWSE_FIELD_SHOWCATCOUNT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_totallisting" type="radio" default="0" label="MOD_MT_BROWSE_FIELD_SHOWLISTINGCOUNT_LABEL" description="MOD_MT_BROWSE_FIELD_SHOWLISTINGCOUNT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+		
+				<field name="@spacer" type="spacer" default="" label="" />
+		
+				<field name="currentcat_class" type="text" default="sublevel" label="MOD_MT_BROWSE_FIELD_CURRENTCATCLASS_LABEL" />
+				<field name="subcat_class" type="text" default="sublevel" label="MOD_MT_BROWSE_FIELD_SUBCATCLASS_LABEL" />
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_BROWSE_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_BROWSE_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_BROWSE_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_BROWSE_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_MT_BROWSE_FIELD_CLASS_LABEL"
+					description="MOD_MT_BROWSE_FIELD_CLASS_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

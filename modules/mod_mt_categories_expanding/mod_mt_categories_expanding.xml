@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_categories_expanding.xml 2010 2013-08-02 09:32:44Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_categories_expanding</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2005-2013 Mosets Consulting. All rights reserved.</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_CATEGORIES_EXPANDING_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_categories_expanding">mod_mt_categories_expanding.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_categories_expanding.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_categories_expanding.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+				<field name="primary_order" type="list" default="-1" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_PRIMARYORDER_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="ordering">MOD_MT_CATEGORIES_EXPANDING_VALUE_ORDERING</option>
+					<option value="cat_name">MOD_MT_CATEGORIES_EXPANDING_VALUE_NAME</option>
+					<option value="cat_featured">MOD_MT_CATEGORIES_EXPANDING_VALUE_FEATURED</option>
+					<option value="cat_created">MOD_MT_CATEGORIES_EXPANDING_VALUE_CREATED</option>
+					<option value="cat_cats">MOD_MT_CATEGORIES_EXPANDING_VALUE_NUMOFCATS</option>
+					<option value="cat_links">MOD_MT_CATEGORIES_EXPANDING_VALUE_NUMOFLISTINGS</option>
+				</field>
+				<field name="primary_sort" type="list" default="-1" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_PRIMARYSORT_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="asc">MOD_MT_CATEGORIES_EXPANDING_VALUE_ASCENDING</option>
+					<option value="desc">MOD_MT_CATEGORIES_EXPANDING_VALUE_DESCENDING</option>
+				</field>
+				<field name="secondary_order" type="list" default="-1" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_SECONDARYORDER_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="ordering">MOD_MT_CATEGORIES_EXPANDING_VALUE_ORDERING</option>
+					<option value="cat_name">MOD_MT_CATEGORIES_EXPANDING_VALUE_NAME</option>
+					<option value="cat_featured">MOD_MT_CATEGORIES_EXPANDING_VALUE_FEATURED</option>
+					<option value="cat_created">MOD_MT_CATEGORIES_EXPANDING_VALUE_CREATED</option>
+					<option value="cat_cats">MOD_MT_CATEGORIES_EXPANDING_VALUE_NUMOFCATS</option>
+					<option value="cat_links">MOD_MT_CATEGORIES_EXPANDING_VALUE_NUMOFLISTINGS</option>
+				</field>
+				<field name="secondary_sort" type="list" default="-1" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_SECONDARYSORT_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="asc">MOD_MT_CATEGORIES_EXPANDING_VALUE_ASCENDING</option>
+					<option value="desc">MOD_MT_CATEGORIES_EXPANDING_VALUE_DESCENDING</option>
+				</field>
+				<field name="show_empty_cat" type="list" default="-1" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_SHOWEMPTYCAT_LABEL" description="MOD_MT_CATEGORIES_EXPANDING_FIELD_SHOWEMPTYCAT_DESC">
+					<option value="-1">JDEFAULT</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="@spacer" type="spacer" />
+
+				<field name="expand_level_1_categories" type="radio" default="0" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_EXPANDLEVEL1CAT_LABEL" description="MOD_MT_CATEGORIES_EXPANDING_FIELD_EXPANDLEVEL1CAT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+
+				<field name="show_totalcats" type="radio" default="0" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_SHOWCATCOUNT_LABEL" description="MOD_MT_CATEGORIES_EXPANDING_FIELD_SHOWCATCOUNT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_totallisting" type="radio" default="0" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_SHOWLISTINGCOUNT_LABEL" description="MOD_MT_CATEGORIES_EXPANDING_FIELD_SHOWLISTINGCOUNT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="hide_active_cat_count" type="radio" default="1" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_HIDEACTIVECATCOUNT_LABEL" description="MOD_MT_CATEGORIES_EXPANDING_FIELD_HIDEACTIVECATCOUNT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="task" type="list" default="listcats" label="MOD_MT_CATEGORIES_EXPANDING_FIELD_TASK_LABEL">
+					<option value="listcats">MOD_MT_CATEGORIES_EXPANDING_VALUE_LISTCATS</option>
+					<option value="listall">MOD_MT_CATEGORIES_EXPANDING_VALUE_LISTALL</option>
+				</field>
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_CATEGORIES_EXPANDING_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_CATEGORIES_EXPANDING_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_CATEGORIES_EXPANDING_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_CATEGORIES_EXPANDING_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_CATEGORIES_EXPANDING_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_CATEGORIES_EXPANDING_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_CATEGORIES_EXPANDING_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_CATEGORIES_EXPANDING_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_MT_CATEGORIES_EXPANDING_FIELD_CLASS_LABEL"
+					description="MOD_MT_CATEGORIES_EXPANDING_FIELD_CLASS_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

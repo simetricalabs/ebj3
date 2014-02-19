@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: mod_mt_categories.xml 2010 2013-08-02 09:32:44Z cy $ -->
+<extension type="module" version="3.5.0" client="site"	method="upgrade">
+	<name>mod_mt_categories</name>
+	<author>Mosets Consulting</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>(C) 2005-2013 Mosets Consulting http://www.mosets.com/</copyright>
+    	<license>GNU General Public License</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.5.0</version>
+	<description>MOD_MT_CATEGORIES_XML_DESC</description>
+	<files>
+		<filename module="mod_mt_categories">mod_mt_categories.php</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_mt_categories.ini</language>
+		<language tag="en-GB">en-GB.mod_mt_categories.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_mtree/elements">
+				<field name="primary_order" type="list" default="-1" label="MOD_MT_CATEGORIES_FIELD_PRIMARYORDER_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="ordering">MOD_MT_CATEGORIES_VALUE_ORDERING</option>
+					<option value="cat_name">MOD_MT_CATEGORIES_VALUE_NAME</option>
+					<option value="cat_featured">MOD_MT_CATEGORIES_VALUE_FEATURED</option>
+					<option value="cat_created">MOD_MT_CATEGORIES_VALUE_CREATED</option>
+					<option value="cat_cats">MOD_MT_CATEGORIES_VALUE_NUMOFCATS</option>
+					<option value="cat_links">MOD_MT_CATEGORIES_VALUE_NUMOFLISTINGS</option>
+				</field>
+				<field name="primary_sort" type="list" default="-1" label="MOD_MT_CATEGORIES_FIELD_PRIMARYSORT_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="asc">MOD_MT_CATEGORIES_VALUE_ASCENDING</option>
+					<option value="desc">MOD_MT_CATEGORIES_VALUE_DESCENDING</option>
+				</field>
+				<field name="secondary_order" type="list" default="-1" label="MOD_MT_CATEGORIES_FIELD_SECONDARYORDER_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="ordering">MOD_MT_CATEGORIES_VALUE_ORDERING</option>
+					<option value="cat_name">MOD_MT_CATEGORIES_VALUE_NAME</option>
+					<option value="cat_featured">MOD_MT_CATEGORIES_VALUE_FEATURED</option>
+					<option value="cat_created">MOD_MT_CATEGORIES_VALUE_CREATED</option>
+					<option value="cat_cats">MOD_MT_CATEGORIES_VALUE_NUMOFCATS</option>
+					<option value="cat_links">MOD_MT_CATEGORIES_VALUE_NUMOFLISTINGS</option>
+				</field>
+				<field name="secondary_sort" type="list" default="-1" label="MOD_MT_CATEGORIES_FIELD_SECONDARYSORT_LABEL">
+					<option value="-1">JDEFAULT</option>
+					<option value="asc">MOD_MT_CATEGORIES_VALUE_ASCENDING</option>
+					<option value="desc">MOD_MT_CATEGORIES_VALUE_DESCENDING</option>
+				</field>
+				<field name="show_empty_cat" type="list" default="-1" label="MOD_MT_CATEGORIES_FIELD_SHOWEMPTYCAT_LABEL" description="MOD_MT_CATEGORIES_FIELD_SHOWEMPTYCAT_DESC">
+					<option value="-1">JDEFAULT</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_totalcats" type="radio" default="0" label="MOD_MT_CATEGORIES_FIELD_SHOWCATCOUNT_LABEL" description="MOD_MT_CATEGORIES_FIELD_SHOWCATCOUNT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="show_totallisting" type="radio" default="0" label="MOD_MT_CATEGORIES_FIELD_SHOWLISTINGCOUNT_LABEL" description="MOD_MT_CATEGORIES_FIELD_SHOWLISTINGCOUNT_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+				<field name="show_back" type="radio" default="0" label="MOD_MT_CATEGORIES_FIELD_ALWAYSSHOWBACKLINK_LABEL" description="MOD_MT_CATEGORIES_FIELD_ALWAYSSHOWBACKLINK_DESC" class="radio btn-group">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="back_symbol" type="text" default="&lt;&lt;" label="MOD_MT_CATEGORIES_FIELD_BACKSYMBOL_LABEL" description="MOD_MT_CATEGORIES_FIELD_BACKSYMBOL_DESC" />
+			</fieldset>
+			<fieldset name="assignment">
+				<field
+					name="module_assignment"
+					type="mtmoduleassignment"
+					label="COM_MODULES_MODULE_ASSIGN" />
+				<field
+					name="categories_assignment"
+					type="categoriesassignment"
+					label="MOD_MT_CATEGORIES_FIELD_CATEGORIES_ASSIGNMENT_LABEL"
+					description="MOD_MT_CATEGORIES_FIELD_CATEGORIES_ASSIGNMENT_DESC" />
+				<field
+					name="pages_assignment"
+					type="mtpagesassignment"
+					label="MOD_MT_CATEGORIES_FIELD_PAGES_ASSIGNMENT_LABEL"
+					description="MOD_MT_CATEGORIES_FIELD_PAGES_ASSIGNMENT_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_MT_CATEGORIES_FIELD_CLASS_LABEL"
+					description="MOD_MT_CATEGORIES_FIELD_CLASS_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

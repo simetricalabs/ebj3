@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<specific>
+	<version>2.3</version> 
+	<config>
+		<fields>
+            <fieldset name="s50" label="TPL_FIELD_TS_LABEL">
+                <field name="s51spacer_notice" label="&lt;span style=&quot;display:block;&quot;&gt;Make sure to hover your mouse over each title in this column for a full description of what each field does.&lt;/span&gt;" type="spacer" />
+                
+				<field name="xml_s5_facebook" type="text" default="" label="TPL_FACEBOOK_LABEL" description="TPL_FACEBOOK_DESC" />
+				<field name="xml_s5_linkedin" type="text" default="" label="TPL_LINKEDIN_LABEL" description="TPL_LINKEDIN_DESC" />
+				<field name="xml_s5_twitter" type="text" default="" label="TPL_TWITTER_LABEL" description="TPL_TWITTER_DESC" />
+				<field name="xml_s5_rss" type="text" default="" label="TPL_RSS_LABEL" description="TPL_RSS_DESC" />		
+				<field name="xml_s5_fonts_highlight" type="select:list" default="" label="TPL_FIELD_SITEFONT_LABEL" description="TPL_FIELD_SITEFONT_DESC"></field>
+				<field name="xml_s5_fonts_highlight_style" type="text" label="TPL_FIELD_FONTSTYLE_HIGHLIGHT_LABEL" description="TPL_FIELD_FONTSTYLE_HIGHLIGHT_DESC" />
+				
+				<field name="xml_s5_fonts_highlight_iacf" type="select:list" default="" label="TPL_FIELD_SITEFONT_IACF_LABEL" description="TPL_FIELD_SITEFONT_IACF_DESC"></field>
+				<field name="xml_s5_fonts_highlight_iacf_style" type="text" label="TPL_FIELD_FONTSTYLE_HIGHLIGHT_IACF_LABEL" description="TPL_FIELD_FONTSTYLE_IACF_DESC" />
+				
+				<field name="xml_s5_toprow3area2" type="text" default="" label="TPL_BACKGROUNDTOPROW3_LABEL" description="TPL_BACKGROUNDTOPROW3_DESC" />		
+				<field name="xml_s5_background" type="text" default="" label="TPL_BACKGROUNDFOOTERBACK_LABEL" description="TPL_BACKGROUNDFOOTERBACK_DESC" />		
+				
+				<field name="xml_s5_highlight_one" type="text:6:6" default="" label="TPL_HIGHLIGHTONE_LABEL" description="TPL_HIGHLIGHTONE_DESC" />
+				<field name="xml_s5_highlight_two" type="text:6:6" default="" label="TPL_HIGHLIGHTTWO_LABEL" description="TPL_HIGHLIGHTTWO_DESC" />
+				
+				
+            </fieldset>
+		</fields>
+	</config>	
+</specific>

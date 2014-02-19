@@ -1,0 +1,5 @@
+link_name,cat_id,link_desc,user_id,link_hits,link_votes,link_rating,link_featured,metakey,metadesc,internal_notes,address,city,state,country,postcode,telephone,fax,email,website,price,25,26
+Sample import listing,0,sample description,,0,0,0,1,"meta keys","meta description",,,,,,,,,email@127.0.0.1,http://www.mosets.com/,,sample text,http://www.mosets.com/tree/
+Mosets,"2,6","This listing will be imported in to category with ID 2 and 6. Since 2 is the first category ID here, it will be the primary ID of the listing.",,0,0,0,1,"Joomla!, Mosets Tree, directory extension",,,,,,,,,,support@mosets.com,http://www.mosets.com/tree/,,sample text,http://www.mosets.com/
+Root Listing,,"This listing has an empty category field. It will be imported to the root of your directory",,0,0,0,1,,,,,,,,,,,,,,,
+Listing name,,,,,,,,,,,,,,,,,,,,,,

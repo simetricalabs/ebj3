@@ -1,0 +1,19 @@
+/* @group Tags & mod_mt_tagcloud */
+.tagcloud {
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+.tagcloud li
+{
+	list-style-type: none;
+	float: left;
+	display:inline;
+	padding: 1px 1px;
+	margin: 0px 5px 0 0;
+}
+.customfieldcaption {
+	margin-right: 5px;
+}
+/* @end */

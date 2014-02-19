@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_MTREE_MENU_TASK_NAME_MYPAGE" option="com_mtree_mypage_view_default_option">
+		<message><![CDATA[COM_MTREE_MENU_TASK_MSG_MYPAGE]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_mtree/jformfields">
+			<field name="type" type="list" 
+				default="LISTING" 
+				extension="com_mtree" 
+				required="true"
+				label="COM_MTREE_MENU_TASK_NAME_MYPAGE_TYPE_LABEL" 
+			>
+			<option value="listing">COM_MTREE_MENU_TASK_MYPAGE_TYPE_OPTION_LISTING</option>
+			<option value="review">COM_MTREE_MENU_TASK_MYPAGE_TYPE_OPTION_REVIEW</option>
+			<option value="favourite">COM_MTREE_MENU_TASK_MYPAGE_TYPE_OPTION_FAVOURITE</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>
