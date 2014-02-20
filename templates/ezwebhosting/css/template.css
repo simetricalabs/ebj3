@@ -782,14 +782,15 @@ padding-right:0px !important;}
 	
 #login-form .input-prepend input {
 	width:94% !important;}
-	
+
+/*	
 #cboxLoadedContent #login-form .input-prepend input {
 	margin-top: 10px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius:3px;	
     padding: 9px;}	
-	
+*/	
 	
 .item-page .dropdown-toggle, .blog .dropdown-toggle, .item .dropdown-toggle {
 	-webkit-border-radius: 4px !important;
@@ -1198,7 +1199,7 @@ p.readmore a.btn {
 
 /* S5 BOX
 ----------------------------------------------------------- */	
-
+/*
 #cboxContent, #cboxLoadingOverlay {
 	background:#ffffff;}
 	
@@ -1309,7 +1310,7 @@ width:252px !important;
 	
 #cboxTopCenter {
 	height:50px !important;}
-	
+*/	
 
 /* S5 TAB SHOW
 ----------------------------------------------------------- */	

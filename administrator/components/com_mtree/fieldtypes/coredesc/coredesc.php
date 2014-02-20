@@ -41,7 +41,7 @@ class mFieldType_coredesc extends mFieldType {
 				. ' class="'.($this->isRequired() ? ' required':'').'"'
 				. ' name="' . $this->getInputFieldName(1).'"'
 				. ' id="' . $this->getInputFieldId(1) . '"'
-				. ' style="width:75%;height:' . $this->getSize() . 'px">' 
+				. ' style="width:42%;height:' . $this->getSize() . 'px">' 
 				. htmlspecialchars($value)
 				. '</textarea>';
 		}

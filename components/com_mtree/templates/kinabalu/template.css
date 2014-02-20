@@ -237,13 +237,13 @@ padding:0 .2em;
 }*/
 
 div.featured {
-background-color:#D0E4F0;
+background-color:#F5FFFA;
 }
 
 .listing-summary {
 float:left;
 margin-bottom:1.5em;
-background-color:#E6F0F2;
+background-color:#F5FFFA;
 -moz-border-radius:5px;
 -webkit-border-radius:5px;
 border-radius:5px;
@@ -452,7 +452,7 @@ padding:5px;
 
 .listing-summary img.image-left {
 border:1px solid #fff;
-background-color:#E6F0F2;
+background-color:#F5FFFA;
 display:block;
 float:left;
 clear:left;

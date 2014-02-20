@@ -1,20 +1,11 @@
 <?php
 require('vertex/cms_core_functions.php');
 s5_restricted_access_call();
-/*
------------------------------------------
-EZ Web Hosting - Shape 5 Club Design
------------------------------------------
-Site:      shape5.com
-Email:     contact@shape5.com
-@license:  Copyrighted Commercial Software
-@copyright (C) 2013 Shape 5 LLC
-
-*/
 
 ?>
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" <?php s5_language_call(); ?>>
+
+ <!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" <?php s5_language_call(); ?> >
 <head>
 <?php s5_head_call(); ?>
 <?php
@@ -23,11 +14,15 @@ require("vertex/general_functions.php");
 require("vertex/module_calcs.php");
 require("vertex/includes/vertex_includes_header.php");
 
+// Load chosen.css
+JHtml::_('formbehavior.chosen', 'select');
+
 ?>
 
 <?php if(($s5_fonts_highlight != "Arial") && ($s5_fonts_highlight != "Helvetica") && ($s5_fonts_highlight != "Sans-Serif")) { ?>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<?php echo str_replace(" ","%20",$s5_fonts_highlight); if ($s5_fonts_highlight_style != "") { echo ":".$s5_fonts_highlight_style; } ?>" />
 <?php } ?>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone%20Kaffeesatz">
 
 <style type="text/css"> 
 body, .inputbox, input{font-family: '<?php echo $s5_fonts;?>',Helvetica,Arial,Sans-Serif ;} 
@@ -994,7 +989,7 @@ body  {	background:#252525 url(<?php echo $s5_background; ?>) repeat-x bottom;}
 	
 </div>
 <!-- End Body Padding -->
-	
+
 
 </body>
 </html>

@@ -47,7 +47,7 @@ class mFieldType_monthYear extends mFieldType {
 		}
 		
 		$html = '';
-		$html .= '<select name="' . $this->getInputFieldName(1) . '">';
+		$html .= '<select name="' . $this->getInputFieldName(1) . '" style="width:150px">';
 		$html .= '<option value="">&nbsp;</option>';
 		for($month=1;$month<=12;$month++) {
 			$html .= '<option value="' . $month . '"';
@@ -58,7 +58,7 @@ class mFieldType_monthYear extends mFieldType {
 		}
 		$html .= '</select>';
 		
-		$html .= '<select name="' . $this->getInputFieldName(2) . '">';
+		$html .= '<select name="' . $this->getInputFieldName(2) . '" style="width:120px">';
 		$html .= '<option value="">&nbsp;</option>';
 		for($year=$endYear;$year>=$startYear;$year--) {
 			$html .= '<option value="' . $year . '"';

@@ -3,6 +3,7 @@
 <?php if( $this->mtconf['allow_imgupload'] && $this->mtconf['images_per_listing'] > 0 ) { ?>
 <script language="javascript" type="text/javascript" src="<?php echo $this->jconf['live_site'] . $this->mtconf['relative_path_to_js']; ?>jquery-ui-1.8.24.custom.min.js"></script>
 <?php } ?>
+
 <script language="javascript" type="text/javascript">
 	jQuery.noConflict();
 	var JURI_ROOT='<?php echo JURI::root(); ?>';
@@ -118,7 +119,7 @@
 </script>
 
  
-<h2 class="contentheading"><?php echo ($this->link->link_id) ? JText::_( 'COM_MTREE_PAGE_HEADER_EDIT_LISTING' ) : 	JText::_( 'COM_MTREE_PAGE_HEADER_ADD_LISTING' ); ?></h2>
+<h2 style="display:none;" class="contentheading"><?php echo ($this->link->link_id) ? JText::_( 'COM_MTREE_PAGE_HEADER_EDIT_LISTING' ) : 	JText::_( 'COM_MTREE_PAGE_HEADER_ADD_LISTING' ); ?></h2>
 
 <form action="<?php echo JRoute::_("index.php") ?>" method="post" enctype="multipart/form-data" name="adminForm" id="adminForm" class="form-horizontal form-validate">
 	<?php if( isset($this->warn_duplicate) && $this->warn_duplicate == 1 ) { ?>
@@ -128,7 +129,7 @@
 	<div class="control-group">
 		<div class="controls">
 			<button type="button" onclick="javascript:submitbutton('savelisting')" class="btn btn-primary"><?php echo JText::_( 'COM_MTREE_SUBMIT_LISTING' ) ?></button>
-			<button type="button" onclick="history.back();" class="btn"><?php echo JText::_( 'COM_MTREE_CANCEL' ) ?></button>
+			<button type="button" onclick="history.back();" class="btn  btn-primary"><?php echo JText::_( 'COM_MTREE_CANCEL' ) ?></button>
 		</div>
 	</div>
 
@@ -303,7 +304,7 @@ if( $this->mtconf['allow_imgupload'] && $this->mtconf['images_per_listing'] > 0 
 	<div class="control-group">
 		<div class="controls">
 			<button type="button" onclick="javascript:submitbutton('savelisting')" class="btn btn-primary"><?php echo JText::_( 'COM_MTREE_SUBMIT_LISTING' ) ?></button>
-			<button type="button" onclick="history.back();" class="btn"><?php echo JText::_( 'COM_MTREE_CANCEL' ) ?></button>
+			<button type="button" onclick="history.back();" class="btn btn-primary"><?php echo JText::_( 'COM_MTREE_CANCEL' ) ?></button>
 		</div>
 	</div>
 </form>

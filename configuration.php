@@ -19,8 +19,8 @@ class JConfig {
 	public $dbprefix = 'ebj3_';
 	public $live_site = '';
 	public $secret = 'KYWdb5bUvl8JxKCT';
-	public $gzip = '0';
-	public $error_reporting = 'default';
+	public $gzip = '1';
+	public $error_reporting = 'none';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '';
 	public $ftp_port = '';
@@ -28,7 +28,7 @@ class JConfig {
 	public $ftp_pass = '';
 	public $ftp_root = '';
 	public $ftp_enable = '0';
-	public $offset = 'UTC';
+	public $offset = 'America/Bogota';
 	public $mailonline = '1';
 	public $mailer = 'mail';
 	public $mailfrom = 'julian.echeverry@inncubated.com';
@@ -46,11 +46,11 @@ class JConfig {
 	public $MetaDesc = '';
 	public $MetaKeys = '';
 	public $MetaTitle = '1';
-	public $MetaAuthor = '1';
+	public $MetaAuthor = '0';
 	public $MetaVersion = '0';
 	public $robots = '';
 	public $sef = '1';
-	public $sef_rewrite = '0';
+	public $sef_rewrite = '1';
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';

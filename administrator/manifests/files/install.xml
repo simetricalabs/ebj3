@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="file"  method="upgrade">
+
+   <name>Traducción al español</name>
+   <tag>es-ES</tag>
+   <version>2.2.5</version>
+   <creationDate>15 May 2012</creationDate>
+   <author>Diego Hagopian</author>
+   <authorEmail>webmaster@madrynmultimedios.com</authorEmail>
+   <authorUrl>www.madrynmultimedios.com</authorUrl>
+   <copyright>Copyright © 2012 - All rights reserved.</copyright>
+   <license>GNU General Public License v2.0</license>
+   <description><![CDATA[Paquete de traducción al idioma español de Mosets Tree]]></description>
+   
+   <fileset>
+      <files folder="languages-admin/es-ES" target="administrator/language/es-ES">
+        <filename>es-ES.com_mtree.ini</filename>
+        <filename>es-ES.com_mtree.sys.ini</filename>
+		<filename>es-ES.com_mtimporter.sys.ini</filename>
+      </files>
+   
+   
+   
+      <files folder="languages-site/es-ES" target="language/es-ES">
+        <filename>es-ES.com_mtree.ini</filename>
+		<filename>es-ES.mod_mt_alphaindex.ini</filename>
+		<filename>es-ES.mod_mt_alphaindex.sys.ini</filename>
+		<filename>es-ES.mod_mt_browse.ini</filename>
+		<filename>es-ES.mod_mt_browse.sys.ini</filename>
+		<filename>es-ES.mod_mt_categories.ini</filename>
+		<filename>es-ES.mod_mt_categories.sys.ini</filename>
+		<filename>es-ES.mod_mt_categories_expanding.ini</filename>
+		<filename>es-ES.mod_mt_categories_expanding.sys.ini</filename>
+		<filename>es-ES.mod_mt_dtree.ini</filename>
+		<filename>es-ES.mod_mt_dtree.sys.ini</filename>
+		<filename>es-ES.mod_mt_lastupdate.ini</filename>
+		<filename>es-ES.mod_mt_lastupdate.sys.ini</filename>
+		<filename>es-ES.mod_mt_listing.ini</filename>
+		<filename>es-ES.mod_mt_listing.sys.ini</filename>
+		<filename>es-ES.mod_mt_menu.ini</filename>
+		<filename>es-ES.mod_mt_menu.sys.ini</filename>
+		<filename>es-ES.mod_mt_search.ini</filename>
+		<filename>es-ES.mod_mt_search.sys.ini</filename>
+		<filename>es-ES.mod_mt_staticcats.ini</filename>
+		<filename>es-ES.mod_mt_staticcats.sys.ini</filename>
+		<filename>es-ES.mod_mt_stats.ini</filename>
+		<filename>es-ES.mod_mt_stats.sys.ini</filename>
+		<filename>es-ES.mod_mt_votedbest.ini</filename>
+		<filename>es-ES.mod_mt_tagcloud.ini</filename>
+		<filename>es-ES.mod_mt_tagcloud.sys.ini</filename>
+		<filename>es-ES.plg_extension_mosets.ini</filename>
+		<filename>es-ES.plg_extension_mosets.sys.ini</filename>
+		<filename>es-ES.plg_finder_mtree_listings.ini</filename>
+		<filename>es-ES.plg_search_mtree.ini</filename>
+		<filename>es-ES.plg_search_mtree.sys.ini</filename>
+		<filename>es-ES.plg_user_profilepicture.ini</filename>
+		<filename>es-ES.plg_user_profilepicture.sys.ini</filename>
+		<filename>es-ES.tpl_mosets_kinabalu.ini</filename>
+		<filename>es-ES.fld_audioplayer.ini</filename>
+		<filename>es-ES.fld_coreprice.ini</filename>
+		<filename>es-ES.fld_corewebsite.ini</filename>
+		<filename>es-ES.fld_image.ini</filename>
+		<filename>es-ES.fld_mfile.ini</filename>
+		<filename>es-ES.fld_videoplayer.ini</filename>
+		<filename>es-ES.lib_profilepicture.sys.ini</filename>
+		<filename>es-ES.mod_mt_filter.ini</filename>
+		<filename>es-ES.mod_mt_filter.sys.ini</filename>
+      </files>
+   </fileset>
+</extension>

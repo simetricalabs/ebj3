@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="jcomments" version="2.5" method="upgrade">
+    <name>JComments - Social Login</name>
+    <creationDate>09/09/2013</creationDate>
+    <author>smart</author>
+    <copyright>(c) 2012-2013 JoomlaTune.ru</copyright>
+    <authorEmail>smart@joomlatune.ru</authorEmail>
+    <authorUrl>http://www.joomlatune.ru</authorUrl>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.0.8</version>
+    <description>PLG_JCOMMENTS_SLOGIN_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="slogin">slogin.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="plg_jcomments_slogin" folder="media">
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+    </media>
+    <languages folder="language">
+        <language tag="da-DK">da-DK/da-DK.plg_jcomments_slogin.ini</language>
+        <language tag="da-DK">da-DK/da-DK.plg_jcomments_slogin.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_jcomments_slogin.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_jcomments_slogin.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_jcomments_slogin.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_jcomments_slogin.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_jcomments_slogin.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_jcomments_slogin.sys.ini</language>
+        <language tag="sv-SE">sv-SE/sv-SE.plg_jcomments_slogin.ini</language>
+        <language tag="sv-SE">sv-SE/sv-SE.plg_jcomments_slogin.sys.ini</language>
+        <language tag="uk-UA">uk-UA/uk-UA.plg_jcomments_slogin.ini</language>
+        <language tag="uk-UA">uk-UA/uk-UA.plg_jcomments_slogin.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="pretext"
+                        type="textarea"
+                        filter="safehtml"
+                        cols="30"
+                        rows="5"
+                        label="PLG_JCOMMENTS_SLOGIN_FIELD_PRE_TEXT_LABEL"
+                        description="PLG_JCOMMENTS_SLOGIN_FIELD_PRE_TEXT_DESC"/>
+
+                <field
+                        name="css"
+                        type="radio"
+                        default="1"
+                        label="PLG_JCOMMENTS_SLOGIN_FIELD_CSS_LABEL"
+                        description="PLG_JCOMMENTS_SLOGIN_FIELD_CSS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="1" name="JComments Social Login">http://www.joomlatune.ru/updates/plg-jcomments-slogin.xml</server>
+    </updateservers>
+</extension>

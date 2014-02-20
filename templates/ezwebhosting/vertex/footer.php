@@ -3,5 +3,5 @@
 ?>
 <span class="footerc">
 Copyright &copy; <?php echo $s5_cur_year;?>.  <?php echo $s5_csite_name;?>.
-Designed by Shape5.com <a href="http://www.shape5.com/" title="Visit Shape5.com Joomla Template Club" target="blank" class="footerc">Joomla Templates</a>
+Powered by InncubatED.com <a href="http://www.inncubated.com/" title="Visit InncubatED Education Startup Incubator" target="blank" class="footerc">Education Startup Incubator</a>
 </span>
