@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_categories.php 1967 2013-07-16 05:04:58Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -27,7 +26,7 @@ $back_symbol		= htmlspecialchars($params->get( 'back_symbol', '<<' ));
 $link_id	= JFactory::getApplication()->input->getInt('link_id');
 $cat_id		= JFactory::getApplication()->input->getInt('cat_id');
 
-$cache =& JFactory::getCache('mod_mt_categories');
+$cache = JFactory::getCache('mod_mt_categories');
 
 $cat_id		= $cache->call( array('modMTCategoriesHelper','getCategoryId'), $link_id, $cat_id );
 $categories	= $cache->call( array('modMTCategoriesHelper','getCategories'), $params, $cat_id, $link_id );

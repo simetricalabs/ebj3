@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mtree.php 1946 2013-07-04 14:40:24Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2010 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -60,7 +59,7 @@ class plgSearchMtree extends JPlugin
 	
 		require( JPATH_ROOT.'/components/com_mtree/init.php' );
 
-		$db 		=& JFactory::getDBO();
+		$db 		= JFactory::getDBO();
 		$nullDate	= $db->getNullDate();
 		$now 		= JFactory::getDate();
 

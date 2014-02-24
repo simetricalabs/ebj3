@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: helper.php 1936 2013-07-01 13:11:28Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2013 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -15,8 +14,8 @@ require_once( JPATH_SITE.'/components/com_mtree/mtree.tools.php' );
 
 class modMTListingsHelper {
 
-	function getCatIdFilter( $params, $cat_id=0, $link_id=0 ) {
-		$db =& JFactory::getDBO();
+	public static function getCatIdFilter( $params, $cat_id=0, $link_id=0 ) {
+		$db = JFactory::getDBO();
 
 		$show_from_cat_id	= $params->get( 'show_from_cat_id', 0 );
 		$only_subcats		= $params->get( 'only_subcats', 0 );
@@ -49,11 +48,11 @@ class modMTListingsHelper {
 		}
 		return $limit_cat_to;
 	}
-	
-	function getList( $params, $limit_cat_to=0 ) {
+
+	public static function getList( $params, $limit_cat_to=0 ) {
 		global $mtconf;
 		
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		$type			= $params->get( 'type', 1 ); // Default is new listing
 		$count			= $params->get( 'count', 5 );
@@ -116,6 +115,11 @@ class modMTListingsHelper {
 				break;
 			case 8: // Random listing
 				$order = "l.link_id";
+				$sort = 'ASC';
+				$ltask= '';
+				break;
+			case 10: // Random listing (slower)
+				$order = "RAND()";
 				$sort = 'ASC';
 				$ltask= '';
 				break;
@@ -325,10 +329,8 @@ class modMTListingsHelper {
 		return $listing;
 		
 	}
-	
-	function getFields( $params, $listings ) {
-		$db =& JFactory::getDBO();
-		
+
+	public static function getFields( $params, $listings ) {
 		$fields	= $params->get( 'fields', array() );
 		
 		if( !empty($listings) && !empty($fields) )
@@ -343,8 +345,8 @@ class modMTListingsHelper {
 		}
 		return false;
 	}
-	
-	function getModuleTask( $type ) {
+
+	public static function getModuleTask( $type ) {
 		switch( $type ) {
 			case 1: // New listing
 				$ltask= "listnew";
@@ -371,6 +373,7 @@ class modMTListingsHelper {
 				$ltask= "listalpha";
 				break;
 			case 8: // Random listing
+			case 10: // Random listing (slower)
 			default:
 				$ltask= '';
 				break;

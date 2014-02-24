@@ -1,0 +1,119 @@
+/**
+ * sh404SEF - SEO extension for Joomla!
+ *
+ * @author      Yannick Gaultier
+ * @copyright   (c) Yannick Gaultier 2014
+ * @package     sh404SEF
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version     4.3.0.1671
+ * @date		2014-01-23
+ */
+.icon-48-sh404sef {
+	background-image: url(../images/icon-48-sh404sef-logo.png);
+}
+
+.icon-48-save {
+	background-image: url(../images/icon-48-save.png);
+}
+
+div.largertext {
+	display: inline;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.shlargerkey {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+div.sh404sef-toolbar-title {
+	font-size: 22px;
+	font-weight: bold;
+	color: #0B55C4;
+	line-height: 48px;
+	padding-left: 135px;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+}
+
+#toolbar-sh-progress-button-cpprogress {
+	float: right;
+}
+
+.sh-ajax-loading {
+	background-image: url(../images/sh-ajax-loader-wide.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 160px;
+}
+
+#sh404sef-analytics-wrapper {
+	min-width: 300px;
+}
+
+.analytics-report-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+div.hasAnalyticsTip {
+	display: inline;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: auto;
+}
+
+/*div.current input, div.current textarea, div.current select*/
+div.sh404sef-analytics select#accountId,div.sh404sef-analytics input#accountId,div.sh404sef-analytics textarea#accountId
+	{
+	float: none;
+}
+
+div.hero-unit {
+	text-align: left;
+}
+
+div.tooltip-inner {
+	max-width: 300px;
+	text-align: justify;
+}
+
+div.tooltip-inner h4 {
+	text-align: center;
+}
+
+div.shl-center {
+	text-align: center;
+}
+
+.table td.shl-center, td.shl-center {
+    text-align: center;
+}
+
+div.shl-right {
+	text-align: right;
+}
+
+div.shl-left {
+	text-align: left;
+}
+
+div.analytics-report-image {
+	margin-bottom: 1.5em;
+}
+
+/**
+Fix for toolbar
+*/
+@media ( min-width : 480px) {
+	.shl-secondary-toolbar {
+		display: none !important;
+	}
+}
+
+@media ( max-width : 480px) {
+	.shl-secondary-toolbar {
+		display: inherit !important;
+	}
+}

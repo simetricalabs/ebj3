@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_staticcats.php 2010 2013-08-02 09:32:44Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License

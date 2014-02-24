@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>mtext</name>
+	<caption>Text</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>(C) 2011-2012 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>A standard text field type with various configurable parameters.</description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/mtext">
+			<filename>mtext.php</filename>
+			<filename>mtext.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="inputType" type="list" default="1" label="Input type" description="For both Single and Multi-line text box, the size option is used to control the width and height of the respective textbox.">
+					<option value="1">Single-line Textbox</option>
+					<option value="2">Multi-line Textbox</option>
+				</field>
+				<field name="maxSummaryChars" type="text" default="55" label="Max. characters in Summary view." description="Enter 0 to show the full text regardless of its length." />
+				<field name="maxDetailsChars" type="text" default="0" label="Max. characters in Details view." description="Enter 0 to show the full text regardless of its length." />
+				<field name="cols" type="list" default="50" label="Columns" description="Columns specify the width (in columns) of multi-line textbox if this is selected above. Use the Size option on the left to specify the height (in rows) of the textbox.">
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="25">25</option>
+					<option value="30">30</option>
+					<option value="35">35</option>
+					<option value="40">40</option>
+					<option value="45">45</option>
+					<option value="50">50</option>
+					<option value="55">55</option>
+					<option value="60">60</option>
+					<option value="65">65</option>
+					<option value="70">70</option>
+					<option value="80">80</option>
+					<option value="90">90</option>
+					<option value="100">100</option>
+					<option value="120">120</option>
+				</field>
+				<field name="preserveNewline" type="list" default="1" label="Preserve newline" description="If you're using a Multi-line textbox, this option allow you to control where to preserve the newline in the text that is entered.">
+					<option value="1">Details view only</option>
+					<option value="2">Summary view only</option>
+					<option value="3">Details and Summary  view</option>
+				</field>
+				<field name="parseUrl" type="radio" default="1" class="btn-group" label="Parse URL as link in Details view">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="style" type="text" default="" label="Style" description="Specify additional CSS style for the field." />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/mtext.xml</server>
+	</updateservers>
+</extension>

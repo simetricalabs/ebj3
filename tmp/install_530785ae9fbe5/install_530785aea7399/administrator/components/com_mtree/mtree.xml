@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>com_mtree</name>
+	<author>Mosets Consulting</author>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>http://www.mosets.com/tree</authorUrl>
+	<copyright>Mosets Consulting 2005 - 2011. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<version>2.2.0</version>
+	<description>COM_MTREE_XML_DESCRIPTION</description>
+	<creationDate>February 2011</creationDate>
+	<scriptfile>script.php</scriptfile>
+	<install>
+		<sql>
+			<file driver ="mysql" charset="utf8">install.mtree.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver ="mysql" charset="utf8">uninstall.mtree.sql</file>
+		</sql>
+	</uninstall>
+	<administration>
+		<menu link="option=com_mtree" img="../media/com_mtree/images/icon-16-mosetstree.png">Mosets Tree</menu>
+		<files folder="administrator/components/com_mtree">
+			<filename>admin.mtree.ajax.php</filename>
+			<filename>admin.mtree.class.php</filename>
+			<filename>admin.mtree.html.php</filename>
+			<filename>admin.mtree.php</filename>
+			<filename>changelog.txt</filename>
+			<filename>config.mtree.class.php</filename>
+			<filename>customfields.mtree.html.php</filename>
+			<filename>customfields.mtree.php</filename>
+			<filename>diagnosis.php</filename>
+			<filename>dtree.css</filename>
+			<folder>elements</folder>
+			<folder>fieldtypes</folder>
+			<filename>geocode.mtree.php</filename>
+			<folder>helpers</folder>
+			<folder>include</folder>
+			<filename>index.php</filename>
+			<filename>install.mtree.sql</filename>
+			<filename>license.mtree.php</filename>
+			<filename>linkchecker.mtree.html.php</filename>
+			<filename>linkchecker.mtree.php</filename>
+			<filename>mAdvancedSearch.class.php</filename>
+			<filename>mfields.class.php</filename>
+			<folder>models</folder>
+			<filename>mtree.xml</filename>
+			<folder>params</folder>
+			<filename>recount.mtree.php</filename>
+			<filename>spy.mtree.html.php</filename>
+			<filename>spy.mtree.php</filename>
+			<filename>toolbar.mtree.html.php</filename>
+			<filename>toolbar.mtree.php</filename>
+			<filename>tools.mtree.php</filename>
+			<filename>uninstall.mtree.sql</filename>
+			<folder>upgrade</folder>
+			<filename>upgrade.php</filename>
+		</files>
+		<languages folder="administrator/language">
+			<language tag="en-GB">en-GB/en-GB.com_mtree.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_mtree.sys.ini</language>
+		</languages>
+	</administration>
+	<files folder="components/com_mtree">
+		<folder>attachments</folder>
+		<folder>img</folder>
+		<folder>includes</folder>
+		<filename>index.html</filename>
+		<filename>init.php</filename>
+		<folder>js</folder>
+		<filename>listlisting.php</filename>
+		<filename>mtree.class.php</filename>
+		<filename>mtree.php</filename>
+		<filename>mtree.tools.php</filename>
+		<filename>router.php</filename>
+		<filename>rss.php</filename>
+		<folder>Savant2</folder>
+		<filename>Savant2.php</filename>
+		<folder>templates</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.com_mtree.ini</language>
+	</languages>
+	<media destination="com_mtree">
+		<filename>index.html</filename>
+		<folder>attachments</folder>
+		<folder>fieldtypes</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+	<tables>
+		<table>#__mt_cats</table>
+		<table>#__mt_cfvalues</table>
+		<table>#__mt_cfvalues_att</table>
+		<table>#__mt_cl</table>
+		<table>#__mt_claims</table>
+		<table>#__mt_clone_owners</table>
+		<table>#__mt_config</table>
+		<table>#__mt_configgroup</table>
+		<table>#__mt_customfields</table>
+		<table>#__mt_favourites</table>
+		<table>#__mt_fieldtypes</table>
+		<table>#__mt_images</table>
+		<table>#__mt_linkcheck</table>
+		<table>#__mt_links</table>
+		<table>#__mt_log</table>
+		<table>#__mt_relcats</table>
+		<table>#__mt_reports</table>
+		<table>#__mt_reviews</table>
+		<table>#__mt_templates</table>
+	</tables>
+	<dependencies>
+		<dependency type="platform" name="joomla" operator=">=" version="1.6" />
+	</dependencies>
+</extension>

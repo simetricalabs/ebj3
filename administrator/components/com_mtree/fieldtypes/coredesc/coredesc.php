@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: coredesc.php 2011 2013-08-02 11:10:35Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2011 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -32,7 +31,7 @@ class mFieldType_coredesc extends mFieldType {
 		$value = $this->getInputValue();
 
 		if( $this->isUsingWysiwygEditor() ) {
-			$editor = &JFactory::getEditor();
+			$editor = JFactory::getEditor();
 			$html = $editor->display( $this->getInputFieldName(1), $value , '100%', '250', '75', '25', array('pagebreak', 'readmore'), $this->getInputFieldId(1) );
 		} else {
 			$html = '<textarea'
@@ -48,7 +47,7 @@ class mFieldType_coredesc extends mFieldType {
 		return $html;
 	}
 	
-	function getSearchHTML( $showSearchValue=false, $showPlaceholder=false ) {
+	function getSearchHTML( $showSearchValue=false, $showPlaceholder=false, $idprefix='search_' ) {
 		$html = '';
 		$html .= '<input type="text" name="' . $this->getName();
 		

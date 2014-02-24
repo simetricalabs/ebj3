@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="installer" method="upgrade">
+	<name>plg_installer_sh404sef</name>
+	<author>Yannick Gaultier</author>
+	<creationDate>2014-01-23</creationDate>
+	<copyright>(c) Yannick Gaultier 2014</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>yannick@weeblr.com</authorEmail>
+	<authorUrl>http://weeblr.com</authorUrl>
+	<version>4.3.0.1671</version>
+	<description>Handle sh404SEF subscribers updates</description>
+	<files>
+		<filename plugin="sh404sef">sh404sef.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

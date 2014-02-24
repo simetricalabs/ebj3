@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="contact" addrulepath="components/com_mtree/models/rules" label="">
+		<field name="contact_name"
+			type="text"
+			id="contact-name"
+			label="COM_MTREE_LISTING_CONTACT_EMAIL_NAME_LABEL"
+			filter="string"
+			required="true"
+			class="span8"
+		/>
+		<field name="contact_email"
+			type="email"
+			id="contact-email"
+			label="JGLOBAL_EMAIL"
+			filter="string"
+			validate="contactemail"
+			required="true"
+			class="span8"
+		/>
+		<field name="contact_message"
+			type="textarea"
+			cols="50"
+			rows="10"
+			id="contact-message"
+			label="COM_MTREE_LISTING_CONTACT_MESSAGE_LABEL"
+			filter="htmlsafe"
+			validate="contactemailmessage"
+			required="true"
+			class="span8"
+		/>
+	</fieldset>
+</form>

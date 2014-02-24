@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template" client="site">
+	<name>kinabalu</name>
+	<creationdate>December 2012</creationdate>
+	<author>Mosets</author>
+	<copyright>This template is copyrighted to Mosets Consulting.</copyright>
+	<authoremail>mtree@mosets.com</authoremail>
+	<authorurl>http://www.mosets.com/tree/</authorurl>
+	<version>3.0</version>
+	<description>Default template for Mosets Tree 3.0.</description>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field type="spacer" default="" label="Index" description="" class="text" />
+				<field name="numOfColumns" type="list" default="2" label="Number of Columns">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</field>
+				<field name="numOfSubcatsToDisplay" type="list" default="3" label="Number of subcategories">
+					<option value="0" />
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="9999">All</option>
+				</field>
+				<field name="numOfLinksToDisplay" type="list" default="0" label="Number of listings under top level cats." description="The number of listings to be shown under each top level categories">
+					<option value="0" />
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="30">30</option>
+					<option value="-1">ALL</option>
+				</field>
+				<field name="displayIndexCatCount" type="radio" default="0" class="btn-group" label="Show categories count" description="Setting this to Yes, will show the total number of categories besides all top level categories in index.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="displayIndexListingCount" type="radio" default="1" class="btn-group" label="Show listings count" description="Setting this to 'Yes' will show the total number of listings besides all top level categories in index.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="displayCatDesc" type="radio" default="0" class="btn-group" label="Show category's description" description="Setting this to 'Yes' will show each categories' description underneath their header in Index page.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="displayAlphaIndex" type="radio" default="1" class="btn-group" label="Show Alpha Index" description="Alpba Index shows a list of alphabets on top of the Index page to provide quick access to listings and categories that starts with a specific alphabet.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="displayIndexCatImage" type="radio" default="0" class="btn-group" label="Show Categories' images" description="Setting this to 'Yes' will show top level categories' images (when available) beside their name.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" default="" label="Sub-categories" description="" class="text" />
+				<field name="displaySubcatsCatCount" type="radio" default="0" class="btn-group" label="Show categories count">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="displaySubcatsListingCount" type="radio" default="1" class="btn-group" label="Show listings count">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
+				<field type="spacer" default="" label="Listing Details Page" description="" class="text" />
+				<field name="listingDetailsStyle" type="list" default="1" label="Listing Details' Style">
+					<option value="1">Default Style</option>
+					<option value="2">Style 2</option>
+					<option value="3">Style 3</option>
+					<option value="4">Style 4</option>
+					<option value="5">Style 5</option>
+					<option value="6">Style 6</option>
+					<option value="7">Style 7</option>
+					<option value="8">Style 8</option>
+				</field>
+				<field name="skipFirstImage" type="radio" default="0" class="btn-group" label="Skip the first image" description="By default, the first ordered image is used as the thumbnail and main graphical representative of a listing. Setting this option to 'Yes', will skip this first image and show second image and onwards in listing details page.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showBigImage" type="radio" default="1" class="btn-group" label="Show big image" description="Setting this to 'Yes' will display a listing's first image in medium sized, while others are shown in small/thumbnail size.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="limitDetailsViewToRegistered" type="radio" default="0" class="btn-group" label="Limit details view to Registered users">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="listingNameLink" type="list" default="1" label="Listing Name's link destination" description="By default, clicking listing name in summary view bring user to the listing's details page. This parameter allow you to disable the link or forward the link to the listing's website. If you're forwarding the listing to a website, make sure you set the website field as a required field.">
+					<option value="1">Details view</option>
+					<option value="4">Details view or website (if available)</option>
+					<option value="2">Listing's website</option>
+					<option value="3">Listing's website (new window)</option>
+					<option value="0">No link</option>
+				</field>
+				<field name="numOfColumnsInDetailsView" type="list" default="1" label="Custom field columns" description="The number of columns used to display custom fields' data in details view.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				
+				<field type="spacer" default="" label="Listing Summaries" description="" class="text" />
+				<field name="useFeaturedHighlight" type="radio" default="1" class="btn-group" label="Highlight featured listing" description="Using highlight will display a border and a different background color to a featured listing in summary view.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="numOfListingColumnsInSummaryView" type="list" default="1" label="Listing columns" description="The number of columns used to display listings in summary view.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</field>
+				<field name="numOfColumnsInSummaryView" type="list" default="3" label="Custom field columns" description="The number of columns used to display custom fields' data in summary view.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field name="showActionLinksInSummary" type="radio" default="0" class="btn-group" label="Show action links" description="Setting this to 'Yes' will show action links in summary view. eg: Submit Review, Recommend, Print, Contact Owner, Visit, Report, Owner's Listing &amp; Map.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showImageInSummary" type="radio" default="1" class="btn-group" label="Show image" description="Setting this to 'Yes', will show the listing's first image in summary view.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="imageDirectionListingSummary" type="radio" default="left" class="btn-group" label="Image's direction">
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="showFillerImage" type="radio" default="1" class="btn-group" label="Show filler images" description="When set to 'Yes', filler image is shown in summary view when there are no images uploaded to listings.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<!-- <field type="spacer" default="" label="List Alpha" description="" class="text" /> -->
+				<field type="spacer" default="" label="Others" description="" class="text" />
+				<field name="onlyShowRootLevelCatInListalpha" type="radio" default="0" class="btn-group" label="Only show root level category in listalpha" description="If you have a large number of categories, turning on this feature will decrease the number of categories shown in listalpha by only showing root level categories.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="displayAddressInOneRow" type="radio" default="1" class="btn-group" label="Show address related fields in one row" description="In order for this feature to work properly, you need to publish the 'Address' field.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

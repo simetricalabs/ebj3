@@ -37,5 +37,13 @@
 		<?php if ( $searchCategory == 1 ) { ?>
 		<input type="hidden" name="search_cat" value="1" />
 		<?php } ?>
+		<?php
+		if( $parent_cat_id > 0 && is_null($lists['categories']) )
+		{
+			?>
+			<input type="hidden" name="cat_id" value="<?php echo $parent_cat_id; ?>" />
+			<?php
+		}
+		?>
 	</div>
 </form>

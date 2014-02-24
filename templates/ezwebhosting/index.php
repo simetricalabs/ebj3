@@ -106,7 +106,7 @@ body  {	background:#252525 url(<?php echo $s5_background; ?>) repeat-x bottom;}
 					<?php s5_module_call('logo','notitle'); ?>
 				</div>	
 			<?php } else { ?>
-				<img alt="logo" src="<?php echo $s5_directory_path ?>/images/s5_logo.png" id="s5_logo" onclick="window.document.location.href='<?php echo $LiveSiteUrl ?>'" />
+				<img alt="logo edbase" src="<?php echo $s5_directory_path ?>/images/edbase.png" id="s5_logo" onclick="window.document.location.href='<?php echo $LiveSiteUrl ?>'" />
 			<?php } ?>
 			
 			

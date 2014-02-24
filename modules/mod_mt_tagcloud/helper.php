@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id: helper.php 1939 2013-07-02 22:06:01Z cy $
  * @package		Mosets Tree
  * @copyright	(C) 2009 Mosets Consulting. All rights reserved.
  * @license		GNU General Public License
@@ -11,8 +10,8 @@
 defined('_JEXEC') or die('Restricted access');
 
 class modMTTagCloudHelper {
-	function getTags($cf_id) {
-		$db =& JFactory::getDBO();
+	public static function getTags($cf_id) {
+		$db = JFactory::getDBO();
 		
 		if ( modMTTagCloudHelper::isCore($cf_id) )
 		{
@@ -27,7 +26,24 @@ class modMTTagCloudHelper {
 		
 		return $tags;
 	}
-	
+
+	public static function sortTags( $arrTags, $sort_by )
+	{
+		switch( $sort_by )
+		{
+			case 'alpha':
+			default:
+				ksort($arrTags, SORT_STRING);
+				break;
+
+			case 'freq':
+				asort($arrTags, SORT_NUMERIC);
+				$arrTags = array_reverse($arrTags);
+				break;
+		}
+		return $arrTags;
+	}
+
 	/**
 	 * Read through array of strings and return an array mapping tag with number of occurances
 	 *
@@ -36,7 +52,7 @@ class modMTTagCloudHelper {
 	 * @return	array	An array of results mapping keywords to the number of occurances
 	 * @since	1.0
 	 */
-	function parse($arrTags)
+	public static function parse($arrTags)
 	{
 		$rawRank = array();
 		foreach( $arrTags AS $tag )
@@ -47,7 +63,6 @@ class modMTTagCloudHelper {
 		arsort($rawRank);
 		
 		return $rawRank;
-		// print_r($rawRank);
 	}
 	
 	/**
@@ -58,7 +73,7 @@ class modMTTagCloudHelper {
 	 * @return	array	An array of results
 	 * @since	2.1
 	 */
-	function explodeTrim($str)
+	public static function explodeTrim($str)
 	{
 		if( empty($str) ) return array();
 		
@@ -73,8 +88,8 @@ class modMTTagCloudHelper {
 		return array_unique($results);
 	}
 
-	function isCore($cf_id) {
-		$db =& JFactory::getDBO();
+	public static function isCore($cf_id) {
+		$db = JFactory::getDBO();
 		
 		$db->setQuery('SELECT iscore FROM #__mt_customfields WHERE cf_id = ' . $db->Quote($cf_id) . ' LIMIT 1');
 		return $db->loadResult();

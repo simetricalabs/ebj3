@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Id: mod_mt_alphaindex.xml 2010 2013-08-02 09:32:44Z cy $ -->
-<extension type="module" version="3.5.0" client="site"	method="upgrade">
+<extension type="module" version="3.1" client="site" method="upgrade">
 	<name>mod_mt_alphaindex</name>
 	<author>Mosets Consulting</author>
-	<creationDate>August 2013</creationDate>
-	<copyright>(C) 2009-2013 Mosets Consulting. All rights reserved.</copyright>
+	<creationDate>January 2014</creationDate>
+	<copyright>(C) 2009-2014 Mosets Consulting. All rights reserved.</copyright>
     	<license>GNU General Public License</license>
 	<authorEmail>mtree@mosets.com</authorEmail>
 	<authorUrl>www.mosets.com</authorUrl>
-	<version>3.5.0</version>
+	<version>3.5.6</version>
 	<description>MOD_MT_ALPHAINDEX_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_mt_alphaindex">mod_mt_alphaindex.php</filename>
@@ -39,7 +38,8 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-				<field name="seperator" type="text" default=" " label="MOD_MT_ALPHAINDEX_FIELD_SEPARATOR_LABEL" description="MOD_MT_ALPHAINDEX_FIELD_SEPARATOR_DESC" />
+                <field name="limit_to_cat_id" type="text" default="0" label="MOD_MT_ALPHAINDEX_FIELD_LIMIT_TO_CAT_ID_LABEL" description="MOD_MT_ALPHAINDEX_FIELD_LIMIT_TO_CAT_ID_DESC" />
+                <field name="seperator" type="text" default=" " label="MOD_MT_ALPHAINDEX_FIELD_SEPARATOR_LABEL" description="MOD_MT_ALPHAINDEX_FIELD_SEPARATOR_DESC" />
 			</fieldset>
 			<fieldset name="assignment">
 				<field

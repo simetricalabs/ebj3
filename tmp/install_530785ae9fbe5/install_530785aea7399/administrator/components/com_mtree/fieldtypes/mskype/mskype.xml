@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>mskype</name>
+	<caption>Skype</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Show the skype button with online status.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/mskype">
+			<filename>mskype.php</filename>
+			<filename>mskype.xml</filename>
+			<filename>index.html</filename>
+		</files>
+		<files folder="media" target="media/com_mtree/fieldtypes/mskype">
+			<filename>skypeCheck.js</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="detailsButton" type="list" default="" label="Button (details)">
+					<option value="smallicon">Small icon</option>
+					<option value="mediumicon">Medium icon</option>
+					<option value="smallclassic">Small Classic</option> 
+					<option value="bigclassic">Big Classic</option> 
+					<option value="balloon">Balloon</option> 
+				</field>
+				<field name="summaryButton" type="list" default="" label="Button (summary)">
+					<option value="smallicon">Small icon</option>
+					<option value="mediumicon">Medium icon</option>
+					<option value="smallclassic">Small Classic</option> 
+					<option value="bigclassic">Big Classic</option> 
+					<option value="balloon">Balloon</option> 
+				</field>
+		
+				<field name="action" type="list" default="" label="Action">
+					<option value="call">Call</option>
+					<option value="add">Add to Skype contacts</option>
+					<option value="chat">Start a text chat</option> 
+					<option value="userinfo">View a profile</option> 
+					<option value="sendfile">Send a file</option> 
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/mskype.xml</server>
+	</updateservers>
+</extension>

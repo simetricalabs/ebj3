@@ -1,21 +1,26 @@
 <?php
-/* $Id: _fields.php 1974 2013-07-16 09:32:08Z cy $ */ defined('_JEXEC') or die('Restricted access');
-
-$hide_caption = array('link_rating');
+/* $Id: _fields.php 1824 2013-03-05 09:52:34Z cy $ */ defined('_JEXEC') or die('Restricted access');
 
 // Name
+
+	echo '<div class="name">';
+
+
 if( !$hide_name && !empty($l->trimmed_link_name) )
 {
-	echo '<a href="' . $l->link . '" class="name'.($listingclass?' '.$listingclass:'').'">';
+	echo '<a href="' . $l->link . '" >';
 	echo $l->trimmed_link_name;
 	echo  '</a>';
 }
+	echo '</div>';
+	echo '</div>';
 
+			
 // Website
 if ( $show_website == 1 && !empty($l->website) && !empty($l->trimmed_website) ) {
-	echo "<small><a href=\"".$l->website."\">";
+	echo "<a href=\"".$l->website."\">";
 	echo $l->trimmed_website;
-	echo "</a></small>";
+	echo "</a>";
 }
 
 // Category
@@ -25,10 +30,10 @@ if ( $show_category == 1 ) {
 
 // Related Data
 if ( $show_rel_data == 1 && $type <> 2 ) {
-	echo "<small>";
+
 	switch( $type ) {
 		case 1:
-			echo JText::_( 'MOD_MT_LISTINGS_CREATED' ) . ": ".JHtml::_('date', strtotime($l->link_created), 'j M Y');
+			echo JText::_( 'MOD_MT_LISTINGS_CREATED' ) . ": ".JHTML::_('date', strtotime($l->link_created), 'j M Y');
 			break;
 		case 3:
 			echo JText::_( 'MOD_MT_LISTINGS_HITS' ) . ": ".$l->link_hits;
@@ -51,7 +56,7 @@ if ( $show_rel_data == 1 && $type <> 2 ) {
 			echo JText::_( 'MOD_MT_LISTINGS_REVIEWS' ) . ": ".$l->reviews;
 			break;
 	}
-	echo "</small>";
+
 }
 
 // Custom fields
@@ -62,21 +67,98 @@ if( !is_array($displayfields) ) {
 
 if( !empty($displayfields) && isset($fields[$l->link_id]) )
 {
+
 	$fields[$l->link_id]->resetPointer();
 	while( $fields[$l->link_id]->hasNext() ) {
 		$field = $fields[$l->link_id]->getField();
-		if( in_array($field->getId(),$displayfields) && $field->hasValue() )
-		{
-			echo '<small>';
-			if($field->hasCaption() && !in_array($field->getName(),$hide_caption)) {
-				echo $field->getCaption();
-				echo ': ';
-			}
-			$value = $field->getOutput(2);
-			echo $value;
-			echo '</small>';
-		}
+		
+		switch( $field->getID() ) {
+			case 29:
+				$short_desc = $field->getOutput(2);
+			break;
+			case 30:
+				$serv_type = $field->getOutput(2);
+			break;
+			case 31:
+				$segment = $field->getOutput(2);
+			break;			
+			case 12:
+				$homepage = $field->getOutput(2);
+			break;
+			case 33:
+				$twitter = $field->getOutput(2);
+			break;
+			case 32:
+				$facebook = $field->getOutput(2);
+			break;
+			case 34:
+				$google = $field->getOutput(2);
+			break;
+			case 24:
+				$logo = $field->getOutput(2);
+			break;
+			case 7:
+				$country = $field->getOutput(2);
+			break;
+			case 5;
+				$city = $field->getOutput(2);
+			break;																					
+		}	
+
+		
 		$fields[$l->link_id]->next();
 	}
+
 }
+//Short Description
+	echo '<div class="pitch tiptip_bottom" data-hasqtip="0" >';
+	echo '	<div style="margin: 0px; padding: 0px; border: 0px;">';
+	echo $short_desc;
+	echo '	</div>';
+	echo '</div>';
+
+	echo '</div>';
+	
+	echo '<div class="mini">';
+//Location
+	echo '	<div class="tag">';
+	echo '		<div class="type">';
+	echo $country.', '.$city;	
+	echo '		</div>';
+	echo '	</div>';
+//Service Type
+	echo '	<div class="tag">';
+	echo '		<div class="type">';
+	echo $serv_type;	
+	echo '		</div>';
+	echo '	</div>';	
+//Segment
+	echo '	<div class="tag">';
+	echo '		<div class="type">';
+	echo $segment;	
+	echo '		</div>';
+	echo '	</div>';
+					
+	echo '</div>';
+	
+	$facebook = strstr($facebook, '"');
+	$facebook =substr($facebook,1,strpos($facebook,"target")-3);
+
+	$google = strstr($google, '"');
+	$google =substr($google,1,strpos($google,"target")-3);
+
+	echo '<div class="links">';
+	echo '<a class="tag" target="_blank" href="'.$l->website.'">Visitar Sitio Web</a>';
+	echo '<div class="social_links">';
+	if(!empty($facebook))	
+		echo '<a class="linkopacity" target="_blank" href="'.$facebook.'">	<img src="/images/facebook.png" alt="Facebook '.$l->trimmed_link_name.'" ></a>';
+		
+	if(!empty($google))	
+		echo '<a class="linkopacity" target="_blank" href="'.$google.'">	<img src="/images/google_follow.png" alt="Google+ '.$l->trimmed_link_name.'" ></a>';
+	
+	if(!empty($twitter))
+		echo '<a class="linkopacity" target="_blank" href="'.'https://twitter.com/'.$twitter.'">	<img src="/images/twitter.png" alt="Twitter '.$l->trimmed_link_name.'" ></a>';
+	
+	echo '</div>';						
+	echo '</div>';	
 ?>

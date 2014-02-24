@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Id: mod_mt_listings.xml 2010 2013-08-02 09:32:44Z cy $ -->
-<extension type="module" version="3.5.0" client="site"	method="upgrade">
+<!-- $Id$ -->
+<extension type="module" version="3.1" client="site" method="upgrade">
 	<name>mod_mt_listings</name>
 	<author>Mosets Consulting</author>
-	<creationDate>August 2013</creationDate>
+	<creationDate>October 2013</creationDate>
 	<copyright>(C) 2013 Mosets Consulting. All rights reserved.</copyright>
-    	<license>GNU General Public License</license>
+    <license>GNU General Public License</license>
 	<authorEmail>mtree@mosets.com</authorEmail>
 	<authorUrl>www.mosets.com</authorUrl>
-	<version>3.5.0</version>
+	<version>3.5.3</version>
 	<description>MOD_MT_LISTINGS_XML_DESC</description>
 	<files>
 		<filename module="mod_mt_listings">mod_mt_listings.php</filename>
@@ -32,6 +32,7 @@
 					<option value="5">MOD_MT_LISTINGS_VALUE_TOP_RATED_LISTING</option>
 					<option value="6">MOD_MT_LISTINGS_VALUE_MOST_REVIEWED_LISTING</option>
 					<option value="9">MOD_MT_LISTINGS_VALUE_ALPHABETICALLY_ORDERED_LISTING</option>
+                    <option value="10">MOD_MT_LISTINGS_VALUE_RANDOM_LISTING2</option>
 					<option value="8">MOD_MT_LISTINGS_VALUE_RANDOM_LISTING</option>
 				</field>
 				<field name="count" type="text" default="5" label="MOD_MT_LISTINGS_FIELD_COUNT_LABEL" description="MOD_MT_LISTINGS_FIELD_COUNT_DESC" />

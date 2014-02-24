@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_MTREE_MENU_TASK_NAME_ADVSEARCH" option="com_mtree_ADVSEARCH_view_default_option">
+		<message><![CDATA[COM_MTREE_MENU_TASK_MSG_ADVSEARCH]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_mtree/jformfields">
+			<field name="cat_id" type="mtreecategory" 
+				default="0" 
+				extension="com_mtree" 
+				sections="1" 
+				none="None" 
+				required="true"
+				label="COM_MTREE_MENU_TASK_NAME_CATEGORY_LABEL" 
+			/>
+		</fieldset>
+	</fields>
+</metadata>

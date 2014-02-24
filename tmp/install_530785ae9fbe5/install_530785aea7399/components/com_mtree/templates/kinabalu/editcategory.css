@@ -1,0 +1,29 @@
+ul.config {
+	margin:0;
+	padding:0;
+	font-size:1.091em;
+}
+ul.config li {
+	width:100%;
+	overflow:hidden;
+	list-style-type:none;
+}
+ul.config li.default {
+	color: #999;
+}
+ul.config li.override {
+	color: #000;
+	font-weight:normal;
+}
+ul.config li label {
+	width: 25%;
+}
+ul.config li label input.override{
+	margin:0 5px 0 0;
+}
+ul.config li fieldset {
+	background-color:transparent;
+}
+ul.config li span fieldset.radio {
+	padding:0;
+}

@@ -1,0 +1,67 @@
+ul.modMtFilter {
+	width: 100%;
+	margin: 0 !important;
+	padding:0 !important;
+	text-align: left;
+	list-style-type: none !important;
+	display:block;
+}
+
+ul.modMtFilter > li {
+	margin: 5px 0;
+}
+
+ul.modMtFilter > li ul li {
+	float: none;
+	width: 100%;
+}
+
+ul.modMtFilter > li > label {
+	overflow:hidden;
+	display: block;
+	vertical-align: top;
+	padding:0;
+	margin:0 10px 0 0;
+	font-weight: bold;
+}
+
+ul.modMtFilter li span.filterinput {
+	display:inline-block;
+}
+
+ul.modMtFilter li span.filterinput input,
+ul.modMtFilter li span.filterinput select {
+	border: 1px solid #E0E0E0;
+}
+
+ul.modMtFilter li span.filterinput input {
+	max-width: 170px;
+}
+
+ul.modMtFilter li span.filterinput select {
+	max-width: 183px;
+}
+
+ul.modMtFilter li span.filterinput ul {
+	margin:0;
+	list-style-type: none;
+}
+
+ul.modMtFilter li.mfieldtype_mdate .input-append input {
+	max-width: 107px;
+}
+
+ul.modMtFilter li.mfieldtype_year .filterinput select,
+ul.modMtFilter li.mfieldtype_mnumber .filterinput select {
+	max-width: 88px;
+}
+
+ul.modMtFilter li.mfieldtype_mnumber .filterinput input {
+	max-width: 74px;
+}
+
+ul.modMtFilter li.button-send, 
+ul.modMtFilter li.button-reset {
+	margin-right:.5em;
+	display: inline;
+}

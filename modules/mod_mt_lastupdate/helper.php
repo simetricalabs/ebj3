@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: helper.php 1974 2013-07-16 09:32:08Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2010 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -11,9 +10,9 @@
 defined('_JEXEC') or die('Restricted access');
 
 class modMTLastupdateHelper {
-	
-	function getLastUpdate( $params ) {
-		$db =& JFactory::getDBO();
+
+	public static function getLastUpdate( $params ) {
+		$db = JFactory::getDBO();
 		$nullDate	= $db->getNullDate();
 
 		$date_format = $params->get( 'date_format', 'j F, Y' );

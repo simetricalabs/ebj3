@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Id: mod_mt_menu.xml 2010 2013-08-02 09:32:44Z cy $ -->
-<extension type="module" version="3.5.0" client="site"	method="upgrade">
+<!-- $Id$ -->
+<extension type="module" version="3.1" client="site"	method="upgrade">
 	<name>mod_mt_menu</name>
 	<author>Mosets Consulting</author>
-	<creationDate>August 2013</creationDate>
+	<creationDate>October 2013</creationDate>
 	<copyright>(C) 2005-2013 Mosets Consulting. All rights reserved</copyright>
-    	<license>GNU General Public License</license>
+    <license>GNU General Public License</license>
 	<authorEmail>mtree@mosets.com</authorEmail>
 	<authorUrl>www.mosets.com</authorUrl>
-	<version>3.5.0</version>
+	<version>3.5.3</version>
 	<description>MOD_MT_MENU_XML_DESC</description>
 	<files>
 		<filename module="mod_mt_menu">mod_mt_menu.php</filename>

@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id: helper.php 1967 2013-07-16 05:04:58Z cy $
  * @package		Mosets Tree
  * @copyright	(C) 2005-2009 Mosets Consulting. All rights reserved.
  * @license		GNU General Public License
@@ -11,17 +10,17 @@
 defined('_JEXEC') or die('Restricted access');
 
 class modMTMenuHelper {
-	
-	function getCatId( $link_id ) {
-		$db =& JFactory::getDBO();
+
+	public static function getCatId( $link_id ) {
+		$db = JFactory::getDBO();
 		
 		$mtLink = new mtLinks( $db );
 		$mtLink->load( $link_id );
 		
 		return $mtLink->cat_id;		
 	}
-	
-	function getTopListCatId( $cat_id, $params ) {
+
+	public static function getTopListCatId( $cat_id, $params ) {
 		$limit_toplist = $params->get( 'limit_toplist', 0 );
 		
 		if ( $limit_toplist == 0 ) {
@@ -36,9 +35,9 @@ class modMTMenuHelper {
 		}
 		return $toplist_cat_id;
 	}
-	
-	function getCatAllowSubmission( $params, $cat_id ) {
-		$db =& JFactory::getDBO();
+
+	public static function getCatAllowSubmission( $params, $cat_id ) {
+		$db = JFactory::getDBO();
 
 		$show_addlisting_force = $params->get( 'show_addlisting_force', 0 );
 
@@ -56,7 +55,7 @@ class modMTMenuHelper {
 		return ($cat_allow_submission) ? true : false ;
 	}
 	
-	function getActive() {
+	public static function getActive() {
 		$active = null;
 		$task	= JFactory::getApplication()->input->getCmd('task');
 		$option	= JFactory::getApplication()->input->getCmd('option');

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_MTREE_MENU_TASK_NAME_HOME" option="com_mtree_home_view_default_option">
+		<message><![CDATA[COM_MTREE_MENU_TASK_MSG_HOME]]></message>
+	</layout>
+</metadata>

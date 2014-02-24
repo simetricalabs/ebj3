@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>coretelephone</name>
+	<caption>Telephone</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>(C) 2012 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/coretelephone">
+			<filename>coretelephone.php</filename>
+			<filename>coretelephone.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="showLink" type="radio" default="0" class="btn-group" label="Show Link" description="When set to Yes, telephone number will be made as clickable link. This is useful to users using mobile device to make a phone call to the number by clicking the link.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/coretelephone.xml</server>
+	</updateservers>
+</extension>

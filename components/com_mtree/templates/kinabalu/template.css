@@ -237,13 +237,13 @@ padding:0 .2em;
 }*/
 
 div.featured {
-background-color:#F5FFFA;
+/*background-color:#D0E4F0;*/
 }
 
 .listing-summary {
 float:left;
 margin-bottom:1.5em;
-background-color:#F5FFFA;
+/*background-color:#E6F0F2;*/
 -moz-border-radius:5px;
 -webkit-border-radius:5px;
 border-radius:5px;
@@ -295,7 +295,7 @@ margin:0 10px 10px 0;
 .listing-summary .star {
 padding-bottom:3px;
 position:relative;
-top:-4px;
+top:0px;
 margin:4px 0 12px 1px;
 float:left;
 }
@@ -452,7 +452,7 @@ padding:5px;
 
 .listing-summary img.image-left {
 border:1px solid #fff;
-background-color:#F5FFFA;
+background-color:#E6F0F2;
 display:block;
 float:left;
 clear:left;
@@ -1111,6 +1111,10 @@ float:left;
 
 #cat-header,.favourite,.reviews p,.images .content,#map {
 overflow:hidden;
+}
+
+#map img {
+    max-width: none;
 }
 
 /*.output p.mbutton a:link,.output p.mbutton a:visited,.review .review-head a,.users-listings span,.users-reviews span,.users-favourites span {

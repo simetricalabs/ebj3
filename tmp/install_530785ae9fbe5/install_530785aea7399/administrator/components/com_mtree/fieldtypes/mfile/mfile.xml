@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>mfile</name>
+	<caption>File</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>File field type accept any type of file uploads. You can choose to limit the acceptable file extension in the parameter settings.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<isFile>1</isFile>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/mfile">
+			<filename>mfile.php</filename>
+			<filename>mfile.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="fileExtensions" type="textarea" default="gif|png|jpg|jpeg|pdf|zip" label="Acceptable file extensions" description="Enter the acceptable file type of extension for this field. If you have more than one extension, please seperate the extension with a bar '|'. Example: 'gif|png|jpg|jpeg' or 'pdf', without quotes. Please do not start or end the value with a bar. " />
+				<field name="maxSize" type="text" default="10485760" label="Maximum Size (in bytes)" description="The maximum size for a file upload in bytes. Default is 10MB (10485760 bytes). Enter 0 for no limit. Note that your server may have a maximum upload limit." />
+				<field name="useImage" type="text" default="" label="Image" description="Enter the URL to the image you would like to use to link to the uploaded file. You can use {live_site} as the replacement for the value of site's domain. ie: {live_site}/images/save_f2.png" />
+				<field name="showText" type="text" default="" label="Text" description="Enter the text for the download button." />
+				<field name="showFilename" type="radio" default="1" class="btn-group" label="Show Filename" description="This allows you to hide the filename link.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showCounter" type="radio" default="1" class="btn-group" label="Show Counter">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="linkClassSuffix" type="text" default="btn btn-small" label="Link Class Suffix" description="A suffix to be applied to the CSS class of the download link." />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/mfile.xml</server>
+	</updateservers>
+</extension>

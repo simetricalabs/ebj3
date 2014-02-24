@@ -1,0 +1,40 @@
+/**
+ * sh404SEF - SEO extension for Joomla!
+ *
+ * @author      Yannick Gaultier
+ * @copyright   (c) Yannick Gaultier 2014
+ * @package     sh404SEF
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version     4.3.0.1671
+ * @date		2014-01-23
+ */
+
+#editurl-container textarea {
+	width:90%;
+}
+
+#editurl-container input {
+    width:90%;
+}
+
+div.tooltip-inner {
+    max-width: 300px;
+    text-align: justify;
+}
+
+div.tooltip-inner h4 {
+    text-align: center;
+}
+
+div.tip-wrap {
+    max-width: 300px;
+}
+
+.tip-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+.tip-text {
+    text-align: justify;
+}

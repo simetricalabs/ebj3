@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>audioplayer</name>
+	<caption>Audio Player</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Audio Player allows users to upload audio files and play the music from within the listing page. Provides basic playback options such as play, pause and volumne control. Made possible by http://www.1pixelout.net/code/audio-player-wordpress-plugin/.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<isFile>1</isFile>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/audioplayer">
+			<filename>audioplayer.php</filename>
+			<filename>audioplayer.xml</filename>
+			<filename>index.html</filename>
+		</files>
+		<files folder="media" target="media/com_mtree/fieldtypes/audioplayer">
+			<filename>audio-player.js</filename>
+			<filename>player.swf</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.fld_audioplayer.ini</language>
+	</languages>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="autoStart" type="radio" default="0" class="btn-group" label="Auto Start" description="Automatically open the player and start playing the track.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="displayfilename" type="radio" default="1" class="btn-group" label="Display Filename" description="Display the audio's filename below the player.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="loop" type="radio" default="0" class="btn-group" label="Loop" description="The track will be looped indefinitely">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="textColour" type="text" default="" label="Text colour" />
+				<field name="sliderColour" type="text" default="" label="Slider colour" />
+				<field name="loaderColour" type="text" default="" label="Loader colour" />
+				<field name="trackColour" type="text" default="" label="Track colour" />
+				<field name="borderColour" type="text" default="" label="Border colour" />
+				<field name="backgroundColour" type="text" default="" label="Background colour" />
+				<field name="leftBackgroundColour" type="text" default="" label="Left background colour" />
+				<field name="rightBackgroundColour" type="text" default="" label="Right background colour" />
+				<field name="rightBackgroundHoverColour" type="text" default="" label="Right background colour (hover)" />
+				<field name="leftIconColour" type="text" default="" label="Left icon colour" />
+				<field name="rightIconColour" type="text" default="" label="Right icon colour" />
+				<field name="rightIconHoverColour" type="text" default="" label="Right icon colour (hover)" />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/audioplayer.xml</server>
+	</updateservers>
+</extension>

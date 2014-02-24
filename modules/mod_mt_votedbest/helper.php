@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id: helper.php 1967 2013-07-16 05:04:58Z cy $
  * @package		Mosets Tree
  * @copyright	(C) 2005-2009 Mosets Consulting. All rights reserved.
  * @license		GNU General Public License
@@ -12,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 class modMTVotedbestHelper {
 
-	function getList( $params, $cat_id=0 ) {
+	public static function getList( $params, $cat_id=0 ) {
 		global $mtconf;
 		
 		$parent_cat			= $params->get( 'parent_cat', '' );
@@ -22,7 +21,7 @@ class modMTVotedbestHelper {
 		$only_subcats		= $params->get( 'only_subcats', 1 );
 		$max_name_char		= $params->get( 'max_name_char', 24 );
 		
-		$db 		=& JFactory::getDBO();
+		$db 		= JFactory::getDBO();
 		$jdate 		= JFactory::getDate();
 		$now 		= $jdate->toSql();
 		$nullDate	= $db->getNullDate();
@@ -82,9 +81,9 @@ class modMTVotedbestHelper {
 		
 		return $listing;
 	}
-	
-	function getCategoryId() {
-		$db =& JFactory::getDBO();
+
+	public static function getCategoryId() {
+		$db = JFactory::getDBO();
 		
 		# Try to retrieve current category
 		$link_id	= JFactory::getApplication()->input->getInt('link_id');

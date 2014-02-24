@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_categories_expanding.php 2010 2013-08-02 09:32:44Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -40,7 +39,7 @@ if ($secondary_sort == -1) $secondary_sort	= $mtconf->get('second_cat_order2');
 $link_id	= JFactory::getApplication()->input->getInt('link_id');
 $cat_id		= JFactory::getApplication()->input->getInt('cat_id');;
 
-$cache =& JFactory::getCache('mod_mt_categories_expanding');
+$cache = JFactory::getCache('mod_mt_categories_expanding');
 $cat_id = $cache->call(array('modMTCategoriesExpandingHelper','getCategoryId'), $cat_id, $link_id);
 $categories = $cache->call(array('modMTCategoriesExpandingHelper','getCategories'), $params, $cat_id);
 

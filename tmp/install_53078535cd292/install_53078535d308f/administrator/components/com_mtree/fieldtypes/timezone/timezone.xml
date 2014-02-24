@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>timezone</name>
+	<caption>Time Zone</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Displays list of time zones.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>1</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/timezone">
+			<filename>timezone.php</filename>
+			<filename>timezone.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/timezone.xml</server>
+	</updateservers>
+</extension>
+

@@ -3,7 +3,6 @@
 <?php if( $this->mtconf['allow_imgupload'] && $this->mtconf['images_per_listing'] > 0 ) { ?>
 <script language="javascript" type="text/javascript" src="<?php echo $this->jconf['live_site'] . $this->mtconf['relative_path_to_js']; ?>jquery-ui-1.8.24.custom.min.js"></script>
 <?php } ?>
-
 <script language="javascript" type="text/javascript">
 	jQuery.noConflict();
 	var JURI_ROOT='<?php echo JURI::root(); ?>';
@@ -15,7 +14,7 @@
 	var validations=[];
 	var presubmitFunctions=[];
 	var cachedFields;
-	var form = document.adminForm;
+	var form = document.mtForm;
 	var validation_failed=false;
 	<?php
 	$this->fields->resetPointer();
@@ -47,9 +46,9 @@
 		?>	
 	});
 	function submitbutton(pressbutton) {
-		var form = document.adminForm;
-		var validation_fields = jQuery('#adminForm .controls input,#adminForm .controls textarea, #adminForm .controls select');
-		var scroll = new Fx.SmoothScroll({links:'adminForm',wheelStops:false})
+		var form = document.mtForm;
+		var validation_fields = jQuery('#mtForm .controls input,#mtForm .controls textarea, #mtForm .controls select');
+		var scroll = new Fx.SmoothScroll({links:'mtForm',wheelStops:false})
 		validation_failed=false;
 		
 		runPresubmitFunctions(form,validation_fields);
@@ -99,7 +98,7 @@
 		if( $this->mtconf['allow_imgupload'] && $this->mtconf['images_per_listing'] > 0 ) {
 		?>
 		var hash = jQuery("#sortableimages").sortable('serialize');
-		if(hash != ''){document.adminForm.img_sort_hash.value=hash;}
+		if(hash != ''){document.mtForm.img_sort_hash.value=hash;}
 		<?php } ?>
 		
 		if(attCount>0 && checkImgExt(attCount,jQuery("input:file[name|='image[]']"))==false) {
@@ -112,16 +111,16 @@
 			return;
 		<?php } ?>
 		} else {
-			Joomla.submitform(form.task.value, document.getElementById('adminForm'));
+			Joomla.submitform(form.task.value, document.getElementById('mtForm'));
 		}
 		return;
 	}
 </script>
 
  
-<h2 style="display:none;" class="contentheading"><?php echo ($this->link->link_id) ? JText::_( 'COM_MTREE_PAGE_HEADER_EDIT_LISTING' ) : 	JText::_( 'COM_MTREE_PAGE_HEADER_ADD_LISTING' ); ?></h2>
+<h2 class="contentheading"><?php echo ($this->link->link_id) ? JText::_( 'COM_MTREE_PAGE_HEADER_EDIT_LISTING' ) : 	JText::_( 'COM_MTREE_PAGE_HEADER_ADD_LISTING' ); ?></h2>
 
-<form action="<?php echo JRoute::_("index.php") ?>" method="post" enctype="multipart/form-data" name="adminForm" id="adminForm" class="form-horizontal form-validate">
+<form action="<?php echo JRoute::_("index.php") ?>" method="post" enctype="multipart/form-data" name="mtForm" id="mtForm" class="form-horizontal form-validate">
 	<?php if( isset($this->warn_duplicate) && $this->warn_duplicate == 1 ) { ?>
 		<p class="text-info"><?php echo JText::_( 'COM_MTREE_THERE_IS_ALREADY_A_PENDING_APPROVAL_FOR_MODIFICATION' ); ?></p>
 	<?php } ?>
@@ -129,7 +128,7 @@
 	<div class="control-group">
 		<div class="controls">
 			<button type="button" onclick="javascript:submitbutton('savelisting')" class="btn btn-primary"><?php echo JText::_( 'COM_MTREE_SUBMIT_LISTING' ) ?></button>
-			<button type="button" onclick="history.back();" class="btn  btn-primary"><?php echo JText::_( 'COM_MTREE_CANCEL' ) ?></button>
+			<button type="button" onclick="history.back();" class="btn btn-primary"><?php echo JText::_( 'COM_MTREE_CANCEL' ) ?></button>
 		</div>
 	</div>
 

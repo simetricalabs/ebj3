@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id: helper.php 1713 2012-12-29 02:17:01Z cy $
  * @package		Mosets Tree
  * @copyright	(C) 2005-2009 Mosets Consulting. All rights reserved.
  * @license		GNU General Public License
@@ -16,7 +15,7 @@ class modMTBrowseHelper {
 		$db 		= JFactory::getDBO();
 		$itemid 	= MTModuleHelper::getItemid();
 		$db 		= JFactory::getDBO();
-		$tmp_mtconf 	= new mtConfig($db);
+		$tmp_mtconf = new mtConfig($db);
 
 		$tmp_mtconf->setCategory($cat_id);
 

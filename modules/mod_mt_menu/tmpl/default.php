@@ -1,4 +1,4 @@
-<?php /* $Id: default.php 1960 2013-07-11 12:14:38Z cy $ */ defined('_JEXEC') or die('Restricted access'); ?>
+<?php /* $Id$ */ defined('_JEXEC') or die('Restricted access'); ?>
 <ul class="nav menu<?php echo $class_sfx; ?>">
 	<?php
 	

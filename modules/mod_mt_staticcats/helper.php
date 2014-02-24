@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: helper.php 1967 2013-07-16 05:04:58Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2011 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -15,7 +14,7 @@ class modMTStaticcatsHelper {
 	function getCategories( $params ) {
 		global $mtconf;
 		
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		$itemid = MTModuleHelper::getItemid();
 		
 		$parent_cat_id		= $params->get( 'parent_cat_id',	0 );
@@ -56,7 +55,7 @@ class modMTStaticcatsHelper {
 	}
 	
 	function getCategoryId() {
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		# Try to retrieve current category
 		$link_id	= JFactory::getApplication()->input->getInt('link_id');

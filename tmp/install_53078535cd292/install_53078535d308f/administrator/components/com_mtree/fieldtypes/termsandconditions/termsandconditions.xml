@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>termsandconditions</name>
+	<caption>Terms &amp; Conditions</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>(C) 2012-2013 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.5</version>
+	<description>Allows you to present a checkbox for user to agree to your terms sand conditions.</description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/termsandconditions">
+			<filename>termsandconditions.php</filename>
+			<filename>termsandconditions.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields addpath="">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_content/models/fields">
+				<field name="id" type="modal_article"
+					label="COM_MTREE_FIELD_SELECT_ARTICLE_LABEL"
+					description="COM_MTREE_FIELD_SELECT_ARTICLE_DESC"
+				/>
+				<field name="text" type="text" size="44" default="I have read and agree to the &lt;a href=	&quot;{article_url}&quot; target=&quot;_blank&quot;&gt;{article_title}&lt;/a&gt;" label="Text" description="Enter the T&amp;C text that will appear beside the checkbox. You can use {article_title} and {article_url} as a placeholder for the title and URL of the selected article above."/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/termsandconditions.xml</server>
+	</updateservers>
+</extension>

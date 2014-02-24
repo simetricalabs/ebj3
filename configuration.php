@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'This site is down for maintenance.<br /> Please check back again soon.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'EdBase';
+	public $sitename = 'Startups Educación | EdBase';
 	public $editor = 'tinymce';
 	public $captcha = 'recaptcha';
 	public $list_limit = '20';
@@ -43,8 +43,8 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
-	public $MetaDesc = '';
-	public $MetaKeys = '';
+	public $MetaDesc = 'EdBase es una base de datos para startups, emprendedores  e inversionistas interesados ​​en el sector de la educación de latinoamérica. ';
+	public $MetaKeys = 'startups de educación en latinoamérica, startups de educación, inversionistas latinoamerica, startups latinoamerica';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '0';
 	public $MetaVersion = '0';
@@ -59,7 +59,7 @@ class JConfig {
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $MetaRights = '';
-	public $sitename_pagetitles = '0';
+	public $sitename_pagetitles = '2';
 	public $force_ssl = '0';
 	public $frontediting = '1';
 	public $feed_email = 'author';

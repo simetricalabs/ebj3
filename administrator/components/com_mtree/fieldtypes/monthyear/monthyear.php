@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: monthyear.php 2011 2013-08-02 11:10:35Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2011 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -22,7 +21,7 @@ class mFieldType_monthYear extends mFieldType {
 		}
 	}
 	
-	function getOutput() {
+	function getOutput($view=1) {
 		$dateFormat = $this->getParam('dateFormat','%m %Y');
 		$value = $this->getValue();
 		
@@ -47,7 +46,7 @@ class mFieldType_monthYear extends mFieldType {
 		}
 		
 		$html = '';
-		$html .= '<select name="' . $this->getInputFieldName(1) . '" style="width:150px">';
+		$html .= '<select name="' . $this->getInputFieldName(1) . ' " style="width:200px" >';
 		$html .= '<option value="">&nbsp;</option>';
 		for($month=1;$month<=12;$month++) {
 			$html .= '<option value="' . $month . '"';
@@ -58,7 +57,7 @@ class mFieldType_monthYear extends mFieldType {
 		}
 		$html .= '</select>';
 		
-		$html .= '<select name="' . $this->getInputFieldName(2) . '" style="width:120px">';
+		$html .= '<select name="' . $this->getInputFieldName(2) . ' " style="width:150px">';
 		$html .= '<option value="">&nbsp;</option>';
 		for($year=$endYear;$year>=$startYear;$year--) {
 			$html .= '<option value="' . $year . '"';

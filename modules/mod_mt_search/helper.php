@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: helper.php 1713 2012-12-29 02:17:01Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2011 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -12,8 +11,8 @@ defined('_JEXEC') or die('Restricted access');
 
 class modMTSearchHelper {
 
-	function getCategories( $params ) {
-		$db =& JFactory::getDBO();
+	public static function getCategories( $params ) {
+		$db = JFactory::getDBO();
 		$tmp_mtconf = new mtConfig($db);
 		
 		$showCatDropdown= intval( $params->get( 'showCatDropdown', 0 ) );

@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_listings.php 1967 2013-07-16 05:04:58Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2013 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -68,7 +67,7 @@ if( $type == 8 ) {
 	$show_more = 0;
 }
 
-$cache		=& JFactory::getCache('mod_mt_listings'.'_catid'.$cat_id.'_linkid'.$link_id);
+$cache		= JFactory::getCache('mod_mt_listings'.'_catid'.$cat_id.'_linkid'.$link_id);
 $limit_cat_to 	= $cache->call(array('modMTListingsHelper','getCatIdFilter'), $params, $cat_id, $link_id);
 $listings 	= $cache->call(array('modMTListingsHelper','getList'), $params, $limit_cat_to);
 

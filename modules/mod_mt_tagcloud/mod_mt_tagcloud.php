@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_tagcloud.php 1867 2013-04-09 14:17:27Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2009-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -16,13 +15,15 @@ require_once (dirname(__FILE__).'/helper.php');
 if( !$moduleHelper->isModuleShown() ) { return; }
 
 $maxTags	= $params->get( 'maxTags', 30 );
+$sort_by    = $params->get( 'sort_by', 'alpha' );
 $cf_id 		= $params->get( 'cf_id', 28 );
 $hide_list	= $params->get( 'hide_list', '' );
 
-$cache =& JFactory::getCache('mod_mt_tagcloud');
+$cache = JFactory::getCache('mod_mt_tagcloud');
 
 $arrTags = $cache->call(array('modMTTagCloudHelper','getTags'), $cf_id);
-$rawTags = $cache->call(array('modMTTagCloudHelper','parse'), $arrTags);
+$rawTags = $cache->call(array('modMTTagCloudHelper','parse'), $arrTags );
+$rawTags = $cache->call(array('modMTTagCloudHelper','sortTags'), $rawTags, $sort_by);
 $itemid  = MTModuleHelper::getItemid();
 
 if( !empty($hide_list) )
@@ -36,7 +37,7 @@ if( !empty($hide_list) )
 }
 
 $totaltags = count($rawTags);
-if( $totaltags > $maxTags ) {
+if( $maxTags > 0 && $totaltags > $maxTags ) {
 	$rawTags = array_slice($rawTags,0,$maxTags);
 	$totaltags = count($rawTags);
 }
@@ -44,6 +45,7 @@ if( $totaltags > $maxTags ) {
 $i=0;
 foreach( $rawTags AS $tag => $items )
 {
+	$tags[$i]       = new stdClass();
 	$tags[$i]->value = $tag;
 	$tags[$i]->items = $items;
 	$tags[$i]->link  = JRoute::_('index.php?option=com_mtree&task=searchby&cf_id='.$cf_id.'&value='.$tag.$itemid);

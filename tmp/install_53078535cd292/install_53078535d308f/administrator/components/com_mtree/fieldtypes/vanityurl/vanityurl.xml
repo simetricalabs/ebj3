@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>vanityurl</name>
+	<caption>Vanity URL</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>(C) 2012 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description>Vanity URL allows users to enter username and create a link to a spcified URL. For example http://www.twitter.com/username or http://www.facebook.com/username.</description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/vanityurl">
+			<filename>vanityurl.php</filename>
+			<filename>vanityurl.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="urlFormat" type="text" default="http://www.twitter.com/{username}" size="40" label="URL Format" description="Specify the URL format. Use {username} as a placeholder for the user defined name. Example: http://www.twitter.com/{username}"/>
+				<field name="displayFormat" type="text" default="@{username}" size="40" label="Display Format" description="Specify the format in which the vanity URL is displayed. Use {username} as a placeholder for the user defined name. Example: @{username}"/>
+		
+				<field name="title" type="text" default="" size="40" label="Link Title" description="This will be added to your link as Title attribute. Use this to provide additional information about your link. Most browsers display title text as a tooltip when it is hovered over. Use {username} as a placeholder for the user defined name. Example: Follow the user @{username}"/>
+				<field name="image" type="text" default="" size="40" label="Link Image" description="Enter the URL of an image. This will be used for the weblink instead of the Vanity URL text. You can use {live_site} as the replacement for the value of your site's domain. ie: {live_site}/images/banners/white.png"/>
+				<field name="maxChars" type="text" size="15" default="15" label="Max. number of characters" description="Enter the maximum number of characters user can enter for their vanity URL username."/>
+				<field name="openNewWindow" type="radio" default="1" class="btn-group" label="Open New Window" description="Open a new window when the link is clicked.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showGo" type="radio" default="1" class="btn-group" label="Show Go button" description="This Go button will be available in the back-end Edit Listing page to allow admin a fast way to open the listing's website.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field type="spacer" name="@spacer" label="" description=""/>
+
+				<field name="useNofollow" type="radio" default="0" class="btn-group" label="Enable nofollow attribute" description="nofollow is an HTML attribute value used to instruct some search engines that a hyperlink should not influence the link target's ranking in the search engine's index. Enabling this parameter will append the nofollow attribute to all links created using this field type.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+		
+				<field type="spacer" name="@spacer" label="" description=""/>
+
+				<field name="useGA" type="radio" default="0" class="btn-group" label="Use GA tracking" description="If you site uses Google Analytics, this allows you to track outbound link through this field. Please make sure you have Google Analytics running on your site and have the latest version of the tracking code before using this.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="gaPageTrackDirectory" type="text" default="/outgoing/" size="40" label="GA's outbound directory" description="If you use Google Analytics, this parameter allow you to enter an outgoing directory where all outbound clicks through this field will be recorded. More information: http://www.google.com/support/analytics/bin/answer.py?answer=55527&amp;cbid=1aul57ykjrzdd&amp;src=cb"/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/vanityurl.xml</server>
+	</updateservers>
+</extension>

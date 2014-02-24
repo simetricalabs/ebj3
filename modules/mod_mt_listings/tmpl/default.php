@@ -1,8 +1,7 @@
-<?php /* $Id: default.php 2010 2013-08-02 09:32:44Z cy $ */ defined('_JEXEC') or die('Restricted access'); ?>
+<?php /* $Id: default.php 1826 2013-03-06 09:42:38Z cy $ */ defined('_JEXEC') or die('Restricted access'); ?>
 <style type="text/css">
 .mod_mt_listings.tiles {
 	overflow:hidden;
-	margin:0;
 }
 .mod_mt_listings.tiles li {
 	margin-bottom: 2px;
@@ -54,14 +53,25 @@
 }
 
 </style>
-<ul id="<?php echo $uniqid; ?>" class="mod_mt_listings tiles">
+
 <?php
 global $mtconf;
-
+echo '<div class="h_section gray last">';
+echo '<div class="h_holder">';
+echo '<div class="h_content">';
+echo '<div class="dhs74 home-startups flt44 list _a">';
+echo '<div class="startups_section">';
+echo '<div class="startups">';
+echo '<div class="startup_cards">';
+echo '<div class="dhs74 home-startups fss2 startups _a">';
 $i = 0;
 if ( is_array($listings) ) {
 	foreach( $listings AS $l ) {
-		echo '<li'.(($i==0)?' class="first"':'').'>';
+		echo '<div class="card_container">';
+		echo '<div class="g-card shadow_light g-trans_hover"  onclick="window.location = \''.$l->link.'\'" >';
+		echo '<div class="header">';
+		echo '<div class="top">';
+		echo '<div class="pic">';
 
 		// Image
 		if( $show_images )
@@ -69,7 +79,7 @@ if ( is_array($listings) ) {
 			echo '<a class="top-listing-thumb" href="' . $l->link . '">';
 			if( isset($l->image_path) && !empty($l->image_path) )
 			{
-				echo '<img align="bottom" border="0" src="'. $l->image_path . '" alt="' . $l->link_name . '" />';
+				echo '<img border="0" src="'. $l->image_path . '" alt="' . $l->link_name . '" />';
 			}
 			else
 			{
@@ -77,14 +87,16 @@ if ( is_array($listings) ) {
 			}
 			echo  '</a>';
 		}
+		echo '</div>';
 
 		require JModuleHelper::getLayoutPath('mod_mt_listings', '_fields');
 
-		echo '</li>';
+		echo '</div>';
+		echo '</div>';
 		$i++;
 	}
 }
-
+/*
 if ( $show_more ) {
 	echo '<li class="showmore">';
 	echo '<a href="';
@@ -92,5 +104,13 @@ if ( $show_more ) {
 	echo '" class="'.$listingclass.'">';
 	echo $caption_showmore . '</a></li>';
 }
-
-?></ul>
+*/
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+?>

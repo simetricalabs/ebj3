@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>corecreated</name>
+	<caption>Created</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>January 2012</creationDate>
+	<copyright>(C) 2011-2012 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>0</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/corecreated">
+			<filename>corecreated.php</filename>
+			<filename>corecreated.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="dateFormat" type="list" default="" label="Date Format" >
+					<option value="Y-m-d">2007-06-01</option>
+					<option value="Y-m-d H:i:s">2007-06-01 11:00:00</option>
+					<option value="d.m.Y">01.06.2007</option>
+					<option value="d F Y">01 June 2007</option>
+					<option value="d/m/Y">01/06/2007</option>
+					<option value="m/d/Y">06/01/2007</option>
+				</field>
+				<field name="customDateFormat" type="text" default="" label="Custom Date Format" description="Enter a date format string based on PHP's date() function specification at http://php.net/date"/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/corecreated.xml</server>
+	</updateservers>
+</extension>

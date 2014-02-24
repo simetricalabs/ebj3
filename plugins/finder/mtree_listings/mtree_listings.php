@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mtree_listings.php 1945 2013-07-04 14:22:13Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2010-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License

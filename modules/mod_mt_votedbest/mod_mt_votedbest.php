@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_votedbest.php 1867 2013-04-09 14:17:27Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License

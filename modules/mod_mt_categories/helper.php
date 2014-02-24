@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id: helper.php 1967 2013-07-16 05:04:58Z cy $
  * @package		Mosets Tree
  * @copyright	(C) 2005-2009 Mosets Consulting. All rights reserved.
  * @license		GNU General Public License
@@ -14,7 +13,7 @@ class modMTCategoriesHelper {
 
 	function getCategories( $params, $cat_id, $link_id ) {
 		
-		$db	=& JFactory::getDBO();
+		$db	= JFactory::getDBO();
 		$itemid = MTModuleHelper::getItemid();
 		$cats	= modMTCategoriesHelper::loadCategoriesList( $params, $cat_id );
 		
@@ -39,7 +38,7 @@ class modMTCategoriesHelper {
 	}
 	
 	function getBackCategory( $params, $cat_id, $link_id, $current_category_is_empty ) {
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		$itemid = MTModuleHelper::getItemid();
 
 		$back_symbol	= htmlspecialchars($params->get( 'back_symbol', '<<' ));
@@ -78,7 +77,7 @@ class modMTCategoriesHelper {
 	}
 	
 	function getCategoryId( $link_id, $cat_id ) {
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		if ( $link_id > 0 && $cat_id == 0 ) {
 			$db->setQuery( 'SELECT cat_id FROM #__mt_cl WHERE link_id =\''.$link_id.'\' AND main = 1' );
@@ -89,7 +88,7 @@ class modMTCategoriesHelper {
 	}
 	
 	function getCategoryParentId( $cat_id ) {
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		$db->setQuery( 'SELECT cat_parent FROM #__mt_cats WHERE cat_id = ' . $cat_id . ' LIMIT 1' );
 		$cat_parent_id = $db->loadResult();
 		return $cat_parent_id;
@@ -98,7 +97,7 @@ class modMTCategoriesHelper {
 	function loadCategoriesList( $params, $cat_id ) {
 		global $mtconf;
 
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		$primary_order		= $params->get( 'primary_order', $mtconf->get('first_cat_order1') );
 		$primary_sort		= $params->get( 'primary_sort', $mtconf->get('first_cat_order2') );

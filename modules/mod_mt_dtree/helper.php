@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id: helper.php 1936 2013-07-01 13:11:28Z cy $
  * @package		Mosets Tree
  * @copyright	(C) 2005-2009 Mosets Consulting. All rights reserved.
  * @license		GNU General Public License
@@ -18,7 +17,7 @@ class modMTDtreeHelper {
 		$listing_order1	= $params->get( 'listing_order1', 'link_name' );
 		$listing_order2	= $params->get( 'listing_order2', 'desc' );
 
-		$db 		=& JFactory::getDBO();
+		$db 		= JFactory::getDBO();
 		$nullDate	= $db->getNullDate();
 
 		# Get all links
@@ -96,7 +95,7 @@ class modMTDtreeHelper {
 	}
 	
 	function getCategoryId( $link_id, $cat_id ) {
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		if ( $link_id > 0 && $cat_id == 0 ) {
 			$db->setQuery( 'SELECT cat_id FROM #__mt_cl WHERE link_id =\''.$link_id.'\' AND main = 1' );

@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_browse.php 1967 2013-07-16 05:04:58Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2011 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License

@@ -1,6 +1,5 @@
 <?php
 /**
- * @version		$Id: helper.php 1713 2012-12-29 02:17:01Z cy $
  * @package		Mosets Tree
  * @copyright	(C) 2005-2009 Mosets Consulting. All rights reserved.
  * @license		GNU General Public License
@@ -13,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 class modMTCategoriesExpandingHelper {
 
 	function getCategoryId($cat_id, $link_id) {
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		if ( $link_id > 0 && $cat_id == 0 ) {
 			$db->setQuery( 'SELECT cat_id FROM #__mt_cl WHERE link_id =\''.$link_id.'\' AND main = 1' );
@@ -43,7 +42,7 @@ class modMTCategoriesExpandingHelper {
 		if ($secondary_order == -1) $secondary_order	= $mtconf->get('second_cat_order1');
 		if ($secondary_sort == -1) $secondary_sort		= $mtconf->get('second_cat_order2');
 
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		# Get the main categories first
 		$sql = "SELECT cat_name, cat_id, cat_cats, cat_links FROM #__mt_cats WHERE cat_published=1 && cat_approved=1 && cat_parent='0' ";

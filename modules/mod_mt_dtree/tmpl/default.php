@@ -19,7 +19,7 @@
 	if ( $root_catid == 0 ) { ?>
 	d.add(0,-1, '<?php echo JText::_( 'MOD_MT_DTREE_ROOT' ) ?>', '<?php echo JRoute::_("index.php?option=com_mtree" . $itemid); ?>');
 	<?php } else { 
-	$db =& JFactory::getDBO();
+	$db = JFactory::getDBO();
 	$db->setQuery( "SELECT cat_name, cat_id FROM #__mt_cats WHERE cat_id ='".$root_catid."'" );
 	$root = $db->loadObject();
 	?>

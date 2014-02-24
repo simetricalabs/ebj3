@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_menu.php 1967 2013-07-16 05:04:58Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -15,7 +14,7 @@ require_once( dirname(__FILE__).'/helper.php' );
 
 if( !$moduleHelper->isModuleShown() ) { return; }
 
-$my		=& JFactory::getUser();
+$my		= JFactory::getUser();
 $cat_id		= JFactory::getApplication()->input->getInt('cat_id', 0);
 $link_id	= JFactory::getApplication()->input->getInt('link_id', 0);
 $user_id	= JFactory::getApplication()->input->getInt('user_id', 0);
@@ -50,7 +49,7 @@ if ( $link_id > 0 && $cat_id == 0 ) {
 
 $toplist_cat_id			= modMTMenuHelper::getTopListCatId( $cat_id, $params );
 
-$cache =& JFactory::getCache('mod_mt_menu');
+$cache = JFactory::getCache('mod_mt_menu');
 $cat_allow_submission = $cache->call(array('modMTMenuHelper','getCatAllowSubmission'), $params, $cat_id);
 
 $itemid				= MTModuleHelper::getItemid();

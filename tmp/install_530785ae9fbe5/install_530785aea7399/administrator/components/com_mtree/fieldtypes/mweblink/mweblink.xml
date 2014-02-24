@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="3.0.0" method="upgrade" mosetsExtension="mtreeFieldtype">
+	<name>mweblink</name>
+	<caption>Weblink</caption>
+	<author>Lee Cher Yeong</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>(C) 2011 Mosets Consulting. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>3.0.0</version>
+	<description></description>
+	<useElements>0</useElements>
+	<useSize>1</useSize>
+	<taggable>0</taggable>
+	<fileset>
+		<files folder="." target="administrator/components/com_mtree/fieldtypes/mweblink">
+			<filename>mweblink.php</filename>
+			<filename>mweblink.xml</filename>
+			<filename>index.html</filename>
+		</files>
+	</fileset>
+	<config>
+		<fields>
+			<fieldset name="basic">
+				<field name="openNewWindow" type="radio" default="1" label="Open New Window" class="btn-group" description="Open a new window when the link is clicked.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="text" type="text" default="" size="40" label="Link Text" description="Use this parameter to specify the link text. If left empty, the full URL will be displayed as the link's text. If you specify an image below, this will be used for its ALT attribute."/>
+				<field name="title" type="text" default="" size="40" label="Link Title" description="This will be added to your link as Title attribute. Use this to provide additional information about your link. Most browsers display title text as a tooltip when it is hovered over."/>
+				<field name="image" type="text" default="" size="40" label="Link Image" description="Enter the URL of an image. This will be used for the weblink instead of the weblink URL. You can use {live_site} as the replacement for your site's base URL. ie: {live_site}/images/banners/white.png"/>
+				<field name="maxUrlLength" type="text" size="10" default="60" label="Max. URL Length" description="Enter the maximum URL's length before it is clipped"/>
+				<field name="useInternalRedirect" type="radio" default="0" label="Use internal redirect" class="btn-group" description="Using internal redirect will hide the actual destination URL and use an internal URL to redirect users to the actual URL. This also allows you to track the number of visits the link gets. The number of visits can be shown in front-end when 'Show Counter' option below is set to Yes.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="showCounter" type="radio" default="1" label="Show counter" class="btn-group" description="Shows the number of visits the link has been clicked in front-end. Tracking the number of visits is only available when you use internal redirect.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="clippedSymbol" type="text" size="10" default="..." label="Clipped symbol"/>
+				<field name="showGo" type="radio" default="0" label="Show Go button" class="btn-group" description="This Go button will be available in the back-end Edit Listing page to allow admin a fast way to open the listing's website.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+		
+				<field name="acceptFTP" type="radio" default="0" label="Accept FTP links" class="btn-group" description="Setting this to Yes will enable this custom field to accept links with ftp:// protocol.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="accessLevel" type="list" default="0" label="Access Level" description="Set the required access level in order for your users to view this link.">
+					<option value="0">Public</option>
+					<option value="1">Registered</option>
+				</field>
+				<field name="txtLogin" type="text" default="" size="40" label="Login Message" description="If you've set the field's Access Level to Registered, this message will be shows when unregistered users view the field."/>
+
+				<field name="useNofollow" type="radio" default="0" label="Use nofollow attribute" class="btn-group" description="nofollow is an HTML attribute value used to instruct some search engines that a hyperlink should not influence the link target's ranking in the search engine's index. Enabling this parameter will append the nofollow attribute to all links created using this field type.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="useGA" type="radio" default="0" label="Use GA tracking" class="btn-group" description="If you site uses Google Analytics, this allows you to track outbound link through this field. Please make sure you have Google Analytics running on your site and have the latest version of the tracking code before using this.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="gaPageTrackDirectory" type="text" default="/outgoing/" size="40" label="GA's outbound directory" description="If you use Google Analytics, this parameter allow you to enter an outgoing directory where all outbound clicks through this field will be recorded. More information: http://www.google.com/support/analytics/bin/answer.py?answer=55527&amp;cbid=1aul57ykjrzdd&amp;src=cb"/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.mosets.com/mtree/fieldtypes/mweblink.xml</server>
+	</updateservers>
+</extension>

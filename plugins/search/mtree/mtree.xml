@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Id: mtree.xml 1591 2012-10-18 07:38:02Z cy $ -->
-<extension version="1.6" type="plugin" group="search" method="upgrade">
+<!-- $Id$ -->
+<extension version="3,1" type="plugin" group="search" method="upgrade">
 	<name>plg_search_mtree</name>
-	<creationDate>October 2012</creationDate>
-	<version>3.0.0</version>
-	<copyright>Copyright (C) 2008 - 2012 Mosets Consulting. All rights reserved.</copyright>
-    	<license>GNU General Public License</license>
+	<creationDate>October 2013</creationDate>
+	<version>3.5.3</version>
+	<copyright>Copyright (C) 2008 - 2013 Mosets Consulting. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
 	<author>Mosets Consulting</author>
 	<authorEmail>mtree@mosets.com</authorEmail>
 	<authorUrl>www.mosets.com</authorUrl>

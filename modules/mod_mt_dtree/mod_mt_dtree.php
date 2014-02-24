@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_dtree.php 1973 2013-07-16 09:30:13Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -34,9 +33,9 @@ if ($show_empty_cat == -1) $show_empty_cat = $mtconf->get('display_empty_cat');
 $link_id	= JFactory::getApplication()->input->getInt('link_id');
 $cat_id		= JFactory::getApplication()->input->getInt('cat_id');
 
-$cache =& JFactory::getCache('mod_mt_browse');
+$cache = JFactory::getCache('mod_mt_browse');
 
-$uri		=& JUri::getInstance();
+$uri		= JUri::getInstance();
 $itemid		= MTModuleHelper::getItemid();
 $cat_id		= $cache->call( array('modMTDtreeHelper','getCategoryId'), $link_id, $cat_id );
 $categories	= $cache->call( array('modMTDtreeHelper','getCategories'), $params );

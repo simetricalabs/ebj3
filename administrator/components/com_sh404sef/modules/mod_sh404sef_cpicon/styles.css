@@ -1,0 +1,46 @@
+/**
+ * sh404SEF - SEO extension for Joomla!
+ *
+ * @author      Yannick Gaultier
+ * @copyright   (c) Yannick Gaultier 2014
+ * @package     sh404SEF
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version     4.3.0.1671
+ * @date        2014-01-23
+ */
+#modsh404_cpanel div.icon {
+	text-align: center;
+	margin-right: 5px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+#modsh404_cpanel div.icon a {
+	display: block;
+	float: left;
+	border: 1px solid #f0f0f0;
+	height: 97px;
+	width: 108px;
+	color: green;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+#modsh404_cpanel div.icon a:hover {
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f9f9f9;
+	color: #0B55C4;
+}
+
+#modsh404_cpanel span {
+	display: block;
+	text-align: center;
+}
+
+#modsh404_cpanel img {
+	padding: 10px 0;
+	margin: 0 auto;
+}

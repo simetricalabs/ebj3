@@ -1,0 +1,10 @@
+##
+# @version $Id$
+# @package Mosets Tree
+# @copyright Copyright (C) 2009 - Mosets Consulting. All rights reserved.
+# @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+##
+
+# Prevents direct access to files in this directory
+
+deny from all

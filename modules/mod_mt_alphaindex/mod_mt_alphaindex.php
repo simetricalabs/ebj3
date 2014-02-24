@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mod_mt_alphaindex.php 1867 2013-04-09 14:17:27Z cy $
  * @package	Mosets Tree
  * @copyright	(C) 2005-2012 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License
@@ -24,6 +23,7 @@ $display_total_links	= $params->get( 'display_total_links',	0	);
 $show_empty		= $params->get( 'show_empty',		0	);
 $seperator		= $params->get( 'seperator',		'&nbsp;'	);
 $moduleclass_sfx	= $params->get( 'moduleclass_sfx',	''	);
+$limit_to_cat_id = $params->get( 'limit_to_cat_id',	0	);
 
 $list	= modMTAlphaindexHelper::getList($params);
 

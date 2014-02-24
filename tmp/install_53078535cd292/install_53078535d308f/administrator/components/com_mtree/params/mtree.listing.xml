@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="component">
+	<name>Mosets Tree</name>
+	<author>Lee Cher Yeong</author>
+	<creationDate>July 2005</creationDate>
+	<copyright>(C) 2005 Mosets Consulting http://www.mosets.com/</copyright>
+	<authorEmail>mtree@mosets.com</authorEmail>
+	<authorUrl>www.mosets.com</authorUrl>
+	<version>2.0</version>
+	<description>Mosets Tree is a directory component for Joomla!</description>
+	<params>
+		<param name="show_map" type="list" default="" label="Show Map" description="Show/Hide a Map Link">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_print" type="list" default="" label="Show Print" description="Show/Hide a Print link">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_recommend" type="list" default="" label="Show Recommend" description="Show/Hide a Recommend link">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_rating" type="list" default="" label="Show Rating" description="Show/Hide a Rating link">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_review" type="list" default="" label="Show Review" description="Show/Hide a Review link">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_visit" type="list" default="" label="Show Visit" description="Show/Hide a Visit link">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_contact" type="list" default="" label="Show Contact Owner" description="Show/Hide a Contact Owner link">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_report" type="list" default="" label="Allow Report Listing" description="Allow visitors to report this listing">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_ownerlisting" type="list" default="" label="Show link to all owner listing" description="Show/Hide a link to view all owner listing">
+			<option value="">Use Global</option>
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+	</params>
+</mosinstall>

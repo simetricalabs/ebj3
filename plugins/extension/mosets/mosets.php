@@ -1,6 +1,5 @@
 <?php
 /**
- * @version	$Id: mosets.php 1972 2013-07-16 09:24:13Z cy $
  * @copyright	Copyright (C) 2011 Mosets Consulting. All rights reserved.
  * @license	GNU General Public License version 2 or later; see LICENSE.txt
  */
