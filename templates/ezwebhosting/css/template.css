@@ -618,6 +618,16 @@ padding-right:0px !important;}
 	margin-top: 7px;
 	cursor:pointer;
 	background:url(../images/facebook.png) no-repeat;}		
+
+#s5_google {
+	float:right;
+	height:44px;
+	width:40px;
+	margin-left:2px;
+	margin-bottom:5px;
+	margin-top: 7px;
+	cursor:pointer;
+	background:url(../images/google+.png) no-repeat;}	
 	
 #s5_social_wrap {
 	margin-top: 28px;
@@ -916,6 +926,7 @@ p.readmore a.btn {
 /* -blue */
 
 .module_round_box-blue {
+
 	padding:30px;
 	margin-bottom: 19px;
 	background:#36abd8;
@@ -1431,7 +1442,9 @@ width:252px !important;
     line-height: 54px;
     padding: 67px !important;
     text-align: center;
-    width: 300px;}
+    width: 300px;
+    display:none;
+    }
 	
 .jdGallery .slideInfoZone {
 	background:none !important;}

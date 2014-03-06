@@ -49,10 +49,11 @@ defined('_JEXEC') or die('(@)|(@)');
 	<p><?php echo $params->get('inittext'); ?></p>
 	</div>
 <?php endif; ?>
-<div id="slogin-buttons" class="slogin-buttons <?php echo $moduleclass_sfx?>">
+<div id="slogin-buttons" class="slogin-buttons <?php echo $moduleclass_sfx?>" style="float: left;margin-left: 50px;">
 
     <?php if (count($plugins)): ?>
     <?php
+    	$i=0;
         foreach($plugins as $link):
             $linkParams = '';
             if(isset($link['params'])){
@@ -60,8 +61,12 @@ defined('_JEXEC') or die('(@)|(@)');
                     $linkParams .= ' ' . $k . '="' . $v . '"';
                 }
             }
+        	if($i%2==0)    
+            	echo "</br>";
+            $i++;	
             ?>
             <a  rel="nofollow" <?php echo $linkParams;?> href="<?php echo JRoute::_($link['link']);?>"><span class="<?php echo $link['class'];?>">&nbsp;</span></a>
+
         <?php endforeach; ?>
     <?php endif; ?>
 

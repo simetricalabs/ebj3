@@ -144,6 +144,7 @@ body  {	background:#252525 url(<?php echo $s5_background; ?>) repeat-x bottom;}
 				
 				<?php if (($s5_rss  != "") || ($s5_twitter  != "") || ($s5_facebook  != "") || ($s5_google  != "")) { ?>
 				<div id="s5_social_wrap">
+						<div id="s5_google" onclick="window.open('https://plus.google.com/103834987476750810050')"></div>				
 					<?php if ($s5_facebook  != "") { ?>
 						<div id="s5_facebook" onclick="window.open('<?php echo $s5_facebook; ?>')"></div>
 					<?php } ?>	

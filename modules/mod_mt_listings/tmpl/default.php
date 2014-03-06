@@ -68,7 +68,7 @@ $i = 0;
 if ( is_array($listings) ) {
 	foreach( $listings AS $l ) {
 		echo '<div class="card_container">';
-		echo '<div class="g-card shadow_light g-trans_hover"  onclick="window.location = \''.$l->link.'\'" >';
+		echo '<div class="g-card shadow_light g-trans_hover" >';
 		echo '<div class="header">';
 		echo '<div class="top">';
 		echo '<div class="pic">';

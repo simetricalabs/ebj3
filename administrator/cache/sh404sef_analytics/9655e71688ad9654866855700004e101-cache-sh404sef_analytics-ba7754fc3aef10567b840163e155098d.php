@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"output";s:0:"";s:6:"result";O:8:"stdClass":3:{s:6:"status";b:0;s:13:"statusMessage";s:144:"No se pudo conectar al servidor de Analytics (no está disponible, o ninguna cuenta está configurada? está cURL y SSL activado en su phpinfo?)";s:4:"note";s:0:"";}}
