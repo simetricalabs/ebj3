@@ -62,18 +62,26 @@ if ($mobile==true) { require(dirname(__FILE__)."/../../vertex/mobile_device_menu
 
 
 <?php if($mobile==true || $s5_responsive == "enabled"){ ?>
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<?php if ($s5_responsive_user_scalable == "disabled") { ?>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<?php } else { ?>
+		<meta name="viewport" content="initial-scale=1.0" />
+	<?php } ?>
 <?php } ?>
 
-<?php if ($mobile == false && $s5_show_menu == "show") { require(dirname(__FILE__)."/../../vertex/call_menu.php"); } ?>
 <?php require(dirname(__FILE__)."/../../vertex/css_and_js.php"); ?>
+<?php if ($mobile == false && $s5_show_menu == "show") { require(dirname(__FILE__)."/../../vertex/call_menu.php"); } ?>
 
 <!-- Info Slide Script - Called in header so css validates -->	
-<?php if ($s5_info_slide == "yes") { ?>
+<?php if ($s5_info_slide == "yes" || $s5_info_slide == "css") { ?>
 <link href="<?php echo $s5_directory_path ?>/css/s5_info_slide.css" rel="stylesheet" type="text/css" />
+<?php } ?>
+<?php if ($s5_info_slide == "yes") { ?>
 <script type="text/javascript" src="<?php echo $s5_directory_path ?>/js/s5_info_slide.js"></script>
 <?php } ?>
 
+<!-- Resize column function -->	
+<?php if ($s5_resize_columns  != "disabled") { require(dirname(__FILE__)."/../../vertex/resize_columns.php"); } ?>
 
 <!-- File compression. Needs to be called last on this file -->	
 <!-- The excluded files, listed below the compressed php files, are excluded because their calls vary per device or per browser. Included compression files are only ones that have no conditions and are included on all devices and browsers. Otherwise unwanted css will compile in the compressed files. -->	
@@ -82,7 +90,7 @@ $filepath = 'templates/'.$s5_template_name.'/cache/';
 $usejscompression = $s5_compress_js;
 $usecsscompression = $s5_compress_css;
 $cachetime = $s5_compress_cache;
-$excludeFiles= "s5_responsive_ie.js,s5_responsive_mobile_bar.js,s5_responsive.css,s5_responsive_bars.css,s5_responsive_hide_classes.css,s5_responsive_rtl.css,editor_rtl.css,template_rtl.css,bootstrap-rtl.css";
+$excludeFiles= "s5_responsive_ie.js,s5_responsive_mobile_bar.js,s5_responsive.css,s5_responsive_bars.css,s5_responsive_hide_classes.css,s5_responsive_rtl.css,editor_rtl.css,template_rtl.css,bootstrap-rtl.css,font-awesome.min.css,font-awesome.css";
 $bottomexcludeFiles= "";
 require(dirname(__FILE__)."/../../vertex/compression/top_css_and_js_compression.php");
 }

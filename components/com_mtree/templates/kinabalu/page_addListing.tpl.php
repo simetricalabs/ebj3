@@ -118,7 +118,11 @@
 </script>
 
  
-<h2 class="contentheading"><?php echo ($this->link->link_id) ? JText::_( 'COM_MTREE_PAGE_HEADER_EDIT_LISTING' ) : 	JText::_( 'COM_MTREE_PAGE_HEADER_ADD_LISTING' ); ?></h2>
+<h2 class="contentheading">
+
+<?php /*echo ($this->link->link_id) ? JText::_( 'COM_MTREE_PAGE_HEADER_EDIT_LISTING' ) : 	JText::_( 'COM_MTREE_PAGE_HEADER_ADD_LISTING' );*/ ?>
+
+</h2>
 
 <form action="<?php echo JRoute::_("index.php") ?>" method="post" enctype="multipart/form-data" name="mtForm" id="mtForm" class="form-horizontal form-validate">
 	<?php if( isset($this->warn_duplicate) && $this->warn_duplicate == 1 ) { ?>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension version="3.0.0" type="module" group="content" method="upgrade">
+    <name>AddThis Smart Layers</name>
+    <author>AddThis, LLC</author>
+    <copyright>Copyright (C) 2013 AddThis, LLC</copyright>
+    <license>GPL 3.0</license>
+    <authorUrl>www.addthis.com</authorUrl>
+    <version>1.0.0</version>
+    <creationDate>19-Aug-2013</creationDate>
+    <description>
+        <![CDATA[
+        <script>
+       window.onload = function() {   
+	        var enable_follow = function(status)
+			{
+				ats_swapElememnts('jform_params_ats_follow_fld_','jform_params_ats_follow_fld_',status);				
+			}			
+	        if(document.getElementById('jform_params_ats_follow_enabled0')){
+				document.getElementById('jform_params_ats_follow_enabled0').onclick = function() { enable_follow("block"); };
+				document.getElementById('jform_params_ats_follow_enabled1').onclick = function() { enable_follow("none"); };
+			}
+	        var enable_custom_code = function(status)
+			{
+				ats_swapElememnts('jform_params_ats_customcode_content','jform_params_ats_customcode_content',status);				
+			}
+	        if(document.getElementById('jform_params_ats_customcode_enabled0')){
+				document.getElementById('jform_params_ats_customcode_enabled0').onclick = function() { enable_custom_code("block"); };
+				document.getElementById('jform_params_ats_customcode_enabled1').onclick = function() { enable_custom_code("none"); };
+			}
+			if(document.getElementById('jform_params_ats_form_action'))
+				document.getElementById('jform_params_ats_form_action').value = document.getElementById('module-form').action;
+			
+			document.forms["adminForm"].onsubmit = function(event){
+			
+				document.getElementById('module-form').action = document.getElementById('jform_params_ats_form_action').value;
+				
+    			if(document.getElementById('jform_params_ats_customcode_enabled0').checked && document.getElementById('jform_params_ats_customcode_content').value=="") {
+    				alert("Please specify the Custom Code you'd like to use");					
+					try { 
+						event.preventDefault();
+					} 
+					catch(err) { //if IE
+						document.getElementById('module-form').action = 'javascript:;' ;
+						window.event.returnValue = false;
+					}	
+    			}
+			}					
+			var ats_swapElememnts = function(label,inputName,status)
+			{
+			    var inputs = document.getElementsByTagName("input");
+			    var labels = document.getElementsByTagName("label");
+			    
+				for(var i = 0; i < inputs.length; i++) {
+				    if(inputs[i].id.indexOf(inputName) == 0) {
+				      inputs[i].parentNode.style.display = status;
+				      if(inputs[i].parentNode.parentNode.nodeName == "DIV")//for joomla version < 3.0
+				      	inputs[i].parentNode.parentNode.style.display = status;
+				    }
+				}
+				for(var i = 0; i < labels.length; i++) {
+				    if(labels[i].id.indexOf(label) == 0) {
+				      labels[i].parentNode.style.display = status;
+				      if(labels[i].parentNode.parentNode.nodeName == "DIV")//for joomla version < 3.0
+				      	labels[i].parentNode.parentNode.style.display = status;
+				    }
+				}
+			}			        
+        	if(document.getElementById('jform_params_ats_follow_enabled1') && document.getElementById('jform_params_ats_follow_enabled1').checked){
+        		enable_follow("none");	
+        	}       	
+        	if(document.getElementById('jform_params_ats_customcode_enabled1') && document.getElementById('jform_params_ats_customcode_enabled1').checked){
+        		enable_custom_code("none");	
+        	}
+			window.checkProUser = function (arg) {
+				if (JSON.stringify(arg) == '{}'){
+	        		document.getElementById('jform_params_at_messages-lbl').innerHTML = "AddThis Pro now available - start your trial at <a href='http://www.addthis.com' target='_blank' >www.addthis.com</a> and get premium widgets, personalized content recommendations, advanced customization options and priority support.";
+   				}else{
+   					document.getElementById('jform_params_at_messages-lbl').innerHTML = "Since You are an AddThis Pro user, your configuration options below will be overwritten by those in your AddThis Pro <a href='https://www.addthis.com/dashboard#gallery' target='_blank'>Tool Gallery</a>.";
+   				}
+			};
+			var AtProConfig = function () {
+			  var at_json = document.createElement('script');
+			  var at_pub = document.getElementById('jform_params_ats_profile_id').value;
+			  at_json.src = decodeURIComponent('http://q.addthis.com/feeds/1.0/config.json?pubid='+at_pub+'%26callback=window.checkProUser');
+			  document.body.appendChild(at_json);
+			}
+			AtProConfig();
+			document.getElementById('jform_params_ats_profile_id').onblur = AtProConfig;        			
+		}
+        </script><style>#toolbar-save{display:none !important;} #jform_params_at_messages-lbl{max-width:100% !important;}</style>
+        Make your site smarter. Increase traffic, engagement and revenue by instantly showing the right social tools and content to every visitor. It's one piece of code, mobile-ready and free!]]>
+    </description>
+    <files>
+		<filename>mod_addthis_smartlayers.xml</filename>
+        <filename module="mod_addthis_smartlayers">mod_addthis_smartlayers.php</filename>
+        <folder>models</folder>
+    </files>    
+    <languages>
+		<language tag="en-GB">en-GB.mod_addthis_smartlayers.ini</language>
+		<language tag="en-GB">en-GB.mod_addthis_smartlayers.sys.ini</language>
+    </languages>
+    <form>
+    <config>
+    <fields name="params" addfieldpath="/modules/mod_addthis_smartlayers/models/fields" >
+    
+		<fieldset name="ats_follow" label="MOD_ATSMARTLAYER_OPTIONS">
+			<field name="at-messages" type="spacer" description="AddThis Pro" label="" />
+		<!-- Follow -->
+			<field name="ats_follow_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_FOLLOW_LABEL" />
+			<field name="ats_followdesc_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_FOLLOW_DESC" />			
+			<field name="ats_follow_enabled" type="radio" default="true" class="radio btn-group" label="MOD_ATSMARTLAYER_FOLLOW_ENABLED" description="MOD_ATSMARTLAYER_FOLLOW_ENABLED_DESC">
+	          <option value="true">MOD_ATSMARTLAYER_YES</option>
+	          <option value="false">MOD_ATSMARTLAYER_NO</option>
+	        </field>
+	        <field name="ats_follow_fld_facebook" type="text" default="YOUR-PROFILE" label="facebook.com/" description="Go to http://facebook.com.  Click your profile icon.  Then copy the string of letters and/or numbers after 'facebook.com/' in the URL.  It will look like: 'https://facebook.com/greg.franko.10'"/>
+	        <field name="ats_follow_fld_twitter" type="text" default="YOUR-PROFILE" label="twitter.com/" description="Go to http://twitter.com.  Click the 'Me' tab.  Then copy the string of letters and/or numbers after 'twitter.com/' in the URL.  It will look like: 'https://twitter.com/GregFranko'"/>
+	        <field name="ats_follow_fld_linkedin" type="text" default="" label="linkedin.com/in/" description="Go to http://linkedin.com/profile/public-profile-settings.  Then copy your current profile url (it will be visible beneath the 'Your public profile URL' section.  It will look like: 'www.linkedin.com/in/gregfranko'"/>
+	        <field name="ats_follow_fld_linkedin_comp" type="text" default="" label="linkedin.com/company/" description="Go to http://linkedin.com and sign in.  Then search for your company using the company search in the top right corner of the page.  Click on your company page.  Then copy the id in the URL.  It will look like: 'http://www.linkedin.com/company/167173'"/>
+	        <field name="ats_follow_fld_google" type="text" default="" label="plus.google.com/" description="Go to http://plus.google.com.  Click the 'Profile' tab.  Then copy the string of numeric digits before '/posts' in the URL.  It will look like: 'plus.google.com/110725518355805130542/posts'"/>
+	        <field name="ats_follow_fld_youtube" type="text" default="" label="youtube.com/user/" description="Go to http://youtube.com/user. Your username will automatically appear in the address bar.  It will look like: 'youtube.com/user/gregfranko'"/>
+	        <field name="ats_follow_fld_flickr" type="text" default="" label="flickr.com/photos/" description="Go to http://flickr.com.  Click the 'You' tab.  Then copy the string of letters and/or numbers after '/photos/' in the URL.  It will look like: 'http://flickr.com/photos/90503806@N02'"/>
+	        <field name="ats_follow_fld_vimeo" type="text" default="" label="vimeo.com/" description="Go to http://vimeo.com.  Click the 'Me' tab. Then copy the string of letters and/or numbers after 'vimeo.com/' in the URL.  It will look like: 'https://vimeo.com/user5795445'"/>
+	        <field name="ats_follow_fld_pinterest" type="text" default="" label="pinterest.com/" description="Go to http://pinterest.com.  Click your profile picture.  Then copy the string of letters and/or numbers after 'pinterest.com/' in the URL.  It will look like: 'https://pinterest.com/gregfranko'"/>
+	        <field name="ats_follow_fld_instagram" type="text" default="" label="instagram.com/" description="Go to http://followgram.me.  View your username beneath the 'Share your vanity page' section.  It will look like: 'http://followgram.me/gregfranko'"/>
+	        <field name="ats_follow_fld_foursquare" type="text" default="" label="foursquare.com/" description="Go to http://foursquare.com.  Click your profile picture.  Click 'view this page'.  Then copy the string of letters and/or numbers after 'foursquare.com/' in the URL.  It will like: 'https://foursquare.com/gregfranko'"/>
+	        <field name="ats_follow_fld_tumblr" type="text" default="" label="?.tumblr.com" description="Go to http://www.tumblr.com.  Click your account details (the gear icon).  Click on your blog tab on the left side of the page.  Then copy the string of letters and/or numbers next to the 'url' section.  It will look like: 'http://gfranko.tumblr.com'"/>
+	        <field name="ats_follow_fld_rss" type="text" default="" label="RSS feed URL http://" description="The easiest way to get your RSS feed address, no matter what web browser you're using, is to look at the HTML source of your page."/>
+	    <!-- Share -->
+	        
+	        <field name="ats_share_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_SHARE_LABEL" />
+	        <field name="ats_sharedesc_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_SHARE_DESC" />
+			<field name="ats_share_enabled" type="radio" default="true" class="radio btn-group" label="MOD_ATSMARTLAYER_SHARE_ENABLE" description="MOD_ATSMARTLAYER_SHARE_ENABLE_DESC">
+	          <option value="true">MOD_ATSMARTLAYER_YES</option>
+	          <option value="false">MOD_ATSMARTLAYER_NO</option>
+	        </field>
+			<field name="ats_share_position" type="radio" default="left" class="radio btn-group" label="MOD_ATSMARTLAYER_SHARE_POSITION" description="MOD_ATSMARTLAYER_SHARE_POSITION_DESC">
+	          <option value="left">Left</option>
+	          <option value="right">Right</option>
+	        </field>
+	        <field name="ats_share_btn_count" type="list" default="5" label="MOD_ATSMARTLAYER_SHARE_BUTTONS"  description="MOD_ATSMARTLAYER_SHARE_BUTTONS_COUNT">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            </field>
+            
+            <!-- Whats Next -->
+            
+           	<field name="ats_whatsnext_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_WHATSNEXT_LABEL" />
+           	<field name="ats_whatsnext_desc" type="spacer" class="text" label="MOD_ATSMARTLAYER_WHATSNEXT_DESC" />
+ 			<field name="ats_whatsnext_enabled" type="radio" default="true" class="radio btn-group" label="MOD_ATSMARTLAYER_WHATSNEXT_ENABLE" description="MOD_ATSMARTLAYER_WHATSNEXT_ENABLE_DESC">
+	          <option value="true">MOD_ATSMARTLAYER_YES</option>
+	          <option value="false">MOD_ATSMARTLAYER_NO</option>
+	        </field>
+	        
+	       	<!-- Recomended Content -->
+
+           	<field name="ats_recommended_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_RECOMMENDED_LABEL" />
+           	<field name="ats_recommended_desc" type="spacer" class="text" label="MOD_ATSMARTLAYER_RECOMMENDED_DESC" />
+		   	<field name="ats_recommended_enabled" type="radio" default="true" class="radio btn-group" label="MOD_ATSMARTLAYER_RECOMMENDED_ENABLE" description="MOD_ATSMARTLAYER_RECOMMENDED_ENABLE_DESC">
+	          <option value="true">MOD_ATSMARTLAYER_YES</option>
+	          <option value="false">MOD_ATSMARTLAYER_NO</option>
+	        </field>
+        	<field name="ats_recommended_header" type="text" default="Recommended for you:" label="MOD_ATSMARTLAYER_RECOMMENDED" description="MOD_ATSMARTLAYER_RECOMMENDED_HEADER_DESC"/>
+           
+           	<!-- More Options -->
+           
+           	<field name="ats_more_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_MORE_LABEL" />
+	        <field name="ats_more_theme" type="list" default="transparent" label="MOD_ATSMARTLAYER_MORE_THEME"  description="MOD_ATSMARTLAYER_MORE_THEME_DESC">
+            <option value="transparent">MOD_ATSMARTLAYER_TRANSPARENT</option>
+            <option value="light">MOD_ATSMARTLAYER_LIGHT</option>
+            <option value="gray">MOD_ATSMARTLAYER_GRAY</option>
+            <option value="dark">MOD_ATSMARTLAYER_DARK</option>
+            </field>
+			<field name="ats_profile_id" type="Profile" default="Your Profile ID" label="MOD_ATSMARTLAYER_PROFILE" description="MOD_ATSMARTLAYER_PROFILE_DESC" />	           
+            
+            <!-- Custom Code -->
+			<field name="ats_customcode_label" type="spacer" class="text" label="MOD_ATSMARTLAYER_CUSTOMCODE_LABEL" />
+            <field name="ats_customcode_desc" type="spacer" class="text" label="MOD_ATSMARTLAYER_CUSTOMCODE_DESC" />
+ 		   	<field name="ats_customcode_enabled" type="radio" default="false" class="radio btn-group" label="MOD_ATSMARTLAYER_CUSTOMCODE_ENABLE" description="MOD_ATSMARTLAYER_CUSTOMCODE_ENABLE_DESC">
+	          <option value="true">Yes</option>
+	          <option value="false">No</option>
+	        </field>
+        	<field name="ats_customcode_content" type="textarea" default="" label="MOD_ATSMARTLAYER_CUSTOMCODE" description="MOD_ATSMARTLAYER_CUSTOMCODE_CNTNT_DESC"/>
+         	<field name="ats_form_action" type="hidden" class="text"/>		          	        
+			</fieldset>   
+     </fields>
+    </config>
+    </form>
+</extension>

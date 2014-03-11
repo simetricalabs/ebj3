@@ -34,7 +34,7 @@ xml:lang="<?php echo $lang->getTag(); ?>" lang="<?php echo $lang->getTag(); ?>"
 <?php }
 
 //Calls mootools javascript
-function s5_mootools_call() {
+function s5_jslibrary_call() {
 	$version = new JVersion();
 	if($version->RELEASE <= '2.5'){JHTML::_('behavior.mootools');}
 }

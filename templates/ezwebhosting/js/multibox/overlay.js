@@ -42,7 +42,7 @@ if(undefined == Function.prototype.bind){
 		
 		//start building overlay
 		this.container=$('<div id="OverlayContainer"></div>').css({
-			'position':'absolute','left':0,
+			'position':'absolute','left':0,'height':'100%',
 			'top':0,'width':'100%','opacity':0,
 			'overflow':'hidden','background':'black',
 			'zIndex':this.options.zIndex,'opacity':0

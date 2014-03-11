@@ -41,13 +41,13 @@
 	z-index:2;
 	}
 	
-	.s5_responsive_modile_drop_down_wrap_loading {
+	.s5_responsive_mobile_drop_down_wrap_loading {
 	position:absolute;
 	z-index:100;
 	top:-500000px;
 	}
 	
-	.s5_regfloatleft, #member-registration div {
+	#s5_responsive_mobile_drop_down_wrap .s5_regfloatleft, #s5_responsive_mobile_drop_down_wrap #member-registration div {
 	width:100% !important;
 	}
 	
@@ -172,6 +172,10 @@
 	padding-left:16px;
 	}
 	
+	#s5_regsecurity_img {
+	display:block !important;
+	}
+	
 	#s5_responsive_mobile_drop_down_login {
 	width:62%;
 	float:right;
@@ -184,7 +188,7 @@
 	padding-bottom:6px !important;
 	}
 	
-	#s5_responsive_modile_drop_down_wrap input {
+	#s5_responsive_mobile_drop_down_wrap input {
 	border:none;
 	margin:0px !important;
 	margin-bottom: 0px !important;
@@ -216,7 +220,7 @@
 	width:96% !important;
 	}
 	
-	#s5_responsive_modile_drop_down_wrap input:hover {
+	#s5_responsive_mobile_drop_down_wrap input:hover {
 	-moz-box-shadow:0 4px 4px rgba(0, 0, 0, 0.6) inset;
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6) inset;
     box-shadow:0 4px 4px rgba(0, 0, 0, 0.6) inset;
@@ -240,7 +244,7 @@
     box-shadow:none;
 	}
 	
-	#s5_responsive_modile_drop_down_wrap button, #s5_responsive_modile_drop_down_wrap .button, .validate {
+	#s5_responsive_mobile_drop_down_wrap button, #s5_responsive_mobile_drop_down_wrap .button, .validate {
 	color:#FFFFFF !important;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;

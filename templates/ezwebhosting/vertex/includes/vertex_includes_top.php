@@ -12,3 +12,13 @@
 <?php if ($s5_pos_drop_down_1 == "published" || $s5_pos_drop_down_2 == "published" || $s5_pos_drop_down_3 == "published" || $s5_pos_drop_down_4 == "published" || $s5_pos_drop_down_5 == "published" || $s5_pos_drop_down_6 == "published") { ?>
 	<?php require(dirname(__FILE__)."/../../vertex/drop_down.php"); ?>
 <?php } ?>
+
+<!-- Parallax Backgrounds -->
+<?php if (($s5_top_row1_area1_background_parallax == "yes" && $s5_top_row1_area1_background != "") || ($s5_top_row1_area2_background_parallax == "yes" && $s5_top_row1_area2_background != "") || ($s5_top_row2_area1_background_parallax == "yes" && $s5_top_row2_area1_background != "") || ($s5_top_row2_area2_background_parallax == "yes" && $s5_top_row2_area2_background != "") || ($s5_top_row3_area1_background_parallax == "yes" && $s5_top_row3_area1_background != "") || ($s5_top_row3_area2_background_parallax == "yes" && $s5_top_row3_area2_background != "") || ($s5_center_area1_background_parallax == "yes" && $s5_center_area1_background != "") || ($s5_center_area2_background_parallax == "yes" && $s5_center_area2_background != "") || ($s5_above_columns_wrap1_background_parallax == "yes" && $s5_above_columns_wrap1_background != "") || ($s5_above_columns_wrap2_background_parallax == "yes" && $s5_above_columns_wrap2_background != "") || ($s5_columns_wrap_background_parallax == "yes" && $s5_columns_wrap_background != "") || ($s5_columns_wrap_inner_background_parallax == "yes" && $s5_columns_wrap_inner_background != "") || ($s5_below_columns_wrap1_background_parallax == "yes" && $s5_below_columns_wrap1_background != "") || ($s5_below_columns_wrap2_background_parallax == "yes" && $s5_below_columns_wrap2_background != "") || ($s5_bottom_row1_area1_background_parallax == "yes" && $s5_bottom_row1_area1_background != "") || ($s5_bottom_row1_area2_background_parallax == "yes" && $s5_bottom_row1_area2_background != "") || ($s5_bottom_row2_area1_background_parallax == "yes" && $s5_bottom_row2_area1_background != "") || ($s5_bottom_row2_area2_background_parallax == "yes" && $s5_bottom_row2_area2_background != "") || ($s5_bottom_row3_area1_background_parallax == "yes" && $s5_bottom_row3_area1_background != "") || ($s5_bottom_row3_area2_background_parallax == "yes" && $s5_bottom_row3_area2_background != "") == "yes") { ?>
+	<?php require(dirname(__FILE__)."/../../vertex/parallax_backgrounds.php"); ?>
+<?php } ?>
+
+<!-- Floating Menu Spacer -->
+<?php if ($s5_menudetach  == "yes") { ?>	
+<div id="s5_floating_menu_spacer" style="display:none;width:100%;"></div>
+<?php } ?>

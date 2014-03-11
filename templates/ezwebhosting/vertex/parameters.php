@@ -130,6 +130,27 @@ function handleJSONFile($file = false, $style = false, $dir = false) {
       $config[$key] = preg_replace('/\\\/', '', $val);
     }
   }
+  
+   # Parse Multilang Text
+  $lang = JFactory::getLanguage();
+  $lang_tag = $lang->getTag();
+  foreach($config as $key => $val){
+  	if(substr($key, -5)=='_lang'){
+  		$langvals = explode("\n",$val); 
+  		for($i=0;$i<count($langvals);$i++){
+  			
+  			$sublangval =  explode("=",$langvals[$i]); 
+  			if(trim($sublangval[0]) == $lang_tag ){
+  			  
+  				 $newkey = str_replace("_lang","",$key);
+  				 $config[$newkey] = $sublangval[1];
+  			}
+  		}
+  	 
+  	}     
+  }
+  # End Parse Multilang Text
+  
   return $config;
 }
 
@@ -168,5 +189,7 @@ $s5_fonts_responsive_mobile_bar_with_style = str_replace(" ","+",$s5_fonts_respo
 if ($s5_columns_fixed_fluid == "") {
 $s5_columns_fixed_fluid = "px";
 }
+
+$s5_full_width_flex_menu = "no";
 
 ?>

@@ -1,21 +1,22 @@
 <?php
-s5_mootools_call();
+s5_jslibrary_call();
+$doc=JFactory::getDocument();
 //Calls jquery javascript
 if($version->RELEASE >= '3.0'){
 JHtml::_('jquery.framework');
+JHtml::_('jquery.ui', array('core', 'sortable'));
+$doc->addScript($s5_directory_path.'/js/jquery/jquery-ui-addons.js');
 }
-$doc=JFactory::getDocument();
 if($version->RELEASE <= '2.5'){
 $doc->addScript($s5_directory_path.'/js/jquery/jquery.min.js');
-} ?>
+$doc->addScript($s5_directory_path.'/js/jquery/jquery-noconflict.js');
+?>
 <script type="text/javascript">//<![CDATA[
 if(jQuery.easing.easeOutExpo==undefined){
 document.write('<script src="<?php echo$s5_directory_path; ?>/js/jquery/jquery-ui.min.js"><\/script>');
 }
 //]]></script>
-<?php
-$doc->addScript($s5_directory_path.'/js/jquery/jquery-noconflict.js');
-?>
+<?php } ?>
 
 <?php if($version->RELEASE >= '3.0'){ ?>
 	<link href="<?php echo $s5_directory_path ?>/css/bootstrap/bootstrap-default.css" rel="stylesheet" type="text/css" />
@@ -37,7 +38,7 @@ $doc->addScript($s5_directory_path.'/js/jquery/jquery-noconflict.js');
 
 <!-- Css and js addons for vertex features -->	
 <?php if(($s5_responsive == "enabled" || $s5_responsive_cookie == "desktop") && $s5_fonts_responsive_mobile_bar != "Arial" && $s5_fonts_responsive_mobile_bar != "Tahoma" && $s5_fonts_responsive_mobile_bar != "Helvetica" && $s5_fonts_responsive_mobile_bar != "Sans-Serif") { ?>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<?php echo $s5_fonts_responsive_mobile_bar_with_style; ?>" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=<?php echo $s5_fonts_responsive_mobile_bar_with_style; ?>" />
 <?php } ?>
 <?php require(dirname(__FILE__)."/../css/s5_vertex_addons.php"); ?>
 <?php require(dirname(__FILE__)."/../js/s5_vertex_addons.php"); ?>
@@ -74,7 +75,7 @@ $doc->addScript($s5_directory_path.'/js/jquery/jquery-noconflict.js');
 <?php } ?>
 
 <?php if($s5_fonts != "Arial" && $s5_fonts != "Helvetica" && $s5_fonts != "Sans-Serif" && $s5_fonts != "Tahoma") { ?>
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<?php echo $s5_fonts_with_style;?>" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=<?php echo $s5_fonts_with_style;?>" />
 <?php } ?>
 
 <?php if ($s5_multibox  == "yes") { ?>

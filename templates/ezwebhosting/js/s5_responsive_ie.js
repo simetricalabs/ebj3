@@ -596,7 +596,7 @@ if (s5_responsive_hide_mobile != "") {
 	s5_responsive_hide_mobile_array=s5_responsive_hide_mobile.split(",");
 }
 
-window.addEvent('domready', function() {
+jQuery(document).ready( function() {
 	//Triggers width check and adjust body layout accordingly
 	s5_rsp_width_check();
 });

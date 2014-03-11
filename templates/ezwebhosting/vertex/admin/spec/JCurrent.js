@@ -77,17 +77,18 @@ function setupSubBtns(v) {
 function doPrePost(t) {
   if(t=='apply') {
     var res = doPost();
-    if(res) javascript:Joomla.submitbutton('style.apply');
+    //return false;
+    if(res) setTimeout(function(){javascript:Joomla.submitbutton('style.apply');}, 1000);
     return false;
   }
   if(t=='save') {
     var res = doPost();
-    if(res) javascript:Joomla.submitbutton('style.save');
+    if(res) setTimeout(function(){javascript:Joomla.submitbutton('style.save');}, 1000);
     return false;
   }
   if(t=='save2copy') {
     var res = doPost();
-    if(res) javascript:Joomla.submitbutton('style.save2copy');
+    if(res) setTimeout(function(){javascript:Joomla.submitbutton('style.save2copy');}, 1000);
     return false;
   }
   return false;
@@ -117,11 +118,14 @@ function doPost() {
       else jQuery(i2.el).attr('name', i2.vn);
     }
   });
+  //console.dir(form.serializeArray());
+  //return;
   jQuery.ajax({
     type: 'POST',
-    url: '',
+    url: window.location.href,
     async: false,
-    dataType: 'json',
+    //dataType: 'json',
+    cache: false,
     data: {vertex: form.serializeArray(), style: jQuery('#jform_template').val(), style_name: style_name},
     success: function(json) {
       //jQuery('#s5_menu_type').appendTo('#style-form').attr('name', 'jform[params][s5_menu_type]');
@@ -150,7 +154,18 @@ jQuery(document).ready(function() {
   var tabs = jQuery('ul.nav-tabs');
   tabs.find('a').filter(function(){
     if(this.href.match('#options')) jQuery(this).parent('li').remove();
+    if(this.href.match('#attrib-sscript')) jQuery(this).parent('li').remove();
     else jQuery(this).click(function(){togvopts()});
+	var s5_vertex_admin_form_in = document.getElementById("vertex_admin_form_in").getElementsByTagName("DIV");
+	for (var s5_vertex_admin_form_in_y=0; s5_vertex_admin_form_in_y<s5_vertex_admin_form_in.length; s5_vertex_admin_form_in_y++) {
+		if (s5_vertex_admin_form_in[s5_vertex_admin_form_in_y].className == "row-fluid" || s5_vertex_admin_form_in[s5_vertex_admin_form_in_y].className == "control-group") {
+			s5_vertex_admin_form_in[s5_vertex_admin_form_in_y].id = "s5_vertex_admin_old_fields";
+		}
+	}
+	if (document.getElementById("s5_vertex_admin_old_fields")) {
+		document.getElementById("s5_vertex_admin_old_fields").innerHTML = "";
+		jQuery("#s5_vertex_admin_old_fields").remove(); 
+	}
   });
   tabs.append('<li><a data-toggle="tab" href="#vertex" onclick="togvopts(this);">Vertex</a></li>');
   var style_form = jQuery('#style-form');
@@ -166,6 +181,9 @@ jQuery(document).ready(function() {
   jQuery('#templatestyleOptions').remove();
   jQuery('#options').remove();
   
+  var tabs = document.getElementById("myTabTabs");
+  if(tabs.children[tabs.children.length-1]) tabs.children[tabs.children.length-1].children[0].click();
+	
   /*
   jQuery('#vertex_admin_wrap').empty().append(vertex_form_new);
   
@@ -245,4 +263,28 @@ jQuery(document).ready(function() {
     });
   });
 });
+
+jQuery(document).ready( function() {
+	if(document.getElementById("myTabTabs")) {
+		var s5_myTabTabs = document.getElementById("myTabTabs").getElementsByTagName("LI");
+		for (var s5_myTabTabs_y=0; s5_myTabTabs_y<s5_myTabTabs.length; s5_myTabTabs_y++) {
+			s5_myTabTabs[s5_myTabTabs_y].className = "";
+			var s5_myTabTabs_current_check = s5_myTabTabs[s5_myTabTabs_y].innerHTML;
+			if (s5_myTabTabs_current_check.indexOf("vertex") > 1) {
+				s5_myTabTabs[s5_myTabTabs_y].className = "active";
+			}
+		}
+	}
+	if (document.getElementById("assignment")) {
+		document.getElementById("assignment").className = "tab-pane";
+	}
+	if (document.getElementById("details")) {
+		document.getElementById("details").className = "tab-pane";
+	}
+	if (document.getElementById("vertex")) {
+		document.getElementById("vertex").className = "active";
+		document.getElementById("vertex").style.display = "block";
+	}
+});
+
 /* Joomla Only - End */

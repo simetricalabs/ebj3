@@ -353,11 +353,15 @@ jQuery(document).ready( function() {
 
 window.setTimeout(s5_load_resize_columns,s5_resize_columns_delay);
 
-window.setTimeout(s5_load_resize_columns,2000);
+if (s5_resize_columns_browser_check != "ie7" && s5_resize_columns_browser_check != "ie8") {
 
-window.setTimeout(s5_load_resize_columns,2500);
+	window.setTimeout(s5_load_resize_columns,2000);
 
-window.setTimeout(s5_load_resize_columns,3500);
+	window.setTimeout(s5_load_resize_columns,2500);
+
+	window.setTimeout(s5_load_resize_columns,3500);
+	
+}
 
 });
 

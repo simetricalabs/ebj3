@@ -2,7 +2,9 @@
 $dir = dirname(dirname(dirname(__FILE__)));
 $xml = simplexml_load_file($dir . '/xml/Vertex.xml', 'SimpleXMLElement', LIBXML_NOCDATA);
 $version = $xml->details->frameworkVersion;
-$updateUrl = 'http://www.shape5.com/vertex/current_version/vertexVersion.php?version=' . $version;
+$jversion = new JVersion();
+$joomla_version = $jversion->RELEASE;
+$updateUrl = 'http://www.shape5.com/vertex/current_version/vertexVersion.php?version=' . $version. '&joomla_version=' .$joomla_version;
 $file = fopen($updateUrl, "r");
 $update = false;
 $msg = false;

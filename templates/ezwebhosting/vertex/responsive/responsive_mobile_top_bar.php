@@ -47,7 +47,7 @@ $s5_responsive_mobile_bar_register = "disabled";
 			<?php if ($s5_responsive_mobile_bar_active == "enabled") { ?>
 				<div id="s5_responsive_mobile_bar_active">
 					<span>
-						<?php echo JSite::getMenu()->getActive()->title; ?>
+						<?php echo JFactory::getApplication()->getMenu()->getActive()->title; ?>
 					</span>
 				</div>
 			<?php } ?>
@@ -68,7 +68,7 @@ $s5_responsive_mobile_bar_register = "disabled";
 		
 	</div>
 
-	<div id="s5_responsive_modile_drop_down_wrap" class="s5_responsive_modile_drop_down_wrap_loading">
+	<div id="s5_responsive_mobile_drop_down_wrap" class="s5_responsive_mobile_drop_down_wrap_loading">
 		<div id="s5_responsive_mobile_drop_down_menu">
 			<div class="s5_responsive_mobile_drop_down_inner" style="-webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, <?php echo $s5_responsive_mobile_bar_shadow_opacity ?>);-moz-box-shadow: 0px 0px 16px rgba(0, 0, 0, <?php echo $s5_responsive_mobile_bar_shadow_opacity ?>);box-shadow: 0px 0px 16px rgba(0, 0, 0, <?php echo $s5_responsive_mobile_bar_shadow_opacity ?>);">
 				<?php if ($s5_responsive_mobile_bar_menu == "enabled") { ?>

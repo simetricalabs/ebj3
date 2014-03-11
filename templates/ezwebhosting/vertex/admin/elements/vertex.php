@@ -47,6 +47,7 @@ class JFormFieldVertex extends JFormField {
       $cmsversion = new JVersion();
       $document->addStyleSheet(JURI::root(true) . '/templates/' . VERTEX_TEMPLATE_NAME . '/vertex/admin/vertex.css');
       $document->addScript($vertex_admin_path . '/js/vertexAdmin.Loader.js');
+			$document->setMetaData('meta', 'IE=EmulateIE7', 'X-UA-Compatible');
       $session = JFactory::getSession();
       $main_path = dirname(dirname(dirname(dirname(__FILE__))));
       $lang_dir = dirname(dirname($main_path)) . '/language/';

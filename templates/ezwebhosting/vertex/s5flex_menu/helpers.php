@@ -91,7 +91,7 @@ class S5modMainMenuHelper {
             $item->flink = 'index.php?Itemid=' . $item->params->get('aliasoptions');
             break;
           default:
-            $router = JSite::getRouter();
+            $router = JFactory::getApplication()->getRouter();
             if ($router->getMode() == JROUTER_MODE_SEF) {
               $item->flink = 'index.php?Itemid=' . $item->id;
             } else {
@@ -188,9 +188,6 @@ class S5modMainMenuHelper {
           //$router 	= JSite::getRouter();
           //$pitem->url = $router->getMode() == JROUTER_MODE_SEF ? 'index.php?Itemid='.$pitem->id : $pitem->link.'&Itemid='.$pitem->id;
           $pitem->url = $pitem->flink;
-          if ($pitem->home == 1) {
-            $pitem->url = JURI::root();
-          }
           
           //($flexmv <= 2.5 ? '' : 'data.')
           
@@ -261,13 +258,15 @@ class S5modMainMenuHelper {
 						default:
 						case 0:
 							// _top
-							$link_format = "<a href='$pitem->url'><span onclick='window.document.location.href=\"$pitem->url\"'>".$pitem->title."</span></a>";
-							if($S5_subtext != ""){
-								$parent_subtext_flex = "<span class='S5_parent_subtext' onclick='window.document.location.href=\"$pitem->url\"'>".$S5_subtext."</span>";
-							}else{
-								$parent_subtext_flex = "";
+							if ($pitem->title != "") { 
+								$link_format = "<a href='$pitem->url'><span onclick='window.document.location.href=\"$pitem->url\"'>".$pitem->title."</span></a>";
+								if($S5_subtext != ""){
+									$parent_subtext_flex = "<span class='S5_parent_subtext' onclick='window.document.location.href=\"$pitem->url\"'>".$S5_subtext."</span>";
+								}else{
+									$parent_subtext_flex = "";
+								}
+								break;
 							}
-							break;
 						case 1:
 							// _blank
 							$link_format = "<a href='$pitem->url' onclick='this.removeAttribute(\"href\")' target='_blank'><span onclick='window.open(\"$pitem->url\")'>".$pitem->title."</span></a>";

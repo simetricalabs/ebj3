@@ -1,16 +1,15 @@
 <!-- Page scroll, tooltips, multibox, and ie6 warning -->	
+	<?php if ($s5_scrolltotop  == "yes") { ?>
+		<div id="s5_scroll_wrap"<?php if ($template_date != "July 2011" && $template_date != "December 2011") {?> class="s5_wrap"<?php } ?>>
+			<?php require(dirname(__FILE__)."/../../vertex/page_scroll.php"); ?>
+		</div>
+	<?php } ?>
 	<!-- Start compression if enabled -->	
 	<?php if ($s5_compress_js == "yes" || $s5_compress_css == "yes") { ob_start(); } ?>
-	<?php 
-	if ($s5_scrolltotop  == "yes") { ?>
-		<div id="s5_scroll_wrap"<?php if ($template_date != "July 2011" && $template_date != "December 2011") {?> class="s5_wrap"<?php } ?>>
-			<?php require(dirname(__FILE__)."/../../vertex/page_scroll.php"); } ?>
-		</div>
 	<?php
 	if ($s5_tooltips  == "yes" || $s5_multibox  == "yes") { require(dirname(__FILE__)."/../../vertex/tooltips_and_multibox.php"); }
 	if ($s5_lazyload  != "disabled") { require(dirname(__FILE__)."/../../vertex/lazy_load.php"); }
 	if ($s5_ie6plugin == "yes") { require(dirname(__FILE__)."/../../vertex/ie6_warning.php"); }
-	if ($s5_resize_columns  != "disabled") { require(dirname(__FILE__)."/../../vertex/resize_columns.php"); }
 	?>
 	
 <!-- Additional scripts to load just before closing body tag -->
@@ -29,7 +28,16 @@
 <!-- Info Slide script - JS and CSS called in header -->
 	<?php if ($s5_info_slide == "yes") { ?>
 	<script type='text/javascript'>
-	new Slidex();
+	jQuery(document).ready(function(){
+	    jQuery('.s5_is_slide').each(function (i, d) {
+				jQuery(d).wrapInner(jQuery('<div class="s5_is_display"></div>'));
+			});
+			var options = {
+				wrapperId: "s5_body"
+			};
+			var slide = new Slidex();
+			slide.init(options);
+		});
 	</script>
 	<?php } ?>
 	

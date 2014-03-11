@@ -206,7 +206,7 @@ function s5_responsive_mobile_show_visible() {
 	if (document.getElementById("s5_responsive_mobile_register_wrap")) {
 	document.getElementById("s5_responsive_mobile_register_wrap").innerHTML = "";
 	}
-	document.getElementById("s5_responsive_modile_drop_down_wrap").className = "";
+	document.getElementById("s5_responsive_mobile_drop_down_wrap").className = "";
 }
 
 function s5_responsive_mobile_close_toggles() {

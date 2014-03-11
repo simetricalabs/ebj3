@@ -21,8 +21,9 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <?php if(($s5_fonts_highlight != "Arial") && ($s5_fonts_highlight != "Helvetica") && ($s5_fonts_highlight != "Sans-Serif")) { ?>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<?php echo str_replace(" ","%20",$s5_fonts_highlight); if ($s5_fonts_highlight_style != "") { echo ":".$s5_fonts_highlight_style; } ?>" />
-<?php } ?>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone%20Kaffeesatz">
+<?php } ?>
+
 
 <style type="text/css"> 
 body, .inputbox, input{font-family: '<?php echo $s5_fonts;?>',Helvetica,Arial,Sans-Serif ;} 

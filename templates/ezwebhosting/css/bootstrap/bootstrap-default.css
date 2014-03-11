@@ -911,7 +911,7 @@ input[type="file"] {
   line-height: 30px;
 }
 select {
-  width: 460px;
+  width: 220px;
   border: 1px solid #bbb;
   background-color: #ffffff;
 }
@@ -1465,7 +1465,7 @@ legend + .control-group {
   float: left;
   width: 140px;
   padding-top: 5px;
-  text-align: right;
+  text-align: inherit;
 }
 .form-horizontal .controls {
   *display: inline-block;
@@ -1746,7 +1746,6 @@ table .span24 {
   line-height: 14px;
   vertical-align: text-top;
   background-image: url("../../images/bootstrap/glyphicons-halflings.png");
-  background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
 }
@@ -5076,4 +5075,26 @@ outline:none;
 
 .breadcrumb .divider, .muted {
 color:inherit;
+}
+
+.btn-toolbar a {
+margin-left:0px !important;
+margin-right:8px;
+margin-bottom:10px;
+}
+
+#jform_title, #jform_articletext {
+width:94% !important;
+}
+
+#imageForm #upbutton {
+margin-top:-19px;
+}
+
+#member-registration input, #member-registration textarea {
+width:86%;
+}
+
+a.btn {
+font-size:14px;
 }

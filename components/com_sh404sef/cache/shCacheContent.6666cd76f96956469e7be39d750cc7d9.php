@@ -15,3 +15,8 @@ $this->_urlCache['7d2384f8b9e48f7ea72a679b3b772641']='index.php?option=com_slogi
 $this->_urlCache['eb1b15ebb28733929a8e8f7d15cf05aa']='index.php?option=com_slogin&amp;lang=es&amp;plugin=twitter&amp;return=aW5kZXgucGhwP0l0ZW1pZD0xMDE%3D&amp;task=auth#provider/twitter/auth/aW5kZXgucGhwP0l0ZW1pZD0xMDE=#0';
 $this->_urlCache['5dafbb7ff67f71d1770d2ca80ca00f6a']='index.php?option=com_slogin&amp;lang=es&amp;plugin=linkedin&amp;return=aW5kZXgucGhwP0l0ZW1pZD0xMDE%3D&amp;task=auth#provider/linkedin/auth/aW5kZXgucGhwP0l0ZW1pZD0xMDE=#0';
 $shURLCacheCreationDate=1393669504;
+$this->_urlCache['24ecd6da47c47171205e2987702dc6a6']='index.php?option=com_slogin&amp;lang=es&amp;plugin=facebook&amp;return=aW5kZXgucGhwP0l0ZW1pZD0xNTA%3D&amp;task=auth#provider/facebook/auth/aW5kZXgucGhwP0l0ZW1pZD0xNTA=#0';
+$this->_urlCache['2dbd63e99cf784fb6141d38c5e6bd5a5']='index.php?option=com_slogin&amp;lang=es&amp;plugin=google&amp;return=aW5kZXgucGhwP0l0ZW1pZD0xNTA%3D&amp;task=auth#provider/google/auth/aW5kZXgucGhwP0l0ZW1pZD0xNTA=#0';
+$this->_urlCache['b4dc413d064972baf02c54ca87defcfe']='index.php?option=com_slogin&amp;lang=es&amp;plugin=twitter&amp;return=aW5kZXgucGhwP0l0ZW1pZD0xNTA%3D&amp;task=auth#provider/twitter/auth/aW5kZXgucGhwP0l0ZW1pZD0xNTA=#0';
+$this->_urlCache['ef78403eb1fb6a0f7bca5cce1e4df67a']='index.php?option=com_slogin&amp;lang=es&amp;plugin=linkedin&amp;return=aW5kZXgucGhwP0l0ZW1pZD0xNTA%3D&amp;task=auth#provider/linkedin/auth/aW5kZXgucGhwP0l0ZW1pZD0xNTA=#0';
+$shURLCacheCreationDate=1394553060;

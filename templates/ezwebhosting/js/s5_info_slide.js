@@ -1,4 +1,4 @@
-;
+
 Slidex = function () {
     this.init = function (opt) {
         var options = jQuery.extend({
@@ -52,14 +52,5 @@ Slidex = function () {
             });
         });
     }
-};
-jQuery(document).ready(function () {
-    jQuery('.s5_is_slide').each(function (i, d) {
-        jQuery(d).wrapInner(jQuery('<div class="s5_is_display"></div>'));
-    });
-    var options = {
-        wrapperId: "s5_body"
-    };
-    var slide = new Slidex();
-    slide.init(options);
-});
+}; 
+

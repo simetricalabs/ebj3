@@ -3,5 +3,6 @@
 ?>
 <span class="footerc">
 Copyright &copy; <?php echo $s5_cur_year;?>.  <?php echo $s5_csite_name;?>.
-Powered by <a href="https://plus.google.com/103834987476750810050?rel=author" target="blank"> InncubatED.com</a> <a href="http://www.inncubated.com/" title="Visit InncubatED Education Startup Incubator" target="blank" class="footerc">Education Startup Incubator</a>
+Powered by <a href="https://plus.google.com/103834987476750810050?rel=author" target="blank"> InncubatED.com</a> <a href="http://www.inncubated.com/" title="Visit InncubatED Education Startup Incubator" target="blank" class="footerc">Education Startup Incubator.</a>
+<a href="mailto:info@inncubated.com?subject=Contact from EDBase"  target="blank" class="footerc" > Contact US.</a>
 </span>

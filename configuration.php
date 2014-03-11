@@ -40,7 +40,7 @@ class JConfig {
 	public $smtphost = 'smtp.gmail.com';
 	public $smtpsecure = 'ssl';
 	public $smtpport = '465';
-	public $caching = '0';
+	public $caching = '1';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
 	public $MetaDesc = 'EdBase es una base de datos para startups, emprendedores  e inversionistas interesados ​​en el sector de la educación de latinoamérica. ';

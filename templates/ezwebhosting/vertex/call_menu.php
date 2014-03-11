@@ -47,6 +47,12 @@
                 hideDelay:<?php echo $hideDelay; ?>,
                 orientation:"<?php echo $orientation; ?>",
                 tweakInitial:{x:0, y:0},
+				<?php if($s5_full_width_flex_menu == "yes") { ?>
+				fullWidth: function(){
+					if(window.innerWidth<<?php echo $s5_full_width_flex_menu_res; ?>) return "auto";
+						return document.getElementById("<?php echo $s5_full_width_flex_menu_div_id; ?>").offsetWidth+"px";
+				},
+				<?php } ?>
                  <?php if($s5_language_direction == "1") { ?>
 	                direction:{    x: 'left',    y: 'down' },
 				<?php } ?>

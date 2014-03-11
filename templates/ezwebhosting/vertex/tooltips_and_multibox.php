@@ -1,5 +1,5 @@
 <?php if ($s5_tooltips  == "yes") { ?>
-	<script type="text/javascript" language="javascript" src="<?php echo $s5_directory_path ?>/js/tooltips.js"></script>
+	<script type="text/javascript" src="<?php echo $s5_directory_path ?>/js/tooltips.js"></script>
 <?php } ?>
 	
 <?php if ($s5_multibox  == "yes") { ?>
